@@ -1,0 +1,8 @@
+.ma-relatedslider-container{margin: 20px 0 0}
+.ma-relatedslider-container .ma-upsellslider-item{margin-right: 30px;width: 270px !important}
+.related-subtitle,.related-checkbox{display: none}
+
+
+@media (max-width: 992px){
+.ma-relatedslider-container .slides{display: block;}
+}

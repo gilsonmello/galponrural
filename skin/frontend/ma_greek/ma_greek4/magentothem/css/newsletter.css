@@ -1,0 +1,80 @@
+#newsletter_pop_up {
+background-color: #FFFFFF;
+color: #000;
+display: none;
+min-height: 339px;
+margin: -195px 0 0 !important;
+padding: 35px;
+text-align: left;
+top: 50% !important;
+min-width:600px;
+position: fixed !important;
+border: 1px solid #eee;
+}
+ .button.b-close, .button.bClose {
+position: absolute;
+right: 0;
+top: -30px;
+}
+#newsletter_pop_up .button:hover{background-color: #e87058}
+#newsletter_pop_up .button {
+	color: #FFFFFF;
+	cursor: pointer;
+	display:block;
+	padding: 0 5px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #111111;
+	min-width: 70px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 0;
+	font-family: 'Montserrat', sans-serif
+}
+#newsletter_pop_up .button:after{
+content: "close";
+font-size: 10px;	
+}
+.title_subscribe>h1{
+font-size:2.5em;
+font-weight: bold;
+margin-top:60px;
+text-transform: capitalize;
+line-height:1;
+margin-bottom: 0;
+}
+.form-subscribe-header label{font-size:1.2em;font-weight: normal;line-height:25px;font-style: italic;margin: 20px 0;color: #999999;max-width: 72%;}
+#newsletter_subscribe{
+margin: 0 0 5px;
+width:380px;
+height: 40px;
+line-height: 40px;
+padding-left: 10px;
+background-color: #dedede;
+border: none;
+}
+#newsletter_pop_up .button_subscribe{
+background-color: #222222;
+color: #fff;
+padding: 0 10px;
+border: none;
+font-size:1em;
+text-transform: uppercase;
+height: 40px;
+line-height: 40px;
+min-width: 115px;
+font-family:'Montserrat', sans-serif;
+}
+#newsletter_pop_up .button_subscribe:hover{background:#ec5355;}
+#advice-required-entry-newsletter{
+	font-size: 12px;
+	margin: -10px auto 15px;
+	width: 130px;
+	display:none !important;
+}
+
+.subscribe .input-box{float: left;}
+.subscribe .actions{float: left;}

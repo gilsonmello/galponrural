@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cdr_purechat>
+                        <children>
+                            <purechat>
+                                <title>PureChat</title>
+                                <sort_order>50</sort_order>
+                            </purechat>
+                        </children>    
+                    </cdr_purechat>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <purechat>
+                                        <title>CDR PureChat</title>
+                                    </purechat>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

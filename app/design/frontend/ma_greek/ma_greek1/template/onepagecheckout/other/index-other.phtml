@@ -1,0 +1,60 @@
+<?php 
+    $title_terms_conditions = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/title'));
+    $content = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/content'));
+    $enable_custom_size = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/enable_custom_size'));
+    $width = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/width'));
+    $height = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/height'));
+    if(Mage::getModel('customer/session')->getData('message')){
+?>
+    <ul class="messages error_method">
+        <li class="error-msg">
+            <ul>
+                <li>
+                    <?php 
+                        echo Mage::getModel('customer/session')->getData('message'); 
+                        Mage::getModel('customer/session')->setData('message',null);
+                    ?>
+                </li>
+            </ul>
+        </li>
+    </ul>
+<?php 
+    }
+?>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/opcheckout.js') ?>"></script>
+<style>
+    .term_conditions{
+        <?php if($enable_custom_size){ ?>
+            width: <?php echo $width.'px' ?>;
+            height: <?php echo $height.'px' ?>;
+        <?php }else{ ?>
+            width: 500px;
+            height: 500px;
+        <?php } ?>
+        position: fixed;
+        border: 1px solid silver;
+        border-radius: 10px;
+        background: white;
+        top: 100px;
+        display: none;
+        z-index: 10000;
+        padding: 10px 10px 20px ; 
+    }
+    <?php 
+        if(Mage::getStoreConfig('onepagecheckout/general/hide_shipping_method') && !Mage::getStoreConfig('onepagecheckout/delivery/enabled')){
+    ?>
+        .opc_payment{
+            width:100%;   
+        }
+    <?php    
+    }
+    ?>
+</style>
+<div id="control_overlay"></div>
+<div class="term_conditions">
+	<h1><?php echo $title_terms_conditions; ?></h1>
+    <?php echo $content;?>
+    <p class="close">
+        <a href="#"><?php echo $this->__('Close') ?></a>
+    </p>
+</div>

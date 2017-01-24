@@ -1,0 +1,14 @@
+<?php
+/**
+ * Magento
+ * NOTICE OF LICENSE 
+ * @package    ZealousWeb
+ * @author     ZealousWeb
+ * @copyright  Copyright (c) 2014 Zealousweb Technology. (http://www.zealousweb.com)
+ */
+ ?>
+<?php $cekAktif = Mage::getStoreConfig('gtranslateconfiguration/gtranslate/enable');		
+	if($cekAktif == 1):
+?>
+<meta name="google-translate-customization" content="<?php echo Mage::getStoreConfig('gtranslateconfiguration/gtranslate/googletranslatecode'); ?>" /></meta>
+<?php endif;?>

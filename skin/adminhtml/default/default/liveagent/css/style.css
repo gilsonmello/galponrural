@@ -1,0 +1,355 @@
+/* page css */
+#signup, #loader {float: left;}
+.LaSignupForm {padding:4%; text-align:left; position:relative;}
+.FField { display:block; height:65px; position:relative; }
+.FieldLabel { color:#ececec; font-size:14px; margin-bottom:5px; }
+
+ /* default field */
+.FField input { box-sizing:border-box; font-size:18px; color:#fff; display:block; height:40px; width:100%; line-height:40px; border:1px solid #898989; padding:0 40px 0 20px; background:rgb(153,153,153); background:rgba(153,153,153,0.3); }
+.FField input:focus { border:1px solid #e1e1e1; outline:none;}
+.FField input.ValueIn {color:#fff;}
+
+.FField-Message { display:inline-block; position:absolute; right:0; text-align:right; margin:-1px 0 0 0px; font-size:10px; padding:2px 10px 2px 10px; color:#fff; font-weight:bold; text-transform:uppercase; }
+
+/* error */
+.FField.FField-Error input { border:1px solid #ff9c00; color:#fff}
+.FField.FField-Error input:focus { border:1px solid #ff8400; }
+.FField.FField-Error .FField-Message { background:#ff9c00; white-space:nowrap;}
+.FField.FField-Error .FField-Description {display:none;}
+
+/* valid */
+.FField.FField-Valid input, .FField.FField-Valid #domainFieldTextContainer input { color:#fff; border-color:#888; }
+.FField.FField-Valid input:focus {border:1px solid #efefef;}
+.FField.FField-Valid .FField-Message {white-space:nowrap; display:block; overflow:hidden; text-indent:9999px; position:absolute; top:5px; right:8px; background:transparent url('ok_icon.png') center top no-repeat; width:30px; height:30px;}
+
+/* validating */
+.FField.FField-Waiting input { border:1px solid #202020; color:#fff}
+.FField.FField-Waiting input:focus { border:1px solid #000000; }
+.FField.FField-Waiting .FField-Message { background:#202020; }
+.FField.FField-Waiting .FField-Description {display:none;}
+
+.PapTrackFrame {position: absolute; left: -10000px; top: -10000px; width: 20px; height: 20px;}
+
+/* secure */
+p.secure {position:absolute; right:-15px; font-size:10px; display:inline-block; margin-top:-15px; padding:0 5px 0 20px; background:#666 url('lock.png') 5px center no-repeat; opacity:0.9;}
+
+/* loading box */
+.loading-bar {margin:20px auto 10px; width:300px; height:15px; border-bottom:1px solid #63774d; border-top:1px solid #444; background:#090f02; overflow:hidden; position:relative;}
+.loading-info {margin:0 auto; text-align:center; padding:0 0 30px; color:#999;}
+.percentage {font-weight:bold; color:#fff;}
+.loader-label {color:#fff;}
+.progress-bar {height:inherit; width:0%; border-radius:inherit; position:relative; overflow:hidden; background:#6ed100;}
+.progress-stripes {width:inherit; height:inherit; font-size:100px; font-weight:bold; margin-top:-50px; letter-spacing:-14px; color:#62a714;}
+#loader.mainBox p {max-width:100%;} 
+
+#createButtonmain {outline:none;}
+
+/* domain field */
+#domainFieldTextContainer {display:table; width:100%;}
+#domainFieldinnerWidget {display:table-cell; padding:0 20px;}
+#domainFieldEnd {display:table-cell; padding:0 40px 0 10px; color:#fff; border: 1px solid #898989; border-left:none; background: rgb(153,153,153); background: rgba(153,153,153,0.3);}
+.FField-Valid #domainFieldEnd { border-color:#888; }
+.FField-Waiting #domainFieldEnd { border-color:#202020;}
+.FField-Error #domainFieldEnd { border-color:#ff9c00;}
+
+@font-face{font-family:'OpenSans';src:url('fonts/OpenSans-Regular-webfont.eot');src:url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/OpenSans-Regular-webfont.woff') format('woff'),url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),url('fonts/OpenSans-Regular-webfont.svg#OpenSans') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'OpenSans';src:url('fonts/OpenSans-Bold-webfont.eot');src:url('fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/OpenSans-Bold-webfont.woff') format('woff'),url('fonts/OpenSans-Bold-webfont.ttf') format('truetype'),url('fonts/OpenSans-Bold-webfont.svg#OpenSans') format('svg');font-weight:bold;font-style:normal}
+@font-face{font-family:'OpenSans';src:url('fonts/OpenSans-Light-webfont.eot');src:url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/OpenSans-Light-webfont.woff') format('woff'),url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),url('fonts/OpenSans-Light-webfont.svg#OpenSans') format('svg');font-weight:300;font-style:normal}
+
+em,i{font-style:italic}
+strong,b{font-weight:bold}
+#nlTopColumn ul li{padding-bottom:10px}
+.quPathWayLeft{display:none}
+.visible{display:block}
+.invisible,.hidden{display:none}
+.align-center,.center{text-align:center}
+.align-right{text-align:right}
+.align-left{text-align:left}
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both}
+.clearfix{*zoom:1}
+.clear{clear:both}
+#nlTopColumn{padding:0 2%}
+#nlTopColumn>div{width:100%;max-width:978px;margin:0 auto}
+.TwoColumnsBlock .FirstColumn,.TwoColumnsBlock .SecondColumn{float:left;width:50%;padding:2%}
+.TwoColumnsBlock .FirstColumn{padding-left:0}
+.TwoColumnsBlock .SecondColumn{padding-right:0}
+.csc-uploads-element-pdf a{display:inline-block;text-decoration:underline;color:#666;vertical-align:middle;min-height:40px;padding:5px 5px 5px 40px;font-size:16px;line-height:22px;position:relative}
+.csc-uploads-element-pdf a:hover{color:#dd7b09}
+.csc-uploads-element-pdf a:before{position:absolute;left:0;top:0;display:block;width:25px;height:35px;border:1px solid #666;background:#fff;content:""}
+.csc-uploads-element-pdf a:after{position:absolute;left:12px;top:6px;font-size:8px;line-height:8px;color:#fff;display:inline-block;padding:2px 4px;font-weight:bold;background:#CC0000;content:"pdf"}
+#cookie-law{text-align:center;position:fixed;top:0;left:0;right:0;z-index:99999}
+#cookie-law p{font-size:11px;color:#666;text-align:center;padding:0;margin:0;line-height:26px;background:#fff}
+#cookie-law a{color:#000;text-decoration:underline}
+#cookie-law a.close-cookie-banner{display:inline-block;background:#666;padding:2px;color:#fff;text-decoration:none;font-weight:bold;font-size:8px;margin-left:10px;line-height:10px}
+@media all and (max-width:661px){h1{font-size:36px;padding:25px 0 5px}
+h2{font-size:26px;padding:22px 0 0}
+h3{font-size:22px;padding:18px 0 0}
+h4{font-size:18px;padding:13px 0 0}
+}
+.CThinButton.CTryItFree{color:#fff;border-radius:2px;display:inline-block;
+line-height:29px;font-weight:bold;font-size:20px;padding:12px 60px;
+text-decoration:none;background:#62BA00}
+.CThinButton.CTryItFree:hover{background:#339900}
+a.CLinkButton{color:#444;border-radius:2px;display:inline-block;border:1px solid #999;line-height:27px;font-weight:normal;font-size:20px;padding:12px 40px;
+text-decoration:none}
+a.CLinkButton:hover{border-color:#000;color:#000}
+.ImLeButtonMain, .ImLeButtonMain1{text-align:center;}
+.ImLeButtonMain span, .ImLeButtonMain1 span {background:#62BA00;border-radius:2px;padding:0 20px;font-family:'OpenSans',sans-serif;color:#fff;display:inline-block;font-size:20px;font-weight:bold;line-height:50px;height:50px;text-decoration:none;text-align:center}
+.ImLeButtonMain span:hover, .ImLeButtonMain1  span:hover{cursor:pointer;background-color:#339900}
+
+@keyframes slideInFromRight{0%{right:0}
+50%{right:-20px}
+100%{right:0}
+}
+@-webkit-keyframes slideInFromRight{0%{right:0}
+50%{right:-20px}
+100%{right:0}
+}
+#nlHeaderWrapper{width:100%;padding:2%}
+#TopSectionWrapper #nlHeaderWrapper{padding:2% 0;padding:0}
+
+.nav-toggle{display:none}
+@media all and (max-width:750px){#TopSectionWrapper #nlHeaderWrapper{padding:0}
+#nlLogo a span{text-indent:100%;white-space:nowrap;overflow:hidden;display:inline-block}
+.nav-toggle{width:60px;height:60px;padding:5px;display:block;float:right}
+.nav-toggle span{display:block;height:4px;width:35px;text-indent:-999px;background:rgb(23,0,0);background:rgba(23,0,0,0.6);overflow:hidden;margin-top:8px}
+.nav-toggle span::before{position:absolute;display:block;height:4px;width:35px;content:'';margin-top:10px;background:rgb(23,0,0);background:rgba(23,0,0,0.6)}
+.nav-toggle span::after{position:absolute;display:block;height:4px;width:35px;content:'';margin-top:4px;background:rgb(23,0,0);background:rgba(23,0,0,0.6)}
+#nlHeaderWrapper{background:rgb(255,255,255);background:rgba(255,255,255,0.8)}
+.js-nav-active #nlHeaderWrapper{padding-bottom:20px;margin-bottom:10px}
+.js #nlMainMenu.nav-collapse-0.opened{max-height:100% !important}
+}
+.nextStepTeaser{padding:5% 2%;background:#f4efe4;text-align:center}
+.nextStepTeaser h2{font-size:32px;line-height:38px;text-align:center;padding:0 0 5px 0;font-weight:300;color:#333}
+.nextStepTeaser p{text-align:center;color:#888}
+.nextStepTeaser .CThinButton.CTryItFree.sButton{text-align:center;margin:24px auto 0;padding:8px 40px}
+@media all and (max-width:661px){.nextStepTeaser{padding:8% 2%}
+.nextStepTeaser .CThinButton.CTryItFree.sButton{margin-top:16px}
+}
+@media all and (max-width:505px){.integrations{text-align:center}
+}
+.AddTestimonial{max-width:978px;width:100%;display:inline-block;padding:3% 2% 1%;background:#F8F8F8;border:1px solid #ccc;margin:2% 1%;color:#666;text-align:center}
+.AddTestimonial:hover{border-color:#333}
+.ATHeader{display:inline-block;font-size:26px;width:100%;margin:0 0 1.5%;font-weight:300;color:#333}
+.ATText{display:inline-block;margin:0 0 1.5%;color:#999}
+.ATSubtitle.CThinButton.CTryItFree{font-size:16px;line-height:38px;display:block;max-width:230px;padding:0;margin:1% auto}
+.LAVideoBlock{margin:50px 0 0;padding:40px;background:#333;color:#fff;text-align:center}
+.LAVideoBlock h2{color:#fff;text-align:center;padding:0 0 20px}
+.LAVideoBlock .LAVideoLink{margin:15px auto 30px}
+.LAVideoLink{display:block;margin:0 auto;max-width:320px;width:100%;height:180px;position:relative;background: #444 url("video.jpg") no-repeat scroll center center;
+text-align:center}
+.LAVideoLink span{display:none}
+.LAVideoLink:hover span{color:#fff;border:2px solid #fff;position:absolute;display:inline-block;padding:10px;left:50%;top:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%)}
+.LAVideoLink:hover:before{display:block;position:absolute;content:'';left:0;top:0;background:rgba(0,0,0,0.8);width:100%;height:100%}
+#nlContent table{margin-bottom:30px;width:100%;max-width:978px;margin:0 auto}
+#nlContent table td{font-size:13px;color:#444;line-height:22px;padding:10px;border-bottom:1px solid #e8e8e8;vertical-align:middle}
+
+@media all and (max-width:750px){.nlFAQ .BothSame .FirstColumn,.nlFAQ .BothSame .SecondColumn{width:100%;padding:0}
+}
+@media all and (max-width:481px){.nlFAQ{text-align:center}
+}
+@media all and (max-width:850px){.smallTestimonials .anythingWindow a span.quote{font-size:22px;line-height:30px;padding-left:20px}
+}
+@media all and (max-width:750px){.smallTestimonials .anythingWindow a span.logo{display:none}
+.smallTestimonials .anythingWindow a span.quote{width:100%;padding-left:0;font-weight:normal;font-size:18px;line-height:24px}
+.smallTestimonials .anythingWindow a span.name{position:relative;left:0;bottom:0;top:10px}
+}
+.customerRating h2{padding-top:20px}
+.RatingNumbers{display:block;margin-bottom:10px}
+.RatingStars{position:relative;display:inline-block;height:55px;margin-bottom:10px;width:285px}
+.RatingStarsBg{position:absolute;display:block;height:40px;z-index:2;background-color:#ed1c24;bottom:0;left:0}
+.RatingStarsImg{position:absolute;display:block;background:url('../../fileadmin/css/la-new-style/testimonials/hearts.png') no-repeat center bottom;height:40px;width:100%;bottom:0;z-index:5}
+body{oveflow:hidden;max-width:100%}
+#TopSectionWrapper{min-height:100%;height:100%;width:100%;max-width:100%;background:url('../../fileadmin/css/la-new-style/homepage/bg_1920x1200.jpg') center top no-repeat;background-size:cover;display:table}
+#TopSectionWrapper>div{display:table-row}
+#nlHeaderWrapper{height:100px}
+#TopSectionWrapper #nlHeader{padding:2% 0}
+#nlTopColumn{padding:0}
+#nlTopColumn>div{height:100%;max-width:100%;display:table}
+.companies{text-align:center;padding:5% 2%}
+.companies>div{width:100%;max-width:978px;margin:0 auto}
+.companies h3{font-size:55px;font-weight:300}
+.companies h3>span{display:block;font-size:30px;padding-top:3%}
+.companies h3>span>span{font-weight:bold}
+.companies p{padding-bottom:3%}
+.fWrapper{width:100%;position:relative;padding:3% 2% 4%}
+.feature{width:100%;max-width:978px;margin:0 auto;display:table}
+.feature>div{display:table-cell;vertical-align:middle;width:50%}
+.feature>div:first-child{padding-right:6%}
+.feature>div:last-child{padding-left:6%}
+.feature a{white-space:nowrap;font-weight:bold}
+.tagCloud{position:relative;text-align:center}
+.cImage img{margin-bottom:-128px;max-width:100%}
+.rImage img{max-width:100%;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;
+}
+.cBlock:after{width:100%;height:50px;top:-20px;left:0;content:'';position:absolute;display:block;-webkit-transform:rotate(1deg);-moz-transform:rotate(1deg);-o-transform:rotate(1deg);writing-mode:lr-tb}
+.ccBlock:after{width:100%;height:50px;top:-17px;left:0;content:'';position:absolute;display:block;-webkit-transform:rotate(359deg);-moz-transform:rotate(359deg);-o-transform:rotate(359deg);writing-mode:lr-tb}
+.fWrapperColor0{background:#fff;color:#666}
+.fWrapperColor0 h2{color:#333}
+.fWrapperColor0 p{color:#666}
+.fWrapperColor0.cBlock:after{background:#fff}
+.fWrapperColor0.ccBlock:after{background:#fff}
+.fWrapperColor1{background:#333;color:#fff}
+.fWrapperColor1 h2{color:#fff}
+.fWrapperColor1 p{color:#ccc}
+.fWrapperColor1.cBlock:after{background:#333}
+.fWrapperColor1.ccBlock:after{background:#333}
+.fWrapperColor2{background:#3DA8B2;color:#fff}
+.fWrapperColor2 h2{color:#fff}
+.fWrapperColor2 p{color:#fff}
+.fWrapperColor2.cBlock:after{background:#3DA8B2}
+.fWrapperColor2.ccBlock:after{background:#3DA8B2}
+.fWrapperColor3{background:#729A25;color:#fff}
+.fWrapperColor3 h2{color:#fff}
+.fWrapperColor3 p{color:#fff}
+.fWrapperColor3.cBlock:after{background:#729A25}
+.fWrapperColor3.ccBlock:after{background:#729A25}
+.fWrapperColor4{background:#336666;color:#fff}
+.fWrapperColor4 h2{color:#fff}
+.fWrapperColor4 p{color:#fff}
+.fWrapperColor4.cBlock:after{background:#336666}
+.fWrapperColor4.ccBlock:after{background:#336666}
+.fWrapperColor5{background:#E28B24;color:#fff}
+.fWrapperColor5 h2{color:#fff}
+.fWrapperColor5 p{color:#fff}
+.fWrapperColor5.cBlock:after{background:#E28B24}
+.fWrapperColor5.ccBlock:after{background:#E28B24}
+.fWrapperColor6{background:#3EB8BD;color:#fff}
+.fWrapperColor6 h2{color:#fff}
+.fWrapperColor6 p{color:#fff}
+.fWrapperColor6.cBlock:after{background:#3EB8BD}
+.fWrapperColor6.ccBlock:after{background:#3EB8BD}
+#c36896 img{border:1px solid #ccc}
+.mainBox{width:480px;height:auto;background:rgb(23,0,0);background:rgba(23,0,0,0.6);text-align:center;z-index:98;position:relative;border-radius:2px}
+.mainBox h1{font-weight:300;font-size:42px;color:#fff;line-height:48px;border-bottom:1px solid #6ed100;display:block;text-align:center;background:rgb(23,0,0);border-top-left-radius:2px;border-top-right-radius:2px;background:rgba(23,0,0,0.6);padding:15px 2% 17px;font-family:'OpenSans',sans-serif;margin-bottom:15px}
+.bodyLang5 .mainBox h1{font-size:34px}
+.mainBox p{color:#fff;max-width:120px;margin:0 15px 15px}
+.mainBox .label{position:relative;margin:-60px 15px 40px;opacity:0.9;font-size:27px;font-weight:bold}
+#completed.mainBox p{max-width:100%}
+#completed.mainBox{padding-bottom:15px}
+.customerRating{width:100%;padding:0 2% 2%;margin:0;background:#f8f8f8;border:1px solid #ccc;border-width:1 0}
+.customerRating>div{width:100%;max-width:978px;margin:0 auto}
+.AggregateRatingIn{text-align:center}
+.customerRating h2{text-align:center}
+.LaSignupForm{padding:3% 4% 2%;text-align:left;position:relative}
+.g-FormField2{display:block;height:65px;position:relative}
+#domainFieldTextContainer{position:relative}
+.domainLabel{color:#ececec;font-size:14px;margin-bottom:5px}
+.domainLabel span{font-size:12px}
+.domainField .g-FormField2-Description{font-size:12px;color:#605F5F}
+.emailLabel{color:#ececec;font-size:14px;margin-bottom:5px}
+.emailLabel span{font-size:12px}
+.phoneLabel{color:#ececec;font-size:14px;margin-bottom:5px}
+.phoneLabel span{font-size:12px}
+.nameLabel{color:#ececec;font-size:14px;margin-bottom:5px}
+.LaSignupFormDesc{color:#999;font-size:11px;margin-top:15px;text-align:center}
+.LaSignupFormDesc a{color:#ccc;font-size:11px}
+.LaSignupFormDesc a:hover{color:#ccc}
+.LaSignupFormDesc1{color:#999;font-size:11px;margin-top:15px;text-align:center; background: transparent url("../../images/note_bg.gif") no-repeat scroll 0 3px; padding-left: 1em;}
+
+.domainExample{color:#605F5F;font-size:10px}
+#createButtonmain{outline:none}
+.loading-bar{margin:20px auto 10px;width:300px;height:15px;border-bottom:1px solid #63774d;border-top:1px solid #444;background:#090f02;overflow:hidden;position:relative}
+.loading-info{margin:0 auto;text-align:center;padding:0 0 30px;color:#999}
+.percentage{font-weight:bold;color:#fff}
+.loader-label{color:#fff}
+.progress-bar{height:inherit;width:0%;border-radius:inherit;position:relative;overflow:hidden;background:#6ed100}
+.progress-stripes{width:inherit;height:inherit;font-size:100px;font-weight:bold;margin-top:-50px;letter-spacing:-14px;color:#62a714}
+#loader.mainBox p{max-width:100%}
+.g-FormField2 input{font-size:18px;color:#fff;display:block;height:40px;width:100%;line-height:40px;border:1px solid #898989;padding:0 40px 0 20px;background:rgb(153,153,153);background:rgba(153,153,153,0.3);box-sizing: border-box}
+.g-FormField2 input:focus{border:1px solid #e1e1e1;outline:none}
+.g-FormField2 input.ValueIn{color:#fff}
+.domain{position:absolute;left:20px}
+.domain label{height:41px;line-height:41px;color:#ccc;font-family:"Lucida Console",Monaco,monospace;font-size:18px}
+#domainFieldTextContainer input{color:#fff;font-family:"Lucida Console",Monaco,monospace}
+.g-FormField2-Message{display:inline-block;position:absolute;right:0;text-align:right;margin:-1px 0 0 0px;font-size:10px;padding:2px 10px 2px 10px;color:#fff;font-weight:bold;text-transform:uppercase}
+.g-FormField2.g-FormField2-Error input{border:1px solid #ff9c00;color:#fff}
+.g-FormField2.g-FormField2-Error input:focus{border:1px solid #ff8400}
+.g-FormField2.g-FormField2-Error .g-FormField2-Message{background:#ff9c00;white-space:nowrap}
+.g-FormField2.g-FormField2-Error .g-FormField2-Description{display:none}
+.g-FormField2.g-FormField2-Valid input,.g-FormField2.g-FormField2-Valid #domainFieldTextContainer input{color:#fff;border-color:#888}
+.g-FormField2.g-FormField2-Valid input:focus{border:1px solid #efefef}
+.g-FormField2.g-FormField2-Valid .g-FormField2-Message{white-space:nowrap;display:block;overflow:hidden;text-indent:9999px;position:absolute;top:5px;right:8px;background:transparent url('ok_icon.png') center top no-repeat;width:30px;height:30px}
+.g-FormField2.g-FormField2-Waiting input{border:1px solid #202020;color:#fff}
+.g-FormField2.g-FormField2-Waiting input:focus{border:1px solid #000000}
+.g-FormField2.g-FormField2-Waiting .g-FormField2-Message{background:#202020}
+.g-FormField2.g-FormField2-Waiting .g-FormField2-Description{display:none}
+/*p.secure{position:absolute;right:-15px;font-size:10px;display:inline-block;margin-top:-15px;padding:0 5px 0 20px;background:#666 url('lock.png') 5px center no-repeat;opacity:0.9;line-height:23px}*/
+@media all and (max-width:999px){#TopSectionWrapper #nlHeader{padding:2%}
+.homeSignupWrapper{padding:2%}
+.cBlock:after,.ccBlock:after{display:none}
+}
+@media all and (max-width:850px){.feature>div{width:100%;display:block;text-align:center}
+.feature>div:first-child{padding:0}
+.feature>div:last-child{padding:0}
+.fWrapper img{display:none}
+.tagCloud{display:none}
+.mainBox h1{padding:2% 4% 3%;font-size:36px;line-height:42px}
+.companies h3{font-size:46px}
+#TopSectionWrapper{display:block;height:auto;width:auto;min-height:0}
+#TopSectionWrapper>div{display:block}
+#nlTopColumn>div{display:block}
+.homeTable{display:block}
+.homeTable>div{display:block}
+.homeTable>div>div{display:block}
+.homeTable>div:last-child>div{height:auto}
+}
+@media all and (max-width:750px){.mainBox{width:100%}
+.mainBox h1{font-size:28px;line-height:34px;margin-bottom:0}
+p.secure{display:none}
+.g-FormField2{height:55px}
+div[id*="b_cac"]>div:nth-child(1){display:none}
+div[id*="b_cac"]>div:nth-child(2)>div{font-size:11px}
+.ImLeButtonMain span, .ImLeButtonMain 1span{text-shadow:0 0 2px #333;height:40px;line-height:35px;font-size:18px;margin-top:5px}
+#nlHeaderWrapper{height:auto}
+}
+@media all and (max-height:730px) and (min-width:750px){.mainBox h1{padding:2% 6% 3%;font-size:36px;line-height:42px}
+.homeSignupWrapper{padding-top:0}
+}
+@media all and (max-height:360px) and (min-width:480px){p.secure{display:none}
+.mainBox{width:95%;margin:0 auto}
+.mainBox h1{font-size:21px;line-height:26px;padding:2% 1%}
+.LaSignupForm{padding:2%}
+.nameField,.mailField,.domainField{width:32%;float:left;margin-right:2%}
+.domainField{margin-right:0}
+.g-FormField2 input{font-size:16px;padding:0 40px 0 10px}
+.g-FormField2.g-FormField2-Error .g-FormField2-Message{font-size:9px}
+}
+@media all and (max-height:320px) and (min-width:480px){p.secure{display:none}
+.mainBox{width:95%;margin:0 auto}
+.mainBox h1{font-size:21px;line-height:26px;padding:2% 1%}
+.LaSignupForm{padding:2%}
+.nameField,.mailField,.domainField{width:32%;float:left;margin-right:2%}
+.domainField{margin-right:0}
+.g-FormField2 input{font-size:16px;padding:0 40px 0 10px}
+.g-FormField2.g-FormField2-Error .g-FormField2-Message{font-size:9px}
+}
+.skipMain {font-size: 13px; text-align: center; display: block; margin-top: 1ex;}
+.skipMain a {background: rgb(255, 156, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); text-decoration: none; text-transform: uppercase; font-size: 10px; padding: 4px; font-weight: bold;}
+.rightPanelVideo {position: relative;width: 480px;height: auto;float: left;margin-left: 3em;}
+
+.widgetsContainer {display: block;position: relative;float: left;clear: both;margin: 0 0 2em 0;}
+.widgetBox {float: left;margin: 0px 0.5em 0.5em 0px;text-align: center;padding: 0 0.5em 0.5em;}
+.selected {background-color: rgb(242, 218, 177)}
+.widgetCodeInvisible {display: none}
+.widgetTitle {font-size: 14px; font-weight: bold; margin-bottom: 5px; text-align: left;}
+.widgetDisplay {border: 1px solid grey; width: 238px; height: 148px;}
+.widgetSetButton  {background: rgb(255, 156, 0) none repeat scroll 0% 0%; cursor: pointer; display: block;width: 97px;margin: 5px auto 0px;color: white;}
+
+.entry-edit .entry-edit-head h4 {line-height: 26px;font-size: 15px;}
+.entry-edit .entry-edit-head{ background: rgb(23, 0, 0) none repeat scroll 0% 0% !important; }
+.entry-edit fieldset {border-top: 1px solid #6ED100;}
+h3.head-promo-catalog {background-image: url("la_logo.svg");height: 52px;text-indent: 210px;line-height: 52px;}
+.content-header {border-width: 0}
+.form-list td.label {font-weight: bold;}
+.formFooter {display: block;clear: both;text-align: center;}
+.formFooter.SaveWidgetCode {display: none}
+.form-list td.value textarea {width: 450px;}
+.form-list td.label label{width: 240px;}
+.form-list p.note {color: grey;}
+.inUseLabel {width: 100px;display: block;height: 20px;margin: 3px auto 0px;background: transparent url("ok_icon.png") no-repeat scroll left -1px / 20px 20px;}
+.displayInAdminCheckbox {display: block; float: left; clear: both}
+
+#resetLink {text-align: right; font-style: italic; float: right; margin: 0}
+#resetLink:hover {cursor:pointer; color:#ea7601}

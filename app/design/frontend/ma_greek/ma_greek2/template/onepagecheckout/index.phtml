@@ -1,0 +1,276 @@
+<?php
+    $url_request = $this->getUrl('*/', array('_secure'=>(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']==='on')));
+    $http_mode	= (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']==='on');
+    if($http_mode)$url_request = str_replace('http:', 'https:', $url_request);  
+?>
+<input type="hidden" id="mst-address-request" value="<?php echo $url_request; ?>" />
+<?php
+    //Registration 
+    $registration = trim(Mage::getStoreConfig('onepagecheckout/registration/type'));
+?>
+<div class="wrapper">
+<?php echo $this->getChildHtml('index_other') ?>
+<?php if(Mage::getStoreConfig('onepagecheckout/layout_configuration/layout')){?>
+<div class="title-page">
+<h1><?php echo Mage::getStoreConfig('onepagecheckout/general/title'); ?></h1>
+<span><?php echo Mage::getStoreConfig('onepagecheckout/general/description'); ?></span>
+</div>
+    <div class="opc_wrapper">
+        <?php if($registration !=2 ){if (!Mage::getSingleton('customer/session')->isLoggedIn()){?><div class="opc-login-link" ><?php echo $this->__('Already registered?'); ?> <a href="javascript:void(0);" class="opc_login"><?php echo $this->__('Please login here'); ?></a></div><?php }}?>
+        <!-- start opc_top-->
+        <div class="opc_top">
+            <div class="load_forgot_pass loading_image" >
+                <img src="<?php echo $this->getSkinUrl('onepagecheckout/images/loading.gif') ?>" />
+            </div> 
+            <div class="reg_log">
+                <p class="close_login">
+                    <a href="javascript:void(0);">Close</a>
+                </p>
+                <div class="opc_reg">
+                    <?php echo $this->getChildHtml('login'); ?>
+                </div>
+                <div class="opc_log">
+                    <?php echo $this->getChildHtml('forgotpassword'); ?>
+                </div>
+            </div>
+        </div>
+        <!-- end opc_top-->
+        <!-- start opc_content 
+    	<div class="opc_content default">
+    	-->
+        <div class="opc_content default">
+            <form action="<?php echo $url_request.'save/saveOrder';?>" method="POST" id="onepagecheckout_orderform" autocomplete="on">
+                <!-- start opc-column-left -->
+                <div class="opc-column-left">
+                    <div class="opc_billing">
+                        <?php echo $this->getChildHtml('billing_address') ?>
+                    </div>
+                    <div class="opc_billing opc_ship_to_adress" style="display: none;">
+                        <?php echo $this->getChildHtml('shipping_address') ?>
+                    </div>
+                </div>
+                <!-- end opc-column-left -->
+                <!-- start opc-column-right -->
+                <div class="opc-column-right">
+                    <!-- start opc-column-right-top -->
+                    <div class="opc-column-right-top">
+                        <!-- start opc_shipping -->
+						<div class="opc_shipping">
+							<?php if(!Mage::getStoreConfig('onepagecheckout/general/hide_shipping_method')):?>
+								<?php echo $this->getChildHtml('shipping_method') ?>
+							<?php endif; ?>
+							<!-- start opc_delivery-->
+							<?php if(Mage::getStoreConfig('onepagecheckout/delivery/enabled')):?>
+								<div class="opc_delivery">
+									<?php echo $this->getChildHtml('delivery') ?>
+								</div>
+							<?php endif; ?>
+							<!-- end opc_delivery-->
+						</div>
+                        <!--end opc_shipping -->
+                        <!-- start opc_payment -->
+                        <div class="opc_payment">
+                            <?php echo $this->getChildHtml('payment') ?>
+                        </div>
+                        <!-- end opc_payment -->
+                    </div>
+                    <!-- end opc-column-right-top -->
+                    <!-- start opc_review -->
+                    <div class="opc_review"> 
+                         <?php echo $this->getChildHtml('review') ?>
+                    </div>
+                    <!-- end opc_review -->
+                    <!-- start opc_other -->
+                    <div class="opc_other">
+                        <!--other-->
+                    </div>
+                    <!-- end opc_other -->
+                </div>
+                <!-- end opc-column-right -->
+            </form>
+        </div>
+        <!--  end opc_content-->
+    </div>
+<?php 
+}else{
+?>
+<div class="title-page">
+<h1><?php echo Mage::getStoreConfig('onepagecheckout/general/title'); ?></h1>
+<span><?php echo Mage::getStoreConfig('onepagecheckout/general/description'); ?></span>
+</div>
+    <div class="opc_wrapper">
+         <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()){?><div class="opc-login-link" ><?php echo $this->__('Already registered?'); ?> <a href="javascript:void(0);" class="opc_login"><?php echo $this->__('Please login here'); ?></a></div><?php }?>
+        <!-- start opc_top-->
+        <div class="opc_top">
+            <div class="load_forgot_pass loading_image" >
+                <img src="<?php echo $this->getSkinUrl('onepagecheckout/images/loading.gif') ?>" />
+            </div> 
+            <div class="reg_log">
+                <p class="close_login">
+                    <a href="javascript:void(0);">Close</a>
+                </p>
+                <div class="opc_reg">
+                    <?php echo $this->getChildHtml('login'); ?>
+                </div>
+                <div class="opc_log">
+                    <?php echo $this->getChildHtml('forgotpassword'); ?>
+                </div>
+            </div>
+        </div>
+        <!-- end opc_top-->
+        <!-- start opc_content 
+    	<div class="opc_content default">
+    	-->
+        <div class="opc_content three-column-layout">
+            <form action="<?php echo Mage::getUrl('onepagecheckout/save/saveOrder');?>" method="POST" id="onepagecheckout_orderform" autocomplete="on">
+                <!-- start opc-column-left -->
+                <div class="opc-column-left">
+                    <div class="opc_billing">
+                        <?php echo $this->getChildHtml('billing_address') ?>
+                    </div>
+                    <div class="opc_billing opc_ship_to_adress" style="display: none;">
+                        <?php echo $this->getChildHtml('shipping_address') ?>
+                    </div>
+                </div>
+    			<div class="opc-column-center">
+					<!-- start opc_shipping -->
+					<div class="opc_shipping">
+						<?php if(!Mage::getStoreConfig('onepagecheckout/general/hide_shipping_method')):?>
+							<?php echo $this->getChildHtml('shipping_method') ?>
+						<?php endif; ?>
+						<!-- start opc_delivery-->
+						<?php if(Mage::getStoreConfig('onepagecheckout/delivery/enabled')):?>
+							<div class="opc_delivery">
+								<?php echo $this->getChildHtml('delivery') ?>
+							</div>
+						<?php endif; ?>
+						<!-- end opc_delivery-->
+					</div>
+					<!--end opc_shipping -->
+					<!-- start opc_payment -->
+					<div class="opc_payment">
+						<?php echo $this->getChildHtml('payment') ?>
+					</div>
+					<!-- end opc_payment -->
+    			</div>
+                <!-- end opc-column-left -->
+                <!-- start opc-column-right -->
+                <div class="opc-column-right">
+                    <!-- start opc_review -->
+                    <div class="opc_review"> 
+                         <?php echo $this->getChildHtml('review') ?>
+                    </div>
+                    <!-- end opc_review -->
+                    <!-- start opc_other -->
+                    <div class="opc_other">
+                        <!--other-->
+                    </div>
+                    <!-- end opc_other -->
+                </div>
+                <!-- end opc-column-right -->
+            </form>
+        </div>
+        <!--  end opc_content-->
+    </div>
+<?php } ?>
+<script type="text/javascript">
+//< ![CDATA[
+    var billingForm = new VarienForm('onepagecheckout_orderform');
+//]]>
+</script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        <?php //if (Mage::getSingleton('customer/session')->isLoggedIn()==0): ?>
+        <?php //else: ?>
+            <?php if(trim(Mage::getStoreConfig('onepagecheckout/general/shipping_method'))):?> setTimeout(function(){update()}, 100);<?php endif; ?>
+        <?php //endif ?>
+        function update(){
+            url = $('#mst-address-request').val()+'load/update_shipping_review_index';
+            ajax_request = $.ajax({
+            	type: "POST",
+            	url: url,
+            	data: 'refesh=refesh',
+            	cache: false,
+                beforeSend:  function() {
+                    $('.load_review').show();
+                    $('#checkout-review-table-wrapper').css('opacity','0.5');
+                },
+                success: function(html){
+                    var _json=$.parseJSON(html); 
+                    $('.load_review ').hide();
+                    $('#checkout-review-table-wrapper').css('opacity','1');
+                    $('#checkout-review-load').html(_json.info);
+                },
+                complete: function(data){
+              
+                }
+            });
+        }
+        $('.opc_login').click(function(){
+            $('#control_overlay').show();
+            $('.opc_top').show();	
+            $('#onepagecheckout_loginbox').show();		
+        });
+        $('.cusomer_forgot_password_link').click(function(){
+            $('#control_overlay').show();
+            $('.opc_top').show();
+            $('#onepagecheckout_loginbox').hide();
+            $('#onepagecheckout_forgotbox').show();
+        });
+        $('.onepagecheckout_loginlink').click(function(){
+            $('#control_overlay').show();
+            $('.opc_top').show();
+            $('#onepagecheckout_loginbox').show();
+            $('#onepagecheckout_forgotbox').hide();
+        });
+        $('.close_login').click(function(){
+            $('#control_overlay').hide();
+            $('.opc_top').hide();
+            $('#onepagecheckout_loginbox').hide();
+            $('#onepagecheckout_forgotbox').hide();
+        });
+        $('#customer_account_create').click(function(){
+            var length = $("[id='customer_account_create']:checked").length; 
+            switch(length)
+            {
+                case 1:
+                    $('#register-customer-password').show();
+                break;
+                case 0:
+                    $('#register-customer-password').hide();
+                break
+            }
+        }); 
+        $('#billing_use_for_shipping_yes').click(function(){
+            var length = $("[id='billing_use_for_shipping_yes']:checked").length; 
+            switch(length)
+            {
+                case 1:
+                    $('.opc_ship_to_adress').hide();
+                break;
+                case 0:
+                    $('.opc_ship_to_adress').show();
+                break
+            }
+        }); 
+        $('.terms-link').click(function(e){
+            $('#control_overlay').show();
+			$('.term_conditions').show();
+            e.preventDefault();
+        });
+        $('.close a').click(function(e){
+            $('#control_overlay').hide();
+            $('.term_conditions').hide();
+            e.preventDefault();
+        });
+        $('#control_overlay').click(function(e){
+            $('#control_overlay').hide();
+            $('.term_conditions').hide();
+            $('.opc_top').hide();
+            $('#onepagecheckout_loginbox').hide();
+            $('#onepagecheckout_forgotbox').hide();
+            e.preventDefault();
+        });
+    });
+</script>
+</div>

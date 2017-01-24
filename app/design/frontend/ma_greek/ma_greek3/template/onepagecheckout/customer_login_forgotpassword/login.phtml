@@ -1,0 +1,43 @@
+<?php if (!Mage::getSingleton('customer/session')->isLoggedIn()){?>
+<div id="onepagecheckout_loginbox"  class='customer_login'>
+    <div class="page-title">
+        <span><?php echo $this->__('Login to your Account') ?></span>
+    </div>
+    <?php
+        $login_url	= $this->getUrl('*/load/login', array('_secure'=>(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']==='on')));
+        $http_mode	= (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']==='on');
+        if($http_mode)$login_url	= str_replace('http:', 'https:', $login_url);  
+    ?>
+    <form method="post" id="login-form" action="<?php echo $login_url ?>" autocomplete="on">
+        <div class="boxcontent form_fields">
+			<div class='full field'>
+				<label>
+					<em>*</em><?php echo $this->__('Email Address') ?>
+				</label>
+				
+				<div class="input-box">
+					<input type="text" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo $this->__('Email Address') ?>" />
+				</div>
+			</div>
+			<div class='full field'>
+				<label>
+					<em>*</em><?php echo $this->__('Password') ?>
+				</label>
+				
+				<div class="input-box">
+					<input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>" />
+				</div>
+			</div>
+        </div>
+        <div class="buttons-set">
+            <a href="javascript:void(0);" class="cusomer_forgot_password_link f-left"><?php echo $this->__('Forgot Your Password?') ?></a>
+            <button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send"><span><span><?php echo $this->__('Login') ?></span></span></button>
+        </div>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var loginForm = new VarienForm('login-form', true);
+    //]]>
+    </script>
+</div>
+<?php }?>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <improvedaddress module="improvedaddress">
+            <title>Custom Address</title>
+            <sort_order>60</sort_order>               
+            <children>
+                <region module="improvedaddress">
+                    <title>Manage Regions</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/improvedaddress_region</action>
+                </region>
+                <city module="improvedaddress">
+                    <title>Manage City</title>
+                    <sort_order>20</sort_order>
+                    <action>adminhtml/improvedaddress_city</action>
+                </city>
+            </children>
+        </improvedaddress>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <improvedaddress>
+                                        <title>Custom Address</title>
+                                        <sort_order>250</sort_order>
+                                    </improvedaddress>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <improvedaddress module="improvedaddress">
+                        <title>Custom Address</title>
+                        <sort_order>60</sort_order>               
+                        <children>
+                            <region module="improvedaddress">
+                                <title>Manage Regions</title>
+                                <sort_order>10</sort_order>
+                                <action>adminhtml/improvedaddress_region</action>
+                            </region>
+                            <city module="improvedaddress">
+                                <title>Manage City</title>
+                                <sort_order>20</sort_order>
+                                <action>adminhtml/improvedaddress_city</action>
+                            </city>
+                        </children>
+                    </improvedaddress>
+                </children>				
+            </admin>
+        </resources>
+    </acl>
+</config>

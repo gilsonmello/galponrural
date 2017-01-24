@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Justworks_Bancard>
+            <active>true</active>
+            <codePool>local</codePool>
+            
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </Justworks_Bancard>
+    </modules>
+</config>

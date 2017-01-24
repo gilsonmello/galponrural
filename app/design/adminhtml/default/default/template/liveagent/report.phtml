@@ -1,0 +1,20 @@
+<div id="LAReport">
+	<h3 class="LAlogo">Overview:</h3>
+
+	<?php
+	$settings = Mage::getModel('liveagent/settings');
+	$overviews = $settings->getChatsOverview();
+	if ($overviews['error'] != '') {
+		$body = $overviews['error']; 
+	}
+	else {
+		$body = '<div class="reportBoxMain"><div class="reportBox Title">Visitors</div><div class="reportBox Value">'.$overviews['visitors'].'</div></div>';
+		$body .= '<div class="reportBoxMain"><div class="reportBox Title">Chats</div><div class="reportBox Value">'.$overviews['chats'].'</div></div>';
+		$body .= '<div class="reportBoxMain"><div class="reportBox Title">Queue</div><div class="reportBox Value">'.$overviews['queue'].'</div></div>';
+		$body .= '<div class="reportBoxMain"><div class="reportBox Title">Agents</div><div class="reportBox Value">'.$overviews['agents'].'</div></div>';
+	}
+	?>
+	<div id="reportBoxContainer">
+		<?php echo $body; ?>
+	</div>
+</div>

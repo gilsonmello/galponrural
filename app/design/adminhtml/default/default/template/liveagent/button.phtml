@@ -1,0 +1,8 @@
+<?php
+// display in admin?
+$display = Mage::getModel('liveagent/settings')->load('la-display-in-admin', 'name');
+if ($display->getValue() == '') {
+	return;
+}
+$settings = Mage::helper('liveagent/settings');
+echo $settings->getSavedButtonCode();

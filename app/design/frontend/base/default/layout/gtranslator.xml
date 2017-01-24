@@ -1,0 +1,14 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">
+    <default>
+    	<reference name="head">   
+          <block type="core/template" template="gtranslator/index.phtml"/>
+          <action method="addItem"><type>skin_css</type><name>css/gtrasnlator.css</name></action>
+        </reference>   
+        <reference name="store_language">
+            <action method="setTemplate">
+                <template>gtranslator/language.phtml</template>
+            </action>
+        </reference>
+    </default>
+</layout>

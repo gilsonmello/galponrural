@@ -1,0 +1,36 @@
+<?php 
+$allActivePaymentMethods = Mage::getModel('payment/config')->getActiveMethods();
+$mage_ver = Mage::helper('onepagecheckout')->getMagentoVersion();
+$mage_ver	= str_replace('.','',$mage_ver);
+$mage_ver	= intval($mage_ver);
+if($mage_ver >= 1620):
+?>
+<script type="text/javascript">
+//<![CDATA[
+    var quoteBaseGrandTotal = <?php echo (float)$this->getQuoteBaseGrandTotal(); ?>;
+    var checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
+    var lastPrice;
+//]]>
+</script>
+<?php endif;?>                    
+<div id="payment-method" class="onepagecheckout_block">
+    <div class="opc_payment_title step-title">
+        <h1><?php echo $this->__('Payment Method') ?></h1>
+    </div>
+    <div class="opc_payment_content">
+        <div class="load_payment loading_image" >
+            <img src="<?php echo $this->getSkinUrl('onepagecheckout/images/loading.gif') ?>" />
+        </div> 
+        <div class="opc_tool-tip_methods">
+            <div class="tool-tip" id="payment-tool-tip" style="display:none;">
+                <div class="btn-close"><a href="#" id="payment-tool-tip-close" title="<?php echo $this->__('Close') ?>"><?php echo $this->__('Close') ?></a></div>
+                <div class="tool-tip-content"><img src="<?php echo $this->getSkinUrl('images/cvv.gif') ?>" alt="<?php echo $this->__('Card Verification Number Visual Reference') ?>" title="<?php echo $this->__('Card Verification Number Visual Reference') ?>" /></div>
+            </div>
+            <div id="checkout-payment-method-load">
+                <?php echo $this->getChildHtml('payment_method') ?>
+            </div>     
+		</div>		
+    </div>
+	
+</div>
+<div class="clear" ></div>

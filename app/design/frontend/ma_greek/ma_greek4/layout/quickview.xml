@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addJs"><script>magentothem/ma.jq.slide.js</script></action>
+            <action method="addJs"><script>magentothem/ma.bxslider.min.js</script></action>
+            <action method="addCss" ifconfig="quickview/quickview_config/enabled"><name>magentothem/css/ma_quickview.css</name></action>
+            <action method="addJs" ifconfig="quickview/quickview_config/enabled"><script>magentothem/quickview/ma_quickview.js</script></action>
+        </reference>
+
+        <reference name="before_body_end">
+            <block type="magentothem_quickview/quickview" name="magentothem.quickview" template="magentothem/quickview/quickview.phtml" />
+        </reference>
+    </default>
+
+    <magentothem_quickview_index_view>
+        <update handle="catalog_product_view"/>
+
+        <reference name="root">
+            <action method="setTemplate"><template>magentothem/quickview/product.phtml</template></action>
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+
+		<reference name="product.info">
+			<remove name="product.info.upsell" />
+			<remove name="product.info.tabs" />
+		</reference>
+		
+        <remove name="header" />
+        <remove name="footer" />
+        <remove name="after_body_start" />
+        <remove name="before_body_end" />
+        <remove name="global_messages" />
+        <remove name="messages" />
+        <remove name="breadcrumbs" />
+    </magentothem_quickview_index_view>
+
+    <QUICK_PRODUCT_TYPE_simple>
+        <update handle="PRODUCT_TYPE_simple" />
+    </QUICK_PRODUCT_TYPE_simple>
+
+    <QUICK_PRODUCT_TYPE_configurable>
+        <update handle="QUICK_PRODUCT_TYPE_simple" />
+        <update handle="PRODUCT_TYPE_configurable" />
+    </QUICK_PRODUCT_TYPE_configurable>
+
+    <QUICK_PRODUCT_TYPE_grouped>
+        <update handle="QUICK_PRODUCT_TYPE_simple" />
+        <update handle="PRODUCT_TYPE_grouped" />
+    </QUICK_PRODUCT_TYPE_grouped>
+
+    <QUICK_PRODUCT_TYPE_virtual>
+        <update handle="QUICK_PRODUCT_TYPE_simple" />
+        <update handle="PRODUCT_TYPE_virtual" />
+    </QUICK_PRODUCT_TYPE_virtual>
+
+    <QUICK_PRODUCT_TYPE_bundle>
+        <update handle="QUICK_PRODUCT_TYPE_simple" />
+        <update handle="PRODUCT_TYPE_bundle" />
+    </QUICK_PRODUCT_TYPE_bundle>
+
+    <QUICK_PRODUCT_TYPE_downloadable>
+        <update handle="QUICK_PRODUCT_TYPE_simple" />
+        <update handle="PRODUCT_TYPE_downloadable" />
+    </QUICK_PRODUCT_TYPE_downloadable>
+
+</layout>

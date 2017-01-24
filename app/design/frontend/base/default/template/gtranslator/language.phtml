@@ -1,0 +1,19 @@
+<?php
+/**
+ * Magento
+ * NOTICE OF LICENSE 
+ * @package    ZealousWeb
+ * @author     ZealousWeb
+ * @copyright  Copyright (c) 2014 Zealousweb Technology. (http://www.zealousweb.com)
+ */
+ ?>
+<?php $cekAktif = Mage::getStoreConfig('gtranslateconfiguration/gtranslate/enable');		
+	if($cekAktif == 1):
+?>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() 
+{
+  new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: '<?php echo Mage::getStoreConfig('gtranslateconfiguration/gtranslate/selectlanguage'); ?>', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false, multilanguagePage: true}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<?php endif;?>

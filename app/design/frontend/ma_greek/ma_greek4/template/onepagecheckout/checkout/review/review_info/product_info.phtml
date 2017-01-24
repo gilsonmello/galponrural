@@ -1,0 +1,204 @@
+<div class="load_review loading_image" >
+    <img src="<?php echo $this->getSkinUrl('onepagecheckout/images/loading.gif') ?>" />
+</div> 
+<?php 
+    echo $this->getChildHtml('items_before'); 
+    $ennable_delete_product_cart = trim(Mage::getStoreConfig('onepagecheckout/review/product_cart_remove'));
+    $ennable_thumbnail_product = trim(Mage::getStoreConfig('onepagecheckout/review/thumbnail_product'));
+    $ennable_change_product_cart = trim(Mage::getStoreConfig('onepagecheckout/review/product_qty_change'));
+?>
+<div id="checkout-review-table-wrapper">
+    <table class="order-products-table" id="checkout-review-table">
+        <colgroup>
+            <col width="1"/>
+            <col width="1"/>
+            <col width="1"/>
+            <col width="1"/>
+            <col width="1"/>
+            <col width="1"/>
+            <col width="1"/>
+        </colgroup> 
+        <thead>
+            <tr>
+                <?php if($ennable_delete_product_cart){ ?>
+                <th class="review-remove"  rowspan="1"></th>
+                <?php } ?>
+				<?php if($ennable_thumbnail_product){ ?>				
+                <th rowspan="1" class="review-thumnail" ></th>
+				<?php } ?>
+                <th class="a-center" width="40%"><span><?php echo $this->__('Product Name') ?></span></th>
+                <th class="a-center review-price" ><span><?php echo $this->__('Price');?></span></th>
+                <th class="a-center" width="30%"><span><?php echo $this->__('Qty') ?></span></th>
+                <th class="a-center"><span><?php echo $this->__('Subtotal') ?></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            //$quote = Mage::getSingleton('checkout/session')->getQuote();
+            //$items = $quote->getAllVisibleItems();
+            foreach($this->getItems() as $item) {
+                //get deltail product simple
+                $productId = $item->getProduct()->getId();
+                $id_product = $item->getId();
+				$_newProduct = Mage::getModel('catalog/product')->load($productId);
+                if ($option = $item->getOptionByCode('simple_product')) {
+                    //get deltail product config
+                    $data_config = $option->getData();
+                    $productId = $data_config['product_id'];
+                    $id_product = $data_config['item_id'];
+                }
+                $url = Mage::getModel('catalog/product')->load($item->getProduct()->getId())->getProductUrl();
+                ?>
+                    <tr id_product="<?php echo $id_product;?>" >
+                        <?php if($ennable_delete_product_cart){ ?>
+                            <td class="review-remove" ><img class="delete_product_cart" id_product="<?php echo $id_product;?>" src="<?php echo $this->getSkinUrl('onepagecheckout/images/btn_trash.gif') ?>"/></td>
+                        <?php } ?>
+						<?php if($ennable_thumbnail_product){ ?>
+                        <td class="review-thumnail" ><img src='<?php echo Mage::helper('catalog/image')->init($_newProduct, 'small_image')->resize(50,50);?>' width="35px"/></td>
+						<?php } ?>
+                        <td><?php echo $this->getItemHtml($item); ?></td>
+                        <td class="price<?php echo $id_product;?> review-price" price="<?php echo $item->getPrice();?>"><?php echo Mage::helper('core')->currency($item->getPrice())?></td>
+                        <?php 
+                        if($ennable_change_product_cart){
+                        ?>
+                            <td class="review-qty" style="text-align: center;">
+                                <strong class="glc-qtybtn glc-minus" id_product="<?php echo $id_product;?>" product_id=<?php echo $productId;?> action='1'>
+                                    <span>
+                                        <span>-</span>
+                                    </span>
+                                </strong>
+                                <input size="1" type="text" class="input-text gcheckout-qty<?php echo $id_product;?> qty_product_cart" qty="<?php echo $item->getQty()?>" value="<?php echo $item->getQty()?>" id_product="<?php echo $id_product;?>" product_id=<?php echo $productId;?> />
+                                <strong class="glc-qtybtn glc-plus" id_product="<?php echo $id_product;?>" product_id=<?php echo $productId;?> action='2'>
+                                    <span>
+                                        <span>+</span>
+                                    </span>
+                                </strong>
+                            </td>
+                        <?php 
+                        }else{
+                        ?>
+                            <td style="text-align: center;">
+                                <span class="gcheckout-qty<?php echo $id_product;?>" qty="<?php echo $item->getQty()?>"><?php echo $item->getQty()?></span>
+                            </td>
+                        <?php    
+                        }
+                        ?>
+                        <td class="subtotal<?php echo $id_product; ?>"><?php echo Mage::helper('core')->currency(($item->getPrice())*($item->getQty()))?></td>
+                    </tr>  
+                <?php      
+            }
+            ?>
+        </tbody>
+    </table>
+    <?php 
+        echo $this->getChildHtml('totals');
+    ?>
+    <div style="clear: both;"></div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        //delete qty product
+        $('.delete_product_cart').click(function(){
+            id_product = $(this).attr('id_product');
+            product_id = $(this).attr('product_id');
+            var data = 'id_product='+id_product+'&product_id='+product_id;
+            url = $('#mst-address-request').val()+'load/deleteproductcart';
+            if(typeof ajax_request !== 'undefined')
+            ajax_request.abort();
+            ajax_request = $.ajax({
+            	type: "POST",
+            	url: url,
+            	data: data,
+            	cache: false,
+                beforeSend:  function() {
+                    $('.loading_image').show();
+                    $('.opc_available_additional').css('opacity','0.5');
+                    $('.opc_tool-tip_methods').css('opacity','0.5');
+                    $('#checkout-review-table-wrapper').css('opacity','0.5');
+                },
+                success: function(html){
+                    var _json=$.parseJSON(html); 
+                    $('.loading_image').hide();
+                    $('.opc_available_additional').css('opacity','1');
+                    $('.opc_tool-tip_methods').css('opacity','1');
+                    $('#checkout-review-table-wrapper').css('opacity','1');
+                    $('#checkout-review-load').html(_json.info);
+                    $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                    if(_json.validate_cart == 0){
+                        location.reload();
+                    }
+                }
+            });
+        });
+        //update qty product
+        $('.glc-qtybtn').click(function(){
+            id_product = $(this).attr('id_product');
+            product_id = $(this).attr('product_id');
+            action =  $(this).attr('action');
+            qty = parseInt($('.gcheckout-qty'+id_product).val())
+            var data = 'id_product='+id_product+'&product_id='+product_id+'&action='+action+'&qty='+qty;
+            url = $('#mst-address-request').val()+'load/updateqtyproductcart';
+            if(typeof ajax_request !== 'undefined')
+            ajax_request.abort();
+            ajax_request = $.ajax({
+            	type: "POST",
+            	url: url,
+            	data: data,
+            	cache: false,
+                beforeSend:  function() {
+                    $('.loading_image').show();
+                    $('.opc_available_additional').css('opacity','0.5');
+                    $('.opc_tool-tip_methods').css('opacity','0.5');
+                    $('#checkout-review-table-wrapper').css('opacity','0.5');
+                },
+                success: function(html){
+                    var _json=$.parseJSON(html); 
+                    $('.loading_image').hide();
+                    $('.opc_available_additional').css('opacity','1');
+                    $('.opc_tool-tip_methods').css('opacity','1');
+                    $('#checkout-review-table-wrapper').css('opacity','1');
+                    $('#checkout-review-load').html(_json.info);
+                    $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                    if(_json.validate_cart == 0){
+                        location.reload();
+                    }
+                    if(_json.message){alert(_json.message);}
+                }
+            });
+        });
+        $('.qty_product_cart').change(function(){
+            id_product = $(this).attr('id_product');
+            product_id = $(this).attr('product_id');            
+            qty = parseInt($(this).val());
+            var data = 'id_product='+id_product+'&product_id='+product_id+'&action=3&qty='+qty;
+            url = $('#mst-address-request').val()+'load/updateqtyproductcart';
+            if(typeof ajax_request !== 'undefined')
+            ajax_request.abort();
+            ajax_request = $.ajax({
+            	type: "POST",
+            	url: url,
+            	data: data,
+            	cache: false,
+                beforeSend:  function() {
+                    $('.loading_image').show();
+                    $('.opc_available_additional').css('opacity','0.5');
+                    $('.opc_tool-tip_methods').css('opacity','0.5');
+                    $('#checkout-review-table-wrapper').css('opacity','0.5');
+                },
+                success: function(html){
+                    var _json=$.parseJSON(html); 
+                    $('.loading_image').hide();
+                    $('.opc_available_additional').css('opacity','1');
+                    $('.opc_tool-tip_methods').css('opacity','1');
+                    $('#checkout-review-table-wrapper').css('opacity','1');
+                    $('#checkout-review-load').html(_json.info);
+                    $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                    if(_json.validate_cart == 0){
+                        location.reload();
+                    }
+                    if(_json.message){alert(_json.message);}
+                }
+            });
+        });
+    });
+</script>

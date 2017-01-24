@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<layout version="0.2.0">
+     <adminhtml_liveagent_index>
+        <reference name="head">
+      			<action method="addItem"><type>skin_js</type><name>liveagent/js/jquery-1.11.3.min.js</name></action>
+      			<action method="addItem"><type>skin_js</type><name>liveagent/js/jquery-no-conflict.js</name></action>
+      			<!--action method="addItem"><type>skin_js</type><name>liveagent/js/jquery.validate.min.js</name></action -->
+      			<action method="addItem"><type>skin_js</type><name>liveagent/js/jquery.alphanum.js</name></action>
+      			<action method="addItem"><type>skin_js</type><name>liveagent/js/lasignup.js</name></action>
+      			<action method="addItem"><type>skin_js</type><name>liveagent/js/crm_lasignup.js</name></action>
+
+      			<action method="addItem"><type>skin_css</type><name>liveagent/css/animation.css</name></action>
+      			<action method="addItem"><type>skin_css</type><name>liveagent/css/responsive.css</name></action>
+      			<action method="addItem"><type>skin_css</type><name>liveagent/css/style.css</name></action>
+        </reference>
+
+		    <reference name="content">
+            <block type="core/template" name="liveagent_button" template="liveagent/button.phtml" />
+        </reference>
+    </adminhtml_liveagent_index>
+
+  	<adminhtml_dashboard_index>
+  		  <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>liveagent/css/report.css</name></action>
+        </reference>
+
+  		  <reference name="content">
+          	<block type="adminhtml/dashboard_totals" name="liveagent_report" template="liveagent/report.phtml" />
+      	</reference>
+  	</adminhtml_dashboard_index>
+
+    <adminhtml_system_config_edit>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>liveagent/css/la-config.css</stylesheet>
+            </action>
+        </reference>
+    </adminhtml_system_config_edit>
+</layout>

@@ -1,0 +1,100 @@
+<?php if (!$methods = $this->getMethods()) : ?>
+<p><?php echo $this->helper('checkout')->__('Sorry, no quotes are available for this order at this time.') ?></p>
+<?php else : ?>
+<dl class="sp-methods">
+<?php foreach ($this->getMethods() as $_method): $_code = $_method->getCode() ?>
+    <dt>
+    <?php if( sizeof($this->getMethods()) > 1 ): ?>
+        <input class="payment_input radio validate-one-required-by-name" id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio" name="payment[method]" title="<?php echo $this->htmlEscape($_method->getTitle()) ?>" <?php if($this->getSelectedMethodCode()==$_code): ?> checked="checked"<?php endif; ?> />
+    <?php else: ?>
+        <span class="no-display"><input id="p_method_<?php echo $_code ?>" class="radio validate-one-required-by-name" value="<?php echo $_code ?>" type="radio" name="payment[method]" checked="checked" /></span>
+    <?php endif; ?>
+        <label for="p_method_<?php echo $_code ?>"><?php echo $this->htmlEscape($_method->getTitle()) ?> <?php echo $this->getMethodLabelAfterHtml($_method) ?></label>
+    </dt>
+    <?php if ($html = $this->getPaymentMethodFormHtml($_method)): ?>
+    <dd>
+        <?php echo $html; ?>
+    </dd>
+    <?php endif; ?>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var length = $("[id='p_method_<?php echo $_code ?>']:checked").length; 
+        switch(length)
+        {
+            case 1:
+                $('#payment_form_<?php echo $_code ?>').show();
+            break;
+            case 0:
+                $('#payment_form_<?php echo $_code ?>').hide();
+            break
+        }
+    });
+    </script>
+<?php endforeach; ?>
+</dl>
+<?php endif; ?>
+<ul class="messages error_method" style="display: none;">
+    <li class="error-msg">
+        <ul>
+            <li>Please specify payment method.</li>
+        </ul>
+    </li>
+</ul>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.payment_input').click(function(){
+            <?php foreach ($this->getMethods() as $_method): $_code = $_method->getCode() ?>
+                var length = $("[id='p_method_<?php echo $_code ?>']:checked").length; 
+                switch(length)
+                {
+                    case 1:
+                        $('#payment_form_<?php echo $_code ?>').show();
+                    break;
+                    case 0:
+                        $('#payment_form_<?php echo $_code ?>').hide();
+                    break
+                }
+            <?php endforeach; ?>
+            payment_method = $("input[name='payment[method]']:checked").val();
+            shipping_method = $("input[name='shipping_method']:checked").val();
+            data = 'payment_method='+payment_method+'&shipping_method='+shipping_method;
+            url = $('#mst-address-request').val()+'load/update_shipping_payment';
+            if(typeof ajax_request !== 'undefined')
+            ajax_request.abort();
+            ajax_request = $.ajax({
+            	type: "POST",
+            	url: url,
+            	data: data,
+            	cache: false,
+                beforeSend:  function() {
+                    $('.load_review').show();
+                    $('#checkout-review-table-wrapper').css('opacity','0.5');
+                },
+                success: function(html){
+                    var _json=$.parseJSON(html); 
+                    $('.loading_image').hide();
+                    $('.opc_available_additional').css('opacity','1');
+                    $('.opc_tool-tip_methods').css('opacity','1');
+                    $('#checkout-review-table-wrapper').css('opacity','1');
+                    $('#checkout-review-table-wrapper #shopping-cart-totals-table').remove();
+                    $('#checkout-review-load').html(_json.info);
+                    $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                    $('#checkout-payment-method-load').html(_json.payment_method);
+                    if(_json.validate_cart == 0){
+                        location.reload();
+                    }
+                }
+            });
+        });
+        $('.cvv-what-is-this').click(function(e){
+            $('#payment-tool-tip').toggle();
+            e.preventDefault();
+        });
+        $('#payment-tool-tip-close').click(function(e){
+            $('#payment-tool-tip').toggle();
+            e.preventDefault();
+        });
+        
+    });
+</script>
+<div class="clear" > </div>

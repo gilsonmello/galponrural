@@ -1,0 +1,34 @@
+<div class="agreements">
+    <?php 
+        $enable = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/enabled'));
+        $type = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/type'));        
+        $title = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/title'));
+        $url = trim(Mage::getStoreConfig('onepagecheckout/terms_conditions/url'));    
+    ?>
+    <?php 
+    if($enable){
+    ?>
+        <input id="accept_terms" class="checkbox required-entry" type="checkbox" name="accept_terms" value="1"/>
+        <?php
+            switch($type){ 
+            case 1 :
+        ?>
+            <label for="accept_terms">
+                <?php echo $this->__('I accept the'); ?>
+                <a class="terms-link"  rel="<?php echo $title; ?>" href="#"><?php echo $title; ?></a>
+            </label>
+        <?php 
+            break;
+            case 2:
+        ?>   
+            <label for="accept_terms">
+                <?php echo $this->__('I accept the'); ?>
+                <a  rel="<?php echo $title; ?>" href="<?php echo Mage::getBaseUrl().$url; ?>" target="_bank"><?php echo $title; ?></a>
+            </label> 
+        <?php    
+            break;
+            }
+    }
+    ?>            
+</div>
+

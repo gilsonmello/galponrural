@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<layout>
+    <default>
+        <reference name="head">
+            <block type="purechat/jsheader" name="purechat_js" template="purechat/js.phtml" />
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>cdr/purechat/css/purechat.css</name>
+                <params/>
+            </action>
+        </reference>
+        <reference name="left">
+            <block type="purechat/button" name="purechat_left_btn" template="purechat/button.phtml" >
+                <action method="setButton">
+                    <path>left_button</path>
+                </action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="purechat/button" name="purechat_right_btn" template="purechat/button.phtml" >
+                <action method="setButton">
+                    <path>right_button</path>
+                </action>
+            </block>
+        </reference>
+    </default>
+</layout>

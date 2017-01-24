@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.2.0">
+    <default>
+    	<reference name="after_body_start">
+        	<block type="core/template" name="liveagent_button" template="liveagent/button.phtml" />
+    	</reference>
+	</default>
+</layout>

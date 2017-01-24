@@ -1,0 +1,5 @@
+<?php
+class Magebuzz_Improvedaddress_Model_Resource_Region_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+{
+
+}

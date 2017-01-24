@@ -1,0 +1,80 @@
+<?php $this->getProducts() ?>
+<?php $_productCollection=$this->getProductCollection() ?>
+<div class="ma-brand-slider-contain">
+ <div class="container">
+	<div class="container-inner">
+    <?php
+        $slide = $this->getDataBrandslider();
+		$path = Mage::getBaseUrl('media');	
+        $qty_Item = $this->getConfig('qty');
+        /* Get max item & qty item */
+        if ($qty_Item > count($slide)) {
+            $qty_Item = count($slide);
+        }
+    ?>
+	<div class="brand-title ma-title"><h2><?php echo $this->__('OUR BRANDS') ?></h2></div>
+          	<ul class="bxslider">
+				<?php
+					$i = 1;
+					foreach($slide as $s)
+					{
+						if($i <= $qty_Item) {
+							//Get images slide show
+							$st1 = $s['image'];
+							$p1 = strpos($st1,'brandslider');
+							$st2 = substr($st1,$p1+11);
+							$p2 = strpos($st2,'"');
+							$imag = substr($st2,0,$p2);
+				?>
+                    <li class="item">						    														<div class="item-inner">																				    <?php if( $s['link'] ) { ?>
+							<a href="<?php echo $s['link']?>" title=""><img src="<?php echo $path.'magentothem/brandslider'.$imag;?>" alt="" /></a>												
+						<?php } else { ?>
+							<img src="<?php echo $path.'magentothem/brandslider'.$imag;?>" alt="" />
+						<?php } ?>																																	             
+                        <?php if( $this->getConfig('description')): ?>
+                            <div class="ma-des">
+                                <div class="ma-des-title"><h2><?php echo $s['title'] ?></h2></div>
+                                <div class="ma-des-content"><?php echo $s['description'] ?></div>
+                            </div>
+                        <?php endif; ?>
+						</div>
+                    </li>
+				<?php
+                    }//end if
+					$i++;
+                    } // end foreach
+				?>
+            </ul>
+            <script type="text/javascript">
+			       //<![CDATA[
+					$jq(document).ready(function(){
+					  $jq('.ma-brand-slider-contain .bxslider').bxSlider(
+						{
+						<?php if($this->getConfig('auto')) { ?>
+						  auto: true,
+						<?php } ?>
+						  speed: <?php echo $this->getConfig('speed') ?>,
+						  pause: <?php echo $this->getConfig('interval') ?>,			  
+						  minSlides: 1,
+						  maxSlides: <?php echo $this->getConfig('items_show') ?>,
+						  slideWidth: <?php echo $this->getConfig('item_width') ?>,
+						  slideMargin: 42,
+					     <?php if ($this->getConfig('nav_ctrl')) { ?>
+						  pager: true,
+						<?php } else { ?> 
+						  pager:false, 
+						<?php } ?>
+						<?php if ($this->getConfig('next_back')) { ?>
+							controls: true,
+						<?php } else { ?>
+							controls:false,
+						<?php } ?>
+						moveSlides:2,
+						}
+					  );
+					});
+				//]]>
+				</script>
+	</div>	
+	</div>	
+</div> 

@@ -1,0 +1,68 @@
+
+@media all and (max-width:830px) {
+	.mainBox {width:56%;}
+	.mainBox h1 {font-size:38px; line-height:42px;}
+}
+
+@media all and (max-width:730px) {
+	.mainBox h1 {font-size:36px; line-height:40px;}
+}
+
+@media all and (max-width:550px) {
+	.mainBox h1 {font-size:33px; line-height:36px;}
+	.mainBox {width:95%; margin:0 auto;}
+	.mainTableWrapper > div:last-child {display:none;}
+}
+@media all and (max-width:430px) {
+	.mainBox h1 {font-size:26px; line-height:28px;}
+}
+@media all and (max-width:360px) {
+	.mainBox h1 {font-size:24px; line-height:26px; padding:2%;}
+}
+
+@media all and (max-height:700px) {
+	.mainBox h1 {font-size:30px; line-height:33px;}
+}
+
+@media all and (max-height:590px) {
+	.mainBox h1 {font-size:28px; line-height:31px;}
+}
+@media all and (max-height:550px) {
+	.mainBox h1 {font-size:24px; line-height:26px; padding:4% 2%;}
+}
+
+@media all and (max-height:600px) and (max-width:400px) {
+	.CThinButton.CTryItFree.sButton {line-height:28px; font-size:16px;}
+	.LaSignupForm {padding:0 4%;}
+	p.secure {display:none;}
+	.FField {height:60px;}
+	.ImLeButtonMain span {font-size:20px; line-height:42px; height:42px; margin-bottom:10px;}
+}
+
+@media all and (max-height:360px) and (min-width:480px) {
+	p.secure {display:none;}
+	.mainBox {width:95%; margin:0 auto;}
+	.mainBox h1 {font-size:21px; line-height:26px; padding:2% 1%;}
+	.LaSignupForm {padding:2%;}
+	.nameField, .mailField, .domainField {width:32%; float:left; margin-right:2%;}
+	.domainField {margin-right:0;}
+	.FField input {font-size:16px; padding:0 40px 0 10px;}
+	.FField.FField-Error .FField-Message {font-size:9px;}
+	.ImLeButtonMain span {height:40px; line-height:40px; font-size:18px;}
+	.mainTableWrapper > div:last-child {display:none;}
+}
+@media all and (max-height:320px) and (min-width:480px) {
+	p.secure {display:none;}
+	.mainBox {width:95%; margin:0 auto;}
+	.mainBox h1 {font-size:21px; line-height:26px; padding:2% 1%;}
+	.LaSignupForm {padding:2%;}
+	.nameField, .mailField, .domainField {width:32%; float:left; margin-right:2%;}
+	.domainField {margin-right:0;}
+	.FField input {font-size:16px; padding:0 40px 0 10px;}
+	.FField.FField-Error .FField-Message {font-size:9px;}
+	.ImLeButtonMain span {height:40px; line-height:40px; font-size:18px;}
+	.mainTableWrapper > div:last-child {display:none;}
+}
+@media all and (min-height:480px) and (max-width:381px) {
+	.LaSignupFormDesc {margin-top:5px;}
+}

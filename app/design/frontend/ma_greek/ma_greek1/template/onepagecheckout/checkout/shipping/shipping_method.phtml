@@ -1,0 +1,21 @@
+<?php if ($this->getQuote()->isVirtual()) : return; endif; ?>
+<div id="shipping-method" class="onepagecheckout_block">
+    <div class="opc_shipping_title step-title">
+        <h1><?php echo $this->__('Shipping Method') ?></h1>
+    </div>
+    <div class="opc_shipping_method_content">
+        <div class="load_shipping loading_image" >
+            <img src="<?php echo $this->getSkinUrl('onepagecheckout/images/loading.gif') ?>" />
+        </div>   
+        <div class="opc_available_additional">   
+            <div id="checkout-shipping-method-load">
+                <?php echo $this->getChildHtml('available') ?>
+            </div>
+            <div id="onepage-checkout-shipping-method-additional-load">
+                <?php echo $this->getChildHtml('additional') ?>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div style="clear: both;"></div>
+</div>

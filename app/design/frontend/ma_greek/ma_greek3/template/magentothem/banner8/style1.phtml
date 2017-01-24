@@ -1,0 +1,89 @@
+<?php 
+/******************************************************
+ * Website: http://www.plazathemes.com
+*******************************************************/
+?> 
+<?php if($this->getConfig('enabled')){ ?>	  <!-- start enable -->
+	<?php $cur_store = Mage::app()->getStore()->getId() ?>
+	<div class="ma-banner8-container">
+	<div class="flexslider">
+		<div class="ma-loading"></div>
+		<ul class="slides">
+			
+				<?php
+					// Get data banner
+					$slide = $this->getDataBanner8();
+					$path = Mage::getBaseUrl('media');					
+					$qty_Item = $this->getConfig('qty_item');
+					/* Get max item & qty item */
+					if ($qty_Item > count($slide)) {
+						$qty_Item = count($slide);
+					}
+				?>
+				<?php
+					$i = 1;
+					foreach($slide as $s)
+					{
+						
+						if($i <= $qty_Item) {
+							//Get images slide show
+							$st1 = $s['image'];
+							$p1 = strpos($st1,'banner8');
+							$st2 = substr($st1,$p1+7);
+							$p2 = strpos($st2,'"');
+							$imag = substr($st2,0,$p2);
+					?>
+						<li>
+							<?php if( $s['link'] ): ?>
+								<a href="<?php echo $s['link']?>" title="<?php echo $this->__('Read more') ?>">
+							<?php endif; ?>
+								<img src="<?php echo $path.'magentothem/banner8'.$imag;?>" alt="" />
+							<?php if( $s['link'] ): ?>
+								</a>
+							<?php endif; ?>
+							<?php if ($this->getConfig('description')){ ?>
+								<div class="banner8-caption">
+									<div class="banner8-title">
+										<h3><?php echo $this->__($s['title']) ?></h3>
+									</div>
+									<div class="banner8-des">
+										<?php echo $this->__($s['description']) ?>
+									</div>
+								</div>
+							<?php } ?>
+						</li>
+					<?php $i++; ?>
+				<?php
+                        }//end if
+                    } // end foreach
+				?>
+		</ul>
+		<script type="text/javascript">
+			$jq(window).load(function(){
+			  $jq('.ma-banner8-container .flexslider').flexslider({
+				slideshow: true,
+				animation: "<?php echo $this->getConfig('animation') ?>",
+				slideshowSpeed: <?php echo $this->getConfig('speed') ?>,
+				animationSpeed: <?php echo $this->getConfig('interval') ?>,
+				<?php if (!$this->getConfig('nav_ctrl')) { ?>
+				controlNav: false,
+				<?php } ?>
+				<?php if (!$this->getConfig('next_back')) { ?>
+				directionNav: false,
+				<?php } ?>
+				start: function(slider){
+					$jq('.ma-loading').css("display","none");
+				},
+				before: function(){ 
+					$jq('.banner8-title, .banner8-des').css("left","-550px");
+					$jq('.banner8-readmore').css("left","-1500px"); 
+				}, 
+				after: function(){ 
+					$jq('.banner8-title, .banner8-des, .banner8-readmore').css("left","100px") 
+				}
+			  });
+			});
+		</script>
+	</div>
+	</div>
+<?php } ?> <!-- end enable -->

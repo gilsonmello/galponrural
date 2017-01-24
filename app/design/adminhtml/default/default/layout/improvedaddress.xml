@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<adminhtml_improvedaddress_region_index>
+		<reference name="content">
+			<block type="improvedaddress/adminhtml_region" name="improvedaddress_region" />
+		</reference>
+	</adminhtml_improvedaddress_region_index>
+	
+	<adminhtml_improvedaddress_city_index>
+		<reference name="content">
+			<block type="improvedaddress/adminhtml_city" name="improvedaddress_city" />
+		</reference>
+	</adminhtml_improvedaddress_city_index>
+	
+	<adminhtml_improvedaddress_city_edit>
+		<reference name="head">
+			<action method="addJs"><file>magebuzz/improvedaddress.js</file></action>
+		</reference>
+	</adminhtml_improvedaddress_city_edit>
+	
+	<adminhtml_improvedaddress_subdistrict_index>
+		<reference name="content">
+			<block type="improvedaddress/adminhtml_subdistrict" name="improvedaddress_subdistrict" />
+		</reference>
+	</adminhtml_improvedaddress_subdistrict_index>
+	
+	<adminhtml_sales_order_create_index>
+		<reference name="head">			
+			<action method="addJs"><file>magebuzz/improvedaddress.js</file></action>
+		</reference>
+	</adminhtml_sales_order_create_index>
+</layout>

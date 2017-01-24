@@ -1,0 +1,11 @@
+<?php
+$order = new Mage_Sales_Model_Order();
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$order->loadByIncrementId($orderId);
+?>
+<h2><?php echo $this->__('Demo Payment Gateway') ?></h2>
+<p>It's a demo page acting as a payment gateway interface! So don't worry you won't get charged :-)</p>
+<form name="bancard" method="post" action="<?php echo Mage::helper('bancard')->getPaymentGatewayUrl(); ?>">
+    <input type="hidden" name="orderId" value="<?php echo $orderId; ?>">
+    <input type="submit" value="<?php echo $this->__('Make Payment') ?>" />
+</form>

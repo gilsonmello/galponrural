@@ -1,0 +1,71 @@
+{* This is a comment block
+
+Use vars: {{var var_name}}
+*}<!--@subject Recordatorio de transacci&oacute;n de pago fallida @-->
+<!--@vars
+{"var reason":"Transaction Failed Reason",
+"var checkoutType":"Checkout Type",
+"var customerEmail":"Customer Email",
+"var customer":"Customer Name",
+"var items":"Shopping Cart Items",
+"var total":"Total",
+"var billingAddress.format('html')":"Billing Address",
+"var shippingAddress.format('html')":"Shipping Address",
+"var shippingMethod":"Shipping Method",
+"var paymentMethod":"Payment Method",
+"var dateAndTime":"Date and Time of Transaction"}
+@-->
+
+<table>
+    <thead>
+        <tr>
+            <th>Transacci&oacute;n de pago fallida.</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Raz&oacute;n</b><br />
+                    {{var reason}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Tipo de transacci&oacute;n</b><br />
+                    {{var checkoutType}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Comprador:</b><br />
+                    <a href="mailto:{{var customerEmail}}">{{var customer}}</a> &lt;{{var customerEmail}}&gt;
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Productos</b><br />
+                    {{var items}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Total:</b><br />
+                    {{var total}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Direccion de facturaci&oacute;n:</b><br />
+                    {{var billingAddress.format('html')}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Direccion de env&iacute;o:</b><br />
+                    {{var shippingAddress.format('html')}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>M&eacute;todo de env&iacute;o:</b><br />
+                    {{var shippingMethod}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>M&eacute;todo de pago:</b><br />
+                    {{var paymentMethod}}
+                </p>
+                <p style="font-size: 16px; line-height: 20px; margin: 0;">
+                    <b>Fecha y hora:</b><br />
+                    {{var dateAndTime}}
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>

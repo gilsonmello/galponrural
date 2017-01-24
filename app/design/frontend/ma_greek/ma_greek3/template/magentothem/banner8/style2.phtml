@@ -1,0 +1,99 @@
+<?php 
+/******************************************************
+ * Website: http://www.plazathemes.com
+*******************************************************/
+?> 
+<?php if($this->getConfig('enabled')){ ?>	  <!-- start enable -->
+	<?php $cur_store = Mage::app()->getStore()->getId() ?>
+	<div class="ma-banner8-container">
+        <!--<div class="container">-->
+	        <div class="flexslider ma-nivoslider">
+        <div class="ma-loading"></div>
+		<div id="ma-inivoslider-banner8" class="slides">
+			
+				<?php
+					// Get data banner
+					$slide = $this->getDataBanner8();
+					$path = Mage::getBaseUrl('media');					
+					$qty_Item = $this->getConfig('qty_item');
+					/* Get max item & qty item */
+					if ($qty_Item > count($slide)) {
+						$qty_Item = count($slide);
+					}
+				?>
+				<?php
+					$i = 1;
+					foreach($slide as $s) {
+						if($i <= $qty_Item) {
+							//Get images slide show
+							$st1 = $s['image'];
+							$p1 = strpos($st1,'banner8');
+							$st2 = substr($st1,$p1+7);
+							$p2 = strpos($st2,'"');
+							$imag = substr($st2,0,$p2);
+					?>
+					<?php if( $s['link'] ): ?>
+						<a href="<?php echo $s['link']?>" title="<?php echo $this->__('Read more') ?>">
+					<?php endif; ?>
+					<img style="display: none;"  src="<?php echo $path.'magentothem/banner8'.$imag;?>" alt="" title="#banner8-caption<?php echo $i; ?>"  />
+					<?php if( $s['link'] ): ?>
+						</a>
+					<?php endif; ?>
+					<?php $i++; ?>
+				<?php
+                        }//end if
+                    } // end foreach
+				?>
+		</div>
+				<?php
+					if($this->getConfig('description')) {
+						$i = 1;
+						foreach($slide as $s) { ?>
+
+								<div id="banner8-caption<?php echo $i; ?>" class="banner8-caption nivo-html-caption nivo-caption">
+									<div class="banner8-title">
+										<h3><?php echo $this->__($s['title']) ?></h3>
+									</div>
+									<div class="banner8-des">
+										<?php echo $this->__($s['description']) ?>
+									</div>
+								</div>						
+					<?php
+						$i++;
+						}
+					}
+				?>
+		<script type="text/javascript">
+            $jq(window).load(function() {
+                $jq('#ma-inivoslider-banner8').nivoSlider({
+					effect: '<?php echo $this->getConfig('animation');?>',
+					slices: 15,
+					boxCols: 8,
+					boxRows: 4,
+					animSpeed: 500,
+					pauseTime: 50000,
+					startSlide: 0,
+					directionNav: true,
+					controlNav: true,
+					controlNavThumbs: true,
+					pauseOnHover: true,
+					manualAdvance: false,
+					prevText: 'Prev',
+					nextText: 'Next',
+                    afterLoad: function(){
+                        $jq('.ma-loading').css("display","none");
+                        },     
+                    beforeChange: function(){ 
+                        $jq('.banner8-title, .banner8-des').css("left","-2000px" );
+                        $jq('.banner8-readmore').css("left","-2000px"); 
+                    }, 
+                    afterChange: function(){ 
+                        $jq('.banner8-title, .banner8-des, .banner8-readmore').css("left","40px") 
+                    }
+                });
+            });
+		</script>
+	</div>
+        <!--</div>-->
+	</div>
+<?php } ?> <!-- end enable -->

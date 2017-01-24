@@ -1,0 +1,6 @@
+<?php if(trim(Mage::getStoreConfig('onepagecheckout/general/comment'))){?>
+    <div class="comment">
+        <label for="comment"><?php echo $this->__('Comment') ?></label><br />
+        <textarea id="order-comment" name="order-comment" rows="4" style="width: 100%;"><?php echo trim(Mage::getSingleton('customer/session')->getOrderCustomerComment()) ?></textarea>
+    </div>
+<?php } ?>

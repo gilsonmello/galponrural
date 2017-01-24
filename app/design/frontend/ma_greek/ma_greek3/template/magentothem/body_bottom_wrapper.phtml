@@ -1,0 +1,15 @@
+<div class="body-bottom-wrapper">
+	<div class="container">
+		<?php  echo $this->getLayout()->createBlock('lastestproduct/lastestproduct')->setTemplate('magentothem/lastestproduct/lastestproduct.phtml')->toHtml(); ?>
+		<div class="blog-group">
+			<div class="row">
+				<div class="col-md-6 col-ms-6 col-sms-12">
+					<?php  echo $this->getLayout()->createBlock('blog/menu_sidebar')->setTemplate('magentothem_blog/blog_slide.phtml')->toHtml(); ?>
+				</div>
+				<div class="col-md-6 col-ms-6 col-sms-12">
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('box_newsletter')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,400 @@
+<?php 
+    $mage_ver = Mage::helper('onepagecheckout')->getMagentoVersion();
+    $logged		= $this->isCustomerLoggedIn();
+    $has_addr	= $this->customerHasAddresses();
+    //Exclude field
+    $enable_country = !trim(Mage::getStoreConfig('onepagecheckout/exclude/country'));
+    $enable_city = !trim(Mage::getStoreConfig('onepagecheckout/exclude/city'));
+    $enable_telephone = !trim(Mage::getStoreConfig('onepagecheckout/exclude/telephone'));
+    $enable_company = !trim(Mage::getStoreConfig('onepagecheckout/exclude/company'));
+    $enable_fax = !trim(Mage::getStoreConfig('onepagecheckout/exclude/fax'));
+    $enable_region = !trim(Mage::getStoreConfig('onepagecheckout/exclude/region'));
+    $enable_zip_post = !trim(Mage::getStoreConfig('onepagecheckout/exclude/zip_post'));
+    $enable_address = !trim(Mage::getStoreConfig('onepagecheckout/exclude/address'));
+    $enable_tax_vat = !trim(Mage::getStoreConfig('onepagecheckout/exclude/tax_vat'));
+    //Required field
+    $required_fname = trim(Mage::getStoreConfig('onepagecheckout/required/firtname'));
+    $required_lname = trim(Mage::getStoreConfig('onepagecheckout/required/lastname'));
+    $required_country = trim(Mage::getStoreConfig('onepagecheckout/required/country'));
+    $required_city = trim(Mage::getStoreConfig('onepagecheckout/required/city'));
+    $required_telephone = trim(Mage::getStoreConfig('onepagecheckout/required/telephone'));
+    $required_company = trim(Mage::getStoreConfig('onepagecheckout/required/company'));
+    $required_fax = trim(Mage::getStoreConfig('onepagecheckout/required/fax'));
+    $required_region = trim(Mage::getStoreConfig('onepagecheckout/required/region'));
+    $required_zip_post = trim(Mage::getStoreConfig('onepagecheckout/required/zip_post'));
+    $required_address = trim(Mage::getStoreConfig('onepagecheckout/required/address'));
+    $required_tax_vat = trim(Mage::getStoreConfig('onepagecheckout/required/tax_vat'));
+    //Auto update ajax
+    $auto_update_section = trim(Mage::getStoreConfig('onepagecheckout/auto_update_section/option'));
+    $type_auto_update = explode(',',$auto_update_section);
+	//Registration 
+    $registration = trim(Mage::getStoreConfig('onepagecheckout/registration/type'));
+?>
+<input type='hidden' name='billing[address_id]' id='billing:address_id' value='<?php echo $this->getBillAddress()->getId() ?>'/>
+<div class="opc_billing_title step-title"><h1>	<?php	echo $this->__('Billing Address');	?></h1></div>
+<div class="opc_billing_content">
+    <?php if ($has_addr){ ?>
+        <div class="full">
+            <label for="billing_cutomer_address">
+            	<?php echo $this->__('Select a billing address from your address book or enter a new address.') ?>
+            </label>
+            <div class="data_area">
+                <?php echo $this->getCustomerBillAddr() ?>
+            </div>
+        </div>
+    <?php } ?>
+    <div class="billing_full_info" <?php if ($has_addr) {echo ' style="display:none;" ';} ?>>
+		<ul>
+		
+        <li class="two-fields ">
+            <div class="field firt_name">
+                <label class="<?php echo $required_fname?'required':''; ?>" for="billing_firstname">
+                    <?php echo $this->__('First Name') ?>
+                    <?php echo $required_fname?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box">
+                    <input id="billing_firstname" class="input-text <?php echo $required_fname?'required-entry':''; ?>" type="text" title="First Name" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getFirstname());} ?>" name="billing[firstname]" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="field last_name">
+                <label class="<?php echo $required_lname?'required':''; ?>" for="billing_lastname">
+                    <?php echo $this->__('Last Name') ?>
+                    <?php echo $required_lname?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box">
+                    <input id="billing_lastname" class="input-text <?php echo $required_lname?'required-entry':''; ?> " type="text" title="Last Name" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getLastname());} ?>" name="billing[lastname]" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="both" style="clear: both;"></div>
+        </li>
+		<li class="two-fields ">
+        <?php if (!$logged)  : ?>
+            <div class="field email">
+                <label class="required" for="billing_email">
+                    <?php echo $this->__('Email Address') ?>
+                    <em>*</em>
+                </label>
+                <div class="input-box">
+                    <input id="billing_email" class="input-text required-entry validate-email" type="text" title="Email Address" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getEmail());} ?>" name="billing[email]" autocomplete="off"/>
+                </div>
+            </div>
+        <?php endif ?>
+		
+		<?php if($enable_telephone){?>
+			<div class="field phone">
+				<label class="<?php echo $required_telephone?'required':''; ?>" for="billing_telephone">
+                    <?php echo $this->__('Telephone') ?>
+                    <?php echo $required_telephone?'<em>*</em>':''; ?>
+                </label>
+				<div class="input-box billing_telephone">
+					<input id="billing_telephone" class="input-text <?php echo $required_telephone?'required-entry':''; ?> " type="text" title="<?php echo $this->__('Telephone') ?>" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getTelephone());} ?>" name="billing[telephone]" autocomplete="off"/>
+				</div>
+			</div>
+		<?php } ?>
+		
+		</li>
+		<li class="one-field ">
+		<?php if($enable_address){ ?>
+            <div class="field address">
+                <label class="<?php echo $required_address?'required':''; ?>" for="billing_street1">
+                    <?php echo $this->__('Address') ?>
+                    <?php echo $required_address?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box">
+                	<input type="text" title="<?php echo $this->__('Street Address')  ?>" name="billing[street][]" id="billing:street1" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getStreet(1));} ?>" class="input-text <?php echo $required_address?'required-entry':''; ?>" autocomplete="off"/>
+                    <input type="text" title="<?php echo $this->__('Street Address 2')?>" name="billing[street][]" id="billing:street2"  value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getStreet(2));} ?>" class="input-text" autocomplete="off"/>
+                </div>
+            </div>
+        <?php } ?>
+		</li>
+		<li class="two-fields ">
+        <?php if($enable_country) {?>
+            <div class="field country">
+                <label class="<?php echo $required_country?'required':''; ?>" for="billing_country_id">
+                    <?php echo $this->__('Country') ?>
+                    <?php echo $required_country?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box input-box-country billing-country">
+                    <?php echo $this->getBillingCountriesSelectBox() ?>
+                </div>
+            </div>
+        <?php } ?>
+		
+		<?php if($enable_city){ ?>
+            <div class="field city">
+                <label class="<?php echo $required_city?'required':''; ?>" for="billing_city">
+                    <?php echo $this->__('City') ?>
+                    <?php echo $required_city?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box billing_city">
+                    <input value="<?php echo $this->htmlEscape($this->getBillAddress()->getCity()); ?>" id="billing_city" class="input-text <?php echo $required_city?'required-entry':''; ?>" type="text" title="City" name="billing[city]" autocomplete="off"/>
+                </div>
+            </div>
+        <?php } ?>
+		
+		</li>
+        <li class="two-fields ">
+            <?php if($enable_zip_post){?>
+                <div class="field zip">
+                    <label class="<?php echo $required_zip_post?'required':''; ?>" for="billing_postcode">
+                        <?php echo $this->__('Zip/Postal') ?>
+                        <?php echo $required_zip_post?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box billing_postcode">
+                        <input id="billing_postcode" class="input-text <?php echo $required_zip_post?'required-entry':''; ?>" type="text" title="Zip/Postal" value="<?php echo $this->htmlEscape($this->getBillAddress()->getPostcode()); ?>" name="billing[postcode]" autocomplete="off"/>
+                    </div>
+                </div>
+            <?php } ?>
+			
+			<?php if($enable_region){?>
+                <div class="field state">
+                    <label class="<?php echo $required_region?'required':''; ?>" for="billing_region_id">
+                         <?php echo $this->__('State/Province') ?>
+                         <?php echo $required_region?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box input-box-region billing-region">
+                        <select id="state_id" name="billing[region_id]" title="<?php echo $this->__('State/Province') ?>" class="<?php echo $required_region?'validate-select':''; ?>" style="display:none;">
+                            <option value=""><?php echo $this->__('Please select region, state or province') ?></option>
+                        </select>
+                        <input id="billing_region" class="input-text <?php echo $required_region; echo $required_region?'required-entry':''; ?>" type="text" name="billing[region]" autocomplete="off" value="<?php echo $this->htmlEscape($this->getBillAddress()->getRegion()); ?>" title="<?php echo $this->__('State/Province') ?>" style="display:none;" />
+                    </div>
+                </div>
+            <?php } ?>
+		</li>
+        <li class="two-fields ">
+            
+            <?php if($enable_fax){?>
+                <div class="field fax">
+                    <label class="<?php echo $required_fax?'required':''; ?>" for="billing_fax">
+                        <?php echo $this->__('Fax') ?>
+                        <?php echo $required_fax?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box billing_fax">
+                        <input id="billing_fax" class="input-text <?php echo $required_fax?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Fax') ?>" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getFax());} ?>" name="billing[fax]" autocomplete="off"/>
+                    </div>
+                </div>
+            <?php } ?>	
+			
+			<?php if($enable_company){?>
+				<div class="field company">
+					<label class="<?php echo $required_company?'required':''; ?>" for="billing_company">
+                        <?php echo $this->__('Company') ?>
+                        <?php echo $required_company?'<em>*</em>':''; ?>
+                    </label>
+					<div class="input-box billing_company">
+						<input id="billing_company" class="input-text <?php echo $required_company?'required-entry':''; ?>" type="text" title="Company" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getCompany());} ?>" name="billing[company]" autocomplete="off"/>
+					</div>
+				</div>
+			<?php } ?>
+		
+		</li>
+		<li class="one-field ">
+            <?php if($enable_tax_vat){?>
+                <div class="field tax">
+                    <label class="<?php echo $required_tax_vat?'required':''; ?>" for="billing:taxvat">
+                        <?php echo $this->__('Tax/VAT number') ?>
+                        <?php echo $required_tax_vat?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box billing_fax">
+                        <input id="billing:taxvat" class="input-text <?php echo $required_tax_vat?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Tax/VAT number') ?>" value="<?php if(!$has_addr){echo $this->htmlEscape($this->getBillAddress()->getTax());} ?>" name="billing[taxvat]"/>
+                    </div>
+                </div>
+            <?php } ?>
+		</li>
+        <?php 
+            $quote = Mage::getSingleton('checkout/session')->getQuote();
+            $items = $quote->getAllVisibleItems();
+            foreach($items as $product)
+            {
+                $productId = $product->getProduct()->getId();
+                $product = Mage::getModel('catalog/product')->load($productId);
+                $productType = $product->getTypeID();
+                if($productType == 'downloadable'){$validate_product = 'register_login';}
+            }
+            if($validate_product !='register_login'){
+        ?>
+        		<?php if($registration != 2){?>
+        			<li class="two-fields ">
+            			<?php 
+            			     if (!Mage::getSingleton('customer/session')->isLoggedIn()) {
+            			?>
+            				<?php if($registration != 1){?>
+            					<div class="create-an-account" >
+            						<input id="customer_account_create" class="checkbox" type="checkbox" value="1" name="billing[register_account]" autocomplete="off"/>
+            						<label for="customer_account_create"><?php echo $this->__('Create an Account') ?></label>
+            					</div>
+            				<?php 
+                                }else{
+            				?>
+                                <input id="customer_account_create" class="checkbox" type="hidden" value="1" name="billing[register_account]" autocomplete="off"/>
+                            <?php    
+            				    } 
+                            ?>
+            				<div style="clear: both;"></div>
+            				<div id="register-customer-password" class="fields" style="display: <?php echo  $registration != 1?'none':'block';?>">
+            					<div class="field pass">
+            						<label class="required" for="billing_customer_password">
+            							<em>*</em>
+            							<?php echo $this->__('Password') ?>
+            						</label>
+            						<div class="input-box">
+            							<input id="billing_customer_password" class="input-text required-entry validate-password" type="password" title="<?php echo $this->__('Password') ?>" name="billing[customer_password]" autocomplete="off"/>
+            						</div>
+            					</div>
+            					<div class="field pass-confirm">
+            						<label class="required" for="billing_confirm_password">
+            							<em>*</em>
+            							<?php echo $this->__('Confirm Password') ?>
+            						</label>
+            						<div class="input-box">
+            							<input id="billing_confirm_password" class="input-text validate-cpassword required-entry" type="password" title="<?php echo $this->__('Confirm Password') ?>" name="billing[confirm_password]" autocomplete="off"/>
+            						</div>
+            					</div>
+            				</div>
+            			<?php
+            				}
+            			?>
+        			</li>
+        		<?php } ?>
+        <?php }else{ ?>
+            <li class="two-fields ">
+			<?php 
+				 if (!Mage::getSingleton('customer/session')->isLoggedIn()) {
+			?>
+				<input id="customer_account_create" class="checkbox" type="hidden" value="1" name="billing[register_account]" autocomplete="off"/>
+				<div id="register-customer-password" class="fields" >
+					<div class="field pass">
+						<label class="required" for="billing_customer_password">
+							<em>*</em>
+							<?php echo $this->__('Password') ?>
+						</label>
+						<div class="input-box">
+							<input id="billing_customer_password" class="input-text required-entry validate-password" type="password" title="<?php echo $this->__('Password') ?>" name="billing[customer_password]" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="field pass-confirm">
+						<label class="required" for="billing_confirm_password">
+							<em>*</em>
+							<?php echo $this->__('Confirm Password') ?>
+						</label>
+						<div class="input-box">
+							<input id="billing_confirm_password" class="input-text validate-cpassword required-entry" type="password" title="<?php echo $this->__('Confirm Password') ?>" name="billing[confirm_password]" autocomplete="off"/>
+						</div>
+					</div>
+				</div>
+            </li>
+        <?php } }?>
+		<li class="one-field ">
+			<div class="billing_other">
+			<?php 
+				if ($logged && $has_addr){
+			?>
+				<div class="billing_save_in_address_book" <?php if (Mage::getSingleton('customer/session')->isLoggedIn() && $has_addr) {echo 'style="display:none"';}?>>
+					<input id="billing:save_in_address_book" class="checkbox" type="checkbox" checked="checked" title="Save in address book" value="1" name="billing[save_in_address_book]"/>
+					<label for="billing:save_in_address_book"><?php echo $this->__('Save in address book') ?></label>
+				</div>
+			<?php
+				}
+				else
+				{
+			?>
+					<input type="hidden" value="1" name="billing[save_in_address_book]" />
+			<?php 
+				} 
+			?>
+			</div>
+		</li>
+        <div style="clear: both;"></div>
+		</ul>
+    </div> 
+    <div>
+		<input id="billing_use_for_shipping" type="hidden" value="1" name="billing[use_for_shipping]"/>
+		<input id="billing_use_for_shipping_yes" class="checkbox" type="checkbox"  title="Ship to this address" checked="checked" value="1" name="shipping[same_as_billing]" style="margin-left: 3px;"/>
+		<label for="billing_use_for_shipping_yes"><?php echo $this->__('Ship to this address') ?></label>
+	</div>
+</div>
+<?php 
+    $string  = '';
+    foreach($type_auto_update as $type)
+    {
+        switch($type)
+        {
+            case 'country':
+                $string .= 'select[ajax="selectcountry"],';
+            break;
+            case 'postcode':
+                $string .= '#billing_postcode,';
+            break;
+            case 'state/region':
+                $string .= '#billing_region,';
+				$string .= '#state_id,';
+            break;
+            case 'city':
+                $string .= '#billing_city,';
+            break;
+        }
+    }
+    $ajax_update = substr($string,0,-1);
+?>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#billing_customer_address').change(function(){
+            if($(this).val() == '')
+            {
+                $('.billing_full_info').show();
+                $('.sipping_this_address').hide();
+                $('.billing_save_in_address_book').show();
+            }else{
+                $('.billing_full_info').hide();
+                $('.sipping_this_address').show();
+                $('.billing_save_in_address_book').hide();
+            }
+        });
+        $('#billing_use_for_shipping_yes').click(function(){
+        var length = $("[id='billing_use_for_shipping_yes']:checked").length; 
+            switch(length)
+            {
+                case 1:
+                    $('#billing_use_for_shipping').val('1');
+                break;
+                case 0:
+                    $('#billing_use_for_shipping').val('0');
+                break
+            }
+        }); 
+        $('<?php echo $ajax_update;?>').change(function(){
+            if($(this).val() != '')
+            {
+                url = $('#mst-address-request').val()+'load/updateall';
+                if(typeof ajax_request !== 'undefined')
+                ajax_request.abort();
+                ajax_request = $.ajax({
+                	type: "POST",
+                	url: url,
+                	data: $("#onepagecheckout_orderform").serialize(),
+                	cache: false,
+                    beforeSend:  function() {
+                        $('.loading_image').show();
+                        $('.opc_available_additional').css('opacity','0.5');
+                        $('.opc_tool-tip_methods').css('opacity','0.5');
+                        $('#checkout-review-table-wrapper').css('opacity','0.5');
+                    },
+                    success: function(html){
+                        var _json=$.parseJSON(html); 
+                        $('.loading_image').hide();
+                        $('.opc_available_additional').css('opacity','1');
+                        $('.opc_tool-tip_methods').css('opacity','1');
+                        $('#checkout-review-table-wrapper').css('opacity','1');
+                        $('#checkout-review-table-wrapper #shopping-cart-totals-table').remove();
+                        $('#checkout-review-load').html(_json.info);
+                        $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                        $('#checkout-payment-method-load').html(_json.payment_method);
+                    },
+                    complete: function(data){
+                  
+                    }
+                });
+            }
+        });
+    });
+</script>

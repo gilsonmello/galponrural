@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <mst translate="label">
+            <label>Magebay.com</label> 
+            <sort_order>150</sort_order> 
+        </mst>
+    </tabs>
+	<sections>
+		<onepagecheckout translate="label" module="onepagecheckout">
+			<label>One Page Checkout</label>
+			<tab>mst</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>100</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+                <info>
+                    <frontend_model>onepagecheckout/system_config_info</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                </info>	
+				<general translate="label">
+					<label>General</label>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label">
+							<label>Enable Module?</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</enabled>
+						<loadjquery translate='label'>
+                    		<label>Load jquery: </label>
+                            <comment>Select No if the jQuery libraries already exist to remove jQuery conflicts. Select Yes to load jquery library from this module.</comment>
+                    		<frontend_type>select</frontend_type>
+                    		<sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                    	</loadjquery>
+                        <shipping_method translate="label" module="onepagecheckout">
+                            <label>Default Shipping Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_shipping_allmethods</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping_method>
+                        <default_shipping_if_one translate="label">
+                            <label>Select shipping method if only one available</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If your default shipping method is not available when quote is created and only one method is available at the time this will be selected as default (works only when default you have chosen default shipping method)]]></comment>
+                        </default_shipping_if_one>
+                        <hide_shipping_method translate="label">
+                            <label>Hide shipping method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Hide (default) shipping method if there is <b>only one available</b>. Do not use in combination with shipping methods like UPS, Fedex etc that require postcode or similar before calculating the rates.]]></comment>
+                        </hide_shipping_method>
+                        <payment_method translate="label" module="onepagecheckout">
+                            <label>Default Payment Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_payment_allmethods</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </payment_method>
+                        <country translate="label" module="onepagecheckout">
+                            <label>Default Country</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </country>
+                        <city translate="label" module="onepagecheckout">
+                            <label>Default City</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </city>
+                        <zip_postal translate="label" module="onepagecheckout">
+                            <label>Default zip/postal code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </zip_postal>
+                        <!--<region_state translate="label" module="onepagecheckout">
+                            <label>Default region/state</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </region_state>-->
+                        <title translate="label">
+							<label>Chekout title</label>
+							<frontend_type>text</frontend_type>
+							<isrequired>true</isrequired>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+                        <description translate="label">
+							<label>Chekout description</label>
+                            <frontend_type>textarea</frontend_type>
+							<isrequired>true</isrequired>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</description>
+                        <hide_section_shipping_method translate="label" module="checkout">
+                            <label>Hide section Shipping Method if only one method is applicable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hide_section_shipping_method>
+                        <comment translate="label" module="onepagecheckout">
+                            <label>Enable adding comment to order</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </comment>
+                        <newsletter_checkbox translate="label" module="onepagecheckout">
+                            <label>Show Newsletter checkbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </newsletter_checkbox>
+                        <newsletter_checkbox_cheked translate="label" module="onepagecheckout">
+                            <label>Newsletter checkbox checked by default</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </newsletter_checkbox_cheked>
+                        <discount_code translate="label" module="onepagecheckout">
+                            <label>Show Discount Code section</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </discount_code> 
+                        
+                        <guest_checkout translate="label" module="checkout">
+                            <label>Allow Guest Checkout</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </guest_checkout>
+                        <!--<shipping_address translate="label" module="onepagecheckout">
+                            <label>Show Shipping Address Form</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping_address>
+                        -->
+					</fields>
+				</general>
+                <exclude translate="label">
+					<label>Exclude checkout filed</label>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<country translate="label">
+							<label>Country</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</country>
+                        <city translate="label">
+							<label>City</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</city>
+                        <telephone translate="label">
+							<label>Telephone</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</telephone>
+                        <company translate="label">
+							<label>Company</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</company>
+                        <fax translate="label">
+							<label>Fax</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</fax>
+                        <region translate="label">
+							<label>State/Province</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</region>
+                        <zip_post translate="label">
+							<label>Zip/Postcode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</zip_post>
+                        <address translate="label">
+							<label>Address</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</address>
+                        <tax_vat translate="label">
+							<label>Tax/VAT number</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</tax_vat>
+					</fields>
+				</exclude>
+                <required>
+                    <label>Required Field Management</label>
+					<sort_order>35</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+                    <fields>
+                        <firtname translate="label">
+							<label>First Name</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</firtname>
+                        <lastname translate="label">
+							<label>Last Name</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</lastname>
+                        <country translate="label">
+							<label>Country</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</country>
+                        <city translate="label">
+							<label>City</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</city>
+                        <telephone translate="label">
+							<label>Telephone</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</telephone>
+                        <company translate="label">
+							<label>Company</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</company>
+                        <fax translate="label">
+							<label>Fax</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</fax>
+                        <region translate="label">
+							<label>State/Province</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</region>
+                        <zip_post translate="label">
+							<label>Zip/Postcode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</zip_post>
+                        <address translate="label">
+							<label>Address</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</address>
+                        <tax_vat translate="label">
+							<label>Tax/VAT</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</tax_vat>
+                    </fields>
+                </required>
+                <auto_update_section translate="label">
+                    <label>Auto update Sections when changing in Address</label>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+                    <fields>
+                        <option translate="label">
+                            <label>Auto update Sections when changing in Address</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>onepagecheckout/AutoupdateSection</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </option>
+                    </fields>
+                </auto_update_section>
+                <delivery>
+                    <label>Delivery Date</label>
+					<sort_order>45</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <values_required>
+                            <label>Values Required</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </values_required>
+                        <date translate="label">
+                            <label>Date Delivery On</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>onepagecheckout/DeliveryDate</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </date>
+                        <format translate="label">
+                            <label>Date Format</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>onepagecheckout/DeliveryFormat</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </format>
+                        <time translate="label">
+                            <label>Time Delivery On</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>onepagecheckout/DeliveryTime</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </time>
+                    </fields>
+                </delivery>
+                <suvery translate="label">
+					<label>Suvery Configuration</label>
+					<sort_order>50</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+                        <enabled translate="label">
+                            <label>Enable survery</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <question translate="label">
+                            <label>Survery question</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </question>
+                        <enable_other translate="label">
+                            <label>Enable "Other ..." value</label>
+                            <comment>If enabled users can type free text and "Other ..." value will be added to dropdown</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_other>
+                        <values translate="label">
+                            <label>Values</label>
+                            <frontend_model>onepagecheckout/system_config_form_field_suveryfields</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Values entered here will appear as labels in feedback dropdown on checkout page</comment>
+                        </values>
+                    </fields>
+				</suvery>
+				<registration>
+                    <label>Registration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>55</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <type translate="label">
+                            <label>Registration mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>onepagecheckout/registration</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </type>
+                    </fields>
+                </registration>
+                <terms_conditions translate="label comment">
+                    <label>Terms and conditions</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable Terms and Conditions</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <type translate="label">
+                            <label>Show Terms and Conditions</label>
+                            <comment><![CDATA[Instead of OPC agreement  textbox you can use default magento agreement feature. You'll find this under Sales > Terms and Conditions tab</p>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>onepagecheckout/terms</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </type>
+                        <title translate="label">
+                            <label>Terms and conditions title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <url translate="label">
+                            <label>Url Terms and Conditions page</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><type>2</type></depends>                            
+                        </url>
+                        <content translate="label">
+                            <label>Terms and conditions contents (HTML)</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><type>1</type></depends>
+                        </content>
+                        <enable_custom_size translate="label">
+                            <label>Enable custom size</label>
+                            <comment><![CDATA[If enabled, allow adjusting the Terms and Conditions popup size]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><type>1</type></depends>
+                        </enable_custom_size>
+                        <width translate="label">
+                            <label>Width</label>
+                            <comment><![CDATA[Width(px) of terms and Conditions popup size]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><type>1</type></depends>
+                            <depends><enable_custom_size>1</enable_custom_size></depends>
+                        </width>
+                        <height translate="label">
+                            <label>Height</label>
+                            <comment><![CDATA[Width(px) of terms and Conditions popup size]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><type>1</type></depends>
+                            <depends><enable_custom_size>1</enable_custom_size></depends>
+                        </height>
+                    </fields>
+                </terms_conditions>
+                <review translate="label">
+					<label>Review Your Order</label>
+					<sort_order>70</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<product_cart_remove translate="label">
+							<label>Allow Product Removeal</label>
+							<frontend_type>select</frontend_type>
+                            <comment>If you want allow customer to remove product during the checkout, then enable this functionality. Sometimes required for passing store certification.</comment>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</product_cart_remove>
+						<thumbnail_product translate="label">
+							<label>Allow Thumbnail Product</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</thumbnail_product>
+						<product_qty_change translate="label">
+							<label>Allow Product Qty Change</label>
+							<frontend_type>select</frontend_type>
+                            <comment>If you want allow customer to change product quantity during the checkout, then enable this functionality. Sometimes required for passing store certification.</comment>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</product_qty_change>
+						
+					</fields>
+				</review>
+				<layout_configuration translate="label">
+					<label>Layout Configuration</label>
+					<sort_order>80</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<layout translate="label">
+							<label>Checkout page layout</label>
+							<frontend_type>select</frontend_type>
+							<source_model>onepagecheckout/layout</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+						</layout>
+						
+					</fields>
+				</layout_configuration>
+			</groups>
+		</onepagecheckout>
+	</sections>
+</config>

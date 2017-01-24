@@ -1,0 +1,253 @@
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+/* Browser Resets */
+.ma-banner8-container .flex-container a:active,
+.ma-banner8-container .flexslider a:active,
+.ma-banner8-container .flex-container a:focus,
+.ma-banner8-container .flexslider a:focus  {outline: none;}
+.ma-banner8-container .slides,
+.ma-banner8-container .flex-control-nav,
+.ma-banner8-container .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.ma-banner8-container .flexslider {margin: 0; padding: 0;}
+.ma-banner8-container .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative; } /* Hide the slides before the JS is loaded. Avoids image jumping */
+.ma-banner8-container .flexslider .slides img {width: 100%; display: block;}
+.ma-banner8-container .flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.ma-banner8-container .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .ma-banner8-container .slides {display: block;} 
+* html .ma-banner8-container .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .ma-banner8-container .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.ma-banner8-container .flexslider { position: relative; zoom: 1;}
+.ma-banner8-container .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.ma-banner8-container .loading .flex-viewport {max-height: 300px;}
+.ma-banner8-container .flexslider .slides {zoom: 1;}
+
+.ma-banner8-container .carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.ma-banner8-container .flex-direction-nav {display: none}
+.ma-banner8-container:hover .flex-direction-nav {display: block;}
+.ma-banner8-container .flex-direction-nav a,
+.nivo-directionNav a {
+width: 40px;
+height: 40px;
+margin: -15px 0 0;
+display: block;
+background: #b0b0b0 url(../images/arrows.png) no-repeat 0 0;
+position: absolute;
+top: 50%;
+cursor: pointer;
+text-indent: -9999px;
+z-index: 9;
+}
+.ma-banner8-container .flex-direction-nav .flex-next,
+.nivo-directionNav a.nivo-nextNav { background-position: 100% 0; right: 10px; }
+.ma-banner8-container .flex-direction-nav .flex-prev,
+.nivo-directionNav a.nivo-prevNav { left: 10px;}
+.ma-banner8-container .flexslider .flex-next:hover {background-color: #e87058 }
+.ma-banner8-container .flexslider .flex-prev:hover {background-color: #e87058 }
+.ma-banner8-container .flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.ma-banner8-container .flex-control-nav,
+.nivo-controlNav {width: 100%; position: absolute; bottom: 10px; text-align: center;}
+.ma-banner8-container .flex-control-nav li { margin: 0 6px; display: inline-block; zoom: 1; *display: inline; }
+.ma-banner8-container .flex-control-paging li a,
+.nivo-controlNav a {width: 11px; height: 8px; display: block; background: #fff; cursor: pointer; text-indent: -9999px; z-index: 9; }
+.ma-banner8-container .flex-control-paging li a:hover,
+.ma-banner8-container .flex-control-paging li a.flex-active,
+.nivo-controlNav a:hover,
+.nivo-controlNav a.active { background:#ec5355; cursor: pointer; }
+
+
+.ma-banner8-container .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.ma-banner8-container .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.ma-banner8-container .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.ma-banner8-container .flex-control-thumbs img:hover {opacity: 1;}
+.ma-banner8-container .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+
+.ma-nivoslider {
+	overflow: hidden;
+}
+.nivoslider {
+	position: relative;
+	overflow: hidden;
+	height: auto;
+	width: 100%; 
+}
+.nivoslider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.nivo-controlNav {
+    padding: 20px 0;
+    text-align: center;
+}
+.nivo-controlNav a {
+    border: 0 none;
+    display: inline-block;
+    height: 11px;
+    margin: 0 2px;
+    text-indent: -9999px;
+    width: 11px;
+	cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+
+
+.banner8-caption {
+	position: absolute;
+ 	left:0;
+ 	right: 0; 
+ 	top:50%;	
+	width: 100%;
+	background: none;
+	color: #333;
+	font-size: 16px;
+	z-index: 999;
+	text-align: center;
+}
+.banner8-title {
+	padding: 0 10px;
+	-webkit-transition:all 0.5s ease; 
+  	   -moz-transition:all 0.5s ease;
+     	-ms-transition:all 0.5s ease;
+     	 -o-transition:all 0.5s ease;
+        	transition:all 0.5s ease;   
+}
+.banner8-title h3 {
+	color: #333;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+.banner8-des {
+	-webkit-transition:all 1.5s ease; 
+  	   -moz-transition:all 1.5s ease;
+     	-ms-transition:all 1.5s ease;
+     	 -o-transition:all 1.5s ease;
+        	transition:all 1.5s ease;  
+}
+.banner8-readmore {
+	position: absolute;
+ 	left:100px; 
+ 	top:200px; 
+	-webkit-transition:all 1.5s ease; 
+  	   -moz-transition:all 1.5s ease;
+     	-ms-transition:all 1.5s ease;
+     	 -o-transition:all 1.5s ease;
+        	transition:all 1.5s ease;  
+}
+.banner8-readmore a {
+	color: #fff;
+	font-size: 20px; 
+}
+.ma-banner8-container .ma-loading {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	z-index: 99;
+	background: url(../images/loader.gif) no-repeat ;
+	top: 50%;
+	left: 50%;
+	margin: -8px 0 0 -8px;
+}
+
+
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+.nivo-caption {
+  position:absolute;
+ 	left:0; 
+ 	top:0;	
+	color:#fff;
+	width:100%;
+	z-index:8;
+}
+.nivo-html-caption {
+    display: none;
+}

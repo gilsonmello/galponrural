@@ -1,0 +1,32 @@
+<div id="checkout-review" class="onepagecheckout_block">
+    <div class="opc_review_title step-title">
+        <h1><?php echo $this->__('Review Your Order') ?></h1>
+    </div>
+    <div class="opc_review_content">
+        <div id="checkout-review-load">
+            <?php echo $this->getChildHtml('info') ?>
+        </div>
+        <div class="other">
+            <?php echo $this->getChildHtml('coupon') ?>
+            <?php echo $this->getChildHtml('comment') ?>
+            <?php echo $this->getChildHtml('suvery') ?>
+            <?php echo $this->getChildHtml('tem_condition') ?>
+            <div style="clear: both;"></div>
+        </div>
+        <div id="checkout-review-submit">    
+            <div class="buttons-set" id="review-buttons-container">
+                <button type="submit" title="<?php echo $this->__('Place Order Now') ?>" class="button btn-checkout"><?php echo $this->__('Place Order Now') ?></button>
+            </div>
+            <?php if(trim(Mage::getStoreConfig('onepagecheckout/general/newsletter_checkbox'))){?>
+                <div class="newsletter-signup">
+                    <p class="newsletter">
+                        <input type="checkbox" id="newsletter-signup" <?php if(trim(Mage::getStoreConfig('onepagecheckout/general/newsletter_checkbox_cheked'))){echo "checked='checked'";} ?> name="newsletter" value="1" title="<?php echo Mage::helper('newsletter')->__('Sign up for our newsletter') ?>" class="checkbox" />
+                        <label for="newsletter-signup">
+                            <?php echo Mage::helper('newsletter')->__('Sign up for our newsletter') ?>
+                        </label>
+                    </p>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>

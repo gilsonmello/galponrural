@@ -1,0 +1,193 @@
+<?php 
+    $mage_ver = Mage::helper('onepagecheckout')->getMagentoVersion();
+    $logged		= $this->isCustomerLoggedIn();
+    $has_addr	= $this->customerHasAddresses(); 
+    //Exclude field
+    $enable_country = !trim(Mage::getStoreConfig('onepagecheckout/exclude/country'));
+    $enable_city = !trim(Mage::getStoreConfig('onepagecheckout/exclude/city'));
+    $enable_telephone = !trim(Mage::getStoreConfig('onepagecheckout/exclude/telephone'));
+    $enable_company = !trim(Mage::getStoreConfig('onepagecheckout/exclude/company'));
+    $enable_fax = !trim(Mage::getStoreConfig('onepagecheckout/exclude/fax'));
+    $enable_region = !trim(Mage::getStoreConfig('onepagecheckout/exclude/region'));
+    $enable_zip_post = !trim(Mage::getStoreConfig('onepagecheckout/exclude/zip_post'));
+    $enable_address = !trim(Mage::getStoreConfig('onepagecheckout/exclude/address'));
+    $enable_tax_vat = !trim(Mage::getStoreConfig('onepagecheckout/exclude/tax_vat'));
+    //Required field
+    $required_fname = trim(Mage::getStoreConfig('onepagecheckout/required/firtname'));
+    $required_lname = trim(Mage::getStoreConfig('onepagecheckout/required/lastname'));
+    $required_country = trim(Mage::getStoreConfig('onepagecheckout/required/country'));
+    $required_city = trim(Mage::getStoreConfig('onepagecheckout/required/city'));
+    $required_telephone = trim(Mage::getStoreConfig('onepagecheckout/required/telephone'));
+    $required_company = trim(Mage::getStoreConfig('onepagecheckout/required/company'));
+    $required_fax = trim(Mage::getStoreConfig('onepagecheckout/required/fax'));
+    $required_region = trim(Mage::getStoreConfig('onepagecheckout/required/region'));
+    $required_zip_post = trim(Mage::getStoreConfig('onepagecheckout/required/zip_post'));
+    $required_address = trim(Mage::getStoreConfig('onepagecheckout/required/address'));
+    $required_tax_vat = trim(Mage::getStoreConfig('onepagecheckout/required/tax_vat'));
+?>
+<input type="hidden" name="shipping[address_id]" id="shipping:address_id" value="<?php echo $this->getShipAddress()->getId() ?>" />
+<div class="opc_shipping_title step-title"><h1><?php echo $this->__('Shipping Address') ?></h1></div>
+<div class="opc_shipping_content">
+    <?php if ($has_addr){ ?>
+		<div class="full">
+			<label>
+				<?php echo $this->__('Select a shipping address from your address book or enter a new address.') ?>
+			</label>
+			<div class="data_area">
+				<?php echo $this->getCustomerShipAddr() ?>
+			</div>
+		</div>
+    <?php } ?>
+    <div id="ship_form"<?php if ($has_addr){ echo ' style="display:none;" ';}?>>
+        <ul>
+		<li class="two-fields ">
+		    <div class="field firt_name" >
+                <label class="<?php echo $required_fname?'required':''; ?>" for="shipping_firstname">
+                    <?php echo $this->__('First Name') ?>
+                    <?php echo $required_fname?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box">
+                    <input id="shipping_firstname" class="input-text <?php echo $required_fname?'required-entry':''; ?>" type="text" title="<?php echo $this->__('First Name') ?>" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getFirstname());} ?>" name="shipping[firstname]" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="field last_name" >
+                <label class="<?php echo $required_lname?'required':''; ?>" for="shipping_lastname">
+                    <?php echo $this->__('Last Name') ?>
+                    <?php echo $required_lname?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box">
+                    <input id="shipping_lastname" class="input-text <?php echo $required_lname?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Last Name') ?>" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getLastname());} ?>" name="shipping[lastname]" autocomplete="off"/>
+                </div>
+            </div>
+		</li>
+		<li class="two-fields">
+			<?php if($enable_telephone){ ?>
+                <div class="field phone">
+                    <label class="<?php echo $required_telephone?'required':''; ?>" for="shipping_telephone">
+                        <?php echo $this->__('Telephone') ?>
+                        <?php echo $required_telephone?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box shipping_telephone">
+                        <input id="shipping_telephone" class="input-text <?php echo $required_telephone?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Telephone') ?>" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getTelephone());} ?>" name="shipping[telephone]" autocomplete="off"/>
+                    </div>
+                </div>
+            <?php } ?>
+		</li>
+		<li class="one-field">
+        <?php if($enable_address){ ?>
+            <div class="field address">
+                <label class="<?php echo $required_address?'required':''; ?>" for="shipping_street1">
+                    <?php echo $this->__('Address') ?>
+                    <?php echo $required_address?'<em>*</em>':''; ?>
+                </label>
+                <div class="input-box">
+                    <input id="shipping_street1" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getStreet(1));} ?>" class="input-text <?php echo $required_address?'required-entry':''; ?>" type="text"  name="shipping[street][]" title="Street Address" autocomplete="off"/>
+                    <input id="shipping_street2" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getStreet(2));} ?>" class="input-text" type="text"  name="shipping[street][]" title="Street Address 2" autocomplete="off"/>
+                </div>
+            </div>
+        <?php } ?>
+		</li>
+		<li class="two-fields">        
+			<?php if($enable_country){ ?>
+				<div class="field country">
+					<label class="<?php echo $required_country?'required':''; ?>" for="shipping_country_id">
+						<?php echo $this->__('Country') ?>
+                        <?php echo $required_country?'<em>*</em>':''; ?>
+					</label>
+					<div class="input-box input-box-country shipping-country">
+						<?php echo $this->getShippingCountriesSelectBox() ?>
+					</div>
+				</div>
+			<?php } ?>
+			<?php if($enable_city){?>
+				<div class="field city">
+					<label class="<?php echo $required_city?'required':''; ?>" for="shipping_city">
+						<?php echo $this->__('City') ?>
+                        <?php echo $required_city?'<em>*</em>':''; ?>
+					</label>
+					<div class="input-box shipping_city">
+						<input id="shipping_city" value="<?php echo $this->htmlEscape($this->getShipAddress()->getCity()); ?>" class="input-text <?php echo $required_city?'required-entry':''; ?>" type="text" title="City" name="shipping[city]" autocomplete="off"/>
+					</div>
+				</div>
+			<?php } ?>
+		</li>
+		<li class="two-fields ">
+			<?php if($enable_zip_post){?>
+                <div class="field zip">
+                    <label class="<?php echo $required_zip_post?'required':''; ?>" for="shipping_postcode">
+                        <?php echo $this->__('Zip/Postal') ?>
+                        <?php echo $required_zip_post?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box shipping_postcode">
+                        <input id="shipping_postcode" class="input-text <?php echo $required_zip_post?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Zip/Postal') ?>" value="<?php echo $this->htmlEscape($this->getShipAddress()->getPostcode());?>" name="shipping[postcode]" autocomplete="off"/>
+                    </div>
+                </div>
+            <?php } ?>
+			
+            <?php if($enable_region){?>
+                <div class="field state">
+                    <label class="<?php echo $required_region?'required':''; ?>" for="shipping_region_id">
+                         <?php echo $this->__('State/Province') ?>
+                         <?php echo $required_region?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box input-box-region shipping-region">
+                        <select id="state_id_1" name="shipping[region_id]" title="<?php echo $this->__('State/Province') ?>" class="<?php echo $required_region?'validate-select':''; ?>" style="display:none;">
+                            <option value=""><?php echo $this->__('Please select region, state or province') ?></option>
+                        </select>
+                        <input id="shipping_region" class="input-text <?php echo $required_region?'required-entry':''; ?>" type="text" name="shipping[region]" autocomplete="off" value="<?php echo $this->htmlEscape($this->getShipAddress()->getRegion())?>" title="<?php echo $this->__('State/Province') ?>" style="display:none;" />
+                    </div>
+                </div>
+            <?php } ?>
+		</li>
+		
+		<li class="two-fields ">
+			<?php if($enable_fax){?>
+                <div class="field fax">
+                    <label class="<?php echo $required_fax?'required':''; ?>" for="shipping_fax">
+                        <?php echo $this->__('Fax') ?>
+                        <?php echo $required_fax?'<em>*</em>':''; ?>
+                    </label>
+                    <div class="input-box shipping_fax">
+                        <input id="shipping_fax" class="input-text <?php echo $required_fax?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Fax') ?>" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getFax());} ?>" name="shipping[fax]" autocomplete="off"/>
+                    </div>
+                </div>
+            <?php } ?>
+			<?php if($enable_company){ ?>
+				<div class="field company">
+					<label class="<?php echo $required_company?'required':''; ?>" for="shipping_company">
+                        <?php echo $this->__('Company') ?>
+                        <?php echo $required_company?'<em>*</em>':''; ?>
+                    </label>
+					<div class="input-box shipping_company">
+						<input id="shipping_company" class="input-text <?php echo $required_company?'required-entry':''; ?>" type="text" title="<?php echo $this->__('Company') ?>" value="<?php if (!$has_addr){echo $this->htmlEscape($this->getShipAddress()->getCompany());} ?>" name="shipping[company]" autocomplete="off"/>
+					</div>
+				</div>
+			<?php } ?>
+		</li>
+        
+        <div class="">
+            <input id="shipping:save_in_address_book" class="checkbox" type="checkbox" checked="checked" title="Save in address book" value="1" name="shipping[save_in_address_book]"/>
+            <label for="shipping:save_in_address_book"><?php echo $this->__('Save in address book') ?></label>
+        </div>
+		</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#shipping_customer_address').change(function(){
+            if($(this).val() == '')
+            {
+                $('#ship_form').show();
+            }else{
+                $('#ship_form').hide();
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    var countryRegions = <?php echo Mage::helper('directory')->getRegionJson()?>;
+    var newRegionUpdater = new RegionUpdater('billing_country_id', 'billing_region', 'state_id',countryRegions);
+    var newRegionUpdater = new RegionUpdater('shipping_country_id', 'shipping_region', 'state_id_1',countryRegions);
+    //]]>
+</script>

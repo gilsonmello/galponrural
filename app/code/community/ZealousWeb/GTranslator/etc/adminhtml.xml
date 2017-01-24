@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+	<config>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<gtranslateconfiguration translate="title" module="gtranslator">
+											<title>GTranslate Configuration Section</title>
+											<sort_order>1</sort_order>
+										</gtranslateconfiguration>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</config>

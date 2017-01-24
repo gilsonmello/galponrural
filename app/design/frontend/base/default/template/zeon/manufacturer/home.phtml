@@ -1,0 +1,92 @@
+<?php
+/**
+ * zeonsolutions inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.zeonsolutions.com/shop/license-community.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * This package designed for Magento Community edition
+ * =================================================================
+ * zeonsolutions does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * zeonsolutions does not provide extension support in case of
+ * incorrect edition usage.
+ * =================================================================
+ *
+ * @category   design
+ * @package    base_default
+ * @version    0.0.1
+ * @copyright  @copyright Copyright (c) 2013 zeonsolutions.Inc. (http://www.zeonsolutions.com)
+ * @license    http://www.zeonsolutions.com/shop/license-community.txt
+ */
+?>
+<?php $_manufacturersCollection = $this->getManufacturersCollection(); ?>
+
+<?php
+$auto = Mage::getStoreConfig('zeon_manufacturer/frontend/auto');//$this->getConfig('auto');
+$itemsDesktop = Mage::getStoreConfig('zeon_manufacturer/frontend/itemsDesktop');//$this->getConfig('itemsDesktop');
+$itemsDesktopSmall = Mage::getStoreConfig('zeon_manufacturer/frontend/itemsDesktopSmall');//$this->getConfig('itemsDesktopSmall');
+$itemsTablet = Mage::getStoreConfig('zeon_manufacturer/frontend/itemsTablet');//$this->getConfig('itemsTablet');
+$itemsMobile = Mage::getStoreConfig('zeon_manufacturer/frontend/itemsMobile');//$this->getConfig('itemsMobile');
+$speed = Mage::getStoreConfig('zeon_manufacturer/frontend/speed');//$this->getConfig('speed');
+$next_back = Mage::getStoreConfig('zeon_manufacturer/frontend/next_back');//$this->getConfig('next_back');
+$nav_ctrl = Mage::getStoreConfig('zeon_manufacturer/frontend/nav_ctrl');//$this->getConfig('nav_ctrl');
+
+?>
+<div class="ma-brand-slider-contain">
+    <div class="container">
+        <div class="brand-slider">
+            <div class="brand-title ma-title">
+                <h2><?php echo $this->__('Popular Brands') ?></h2>
+            </div>
+            <form id="pollForm" action="<?php echo $this->getUrl('manufacturers') ?>" method="post" >
+                <?php $_iterator = 0; ?>
+                <div class="row">
+                    <ul class="owl">
+                        <?php foreach ($_manufacturersCollection as $_manufacturer): ?>
+                            <li class="item">
+                                <div class="item-innner">
+                                    <a class="product-images" href="<?php echo $this->getUrl('manufacturers' . '/' . $_manufacturer->getIdentifier()) ?>" title="<?php echo $_manufacturer->getManufacturer() ?>"><img alt="<?php echo $_manufacturer->getManufacturerLogo() ?>" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'manufacturer' . '/' . $_manufacturer->getManufacturerLogo() ?>" width="40" height="40"></a>
+                                    <!-- To display name 
+                                    <h2><?php //echo Mage::getModel('zeon_manufacturer/manufacturer')->getManufacturerName($_manufacturer->getManufacturer(), Mage::app()->getStore()->getId())         ?></h2> -->
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <br />
+                <div class="actions" style="clear:left;">
+                    <button type="submit" title="<?php echo $this->__('View All123') ?>" class="button"><span><span><?php echo $this->__('View All') ?></span></span></button>
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+						   //<![CDATA[
+							$jq(document).ready(function(){					  
+							  $jq(".ma-brand-slider-contain .owl").owlCarousel({
+									autoPlay : <?php if($auto) echo 'true'; else echo 'false'; ?>,
+									items : <?php if($itemsDesktop) echo $itemsDesktop; else echo '5'; ?>,
+									itemsDesktop : [1199,<?php if($itemsDesktop) echo $itemsDesktop; else echo '5'; ?>],
+									itemsDesktopSmall : [980,<?php if($itemsDesktopSmall) echo $itemsDesktopSmall; else echo '3'; ?>],
+									itemsTablet: [768,<?php if($itemsTablet) echo $itemsTablet; else echo '2'; ?>],
+									itemsMobile : [479,<?php if($itemsMobile) echo $itemsMobile; else echo '1'; ?>],
+									slideSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+									paginationSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+									rewindSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+									navigation : <?php if($next_back) echo 'true'; else echo 'false'; ?>,
+									stopOnHover : true,
+									pagination : <?php if($nav_ctrl) echo 'true'; else echo 'false'; ?>,
+									scrollPerPage:true,
+								});
+							});
+						//]]>
+						</script>

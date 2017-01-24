@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Qualityunit_Liveagent>
+            <active>false</active>
+            <codePool>local</codePool>
+            <version>3.2.0</version>
+        </Qualityunit_Liveagent>
+    </modules>
+</config> 

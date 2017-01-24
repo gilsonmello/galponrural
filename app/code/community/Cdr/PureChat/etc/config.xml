@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Cdr_PureChat>
+            <version>1.0.0.0</version>
+        </Cdr_PureChat>
+    </modules>
+    <global>
+        <blocks>
+            <purechat>
+                <class>Cdr_PureChat_Block</class>
+            </purechat>
+        </blocks>
+        <helpers>
+            <purechat>
+                <class>Cdr_PureChat_Helper</class>
+            </purechat>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <purechat>
+                    <file>purechat.xml</file>
+                </purechat>
+            </updates>
+        </layout>
+    </frontend>
+</config>

@@ -1,0 +1,426 @@
+
+/* Browser Resets */
+.ma-banner7-container .flex-container a:active,
+.ma-banner7-container .flexslider a:active,
+.ma-banner7-container .flex-container a:focus,
+.ma-banner7-container .flexslider a:focus  {outline: none;}
+.ma-banner7-container .slides,
+.ma-banner7-container .flex-control-nav,
+.ma-banner7-container .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.ma-banner7-container .flexslider {margin: 0; padding: 0;}
+.ma-banner7-container .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative; } /* Hide the slides before the JS is loaded. Avoids image jumping */
+.ma-banner7-container .flexslider .slides img {width: 100%; display: block;}
+.ma-banner7-container .flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.ma-banner7-container .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .ma-banner7-container .slides {display: block;} 
+* html .ma-banner7-container .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .ma-banner7-container .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.ma-banner7-container .flexslider {padding: 0; position: relative; zoom: 1;}
+.ma-banner7-container .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.ma-banner7-container .loading .flex-viewport {max-height: 300px;}
+.ma-banner7-container .flexslider .slides {zoom: 1;}
+
+.ma-banner7-container .carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.ma-banner7-container .flex-direction-nav {*height: 0;}
+.ma-banner7-container .flex-direction-nav a,
+.nivo-directionNav a { width: 40px; height: 40px; margin: -15px 0 0; display: block; background:#b0b0b0 url(../images/arrows.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; z-index: 9;}
+.ma-banner7-container .flex-direction-nav a:hover, .nivo-directionNav a:hover{background-color: #ec5355}
+.ma-banner7-container .flex-direction-nav .flex-next,
+.nivo-directionNav a.nivo-nextNav { background-position: 100% 0; right: 5px; }
+.ma-banner7-container .flex-direction-nav .flex-prev,
+.nivo-directionNav a.nivo-prevNav { left: 5px;}
+.ma-banner7-container .flexslider:hover .flex-next:hover, .ma-banner7-container .flexslider:hover .flex-prev:hover {opacity: 1;}
+.ma-banner7-container .flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+ul.controls,.nivo-directionNav{display: none}
+#sequence-theme:hover ul.controls,.ma-banner7-container :hover .nivo-directionNav{display: block;}
+/* Control Nav */
+.ma-banner7-container .flex-control-nav,
+.nivo-controlNav {position: absolute; bottom:10px; text-align: center;right:0;left: 0}
+.ma-banner7-container .flex-control-nav li { margin: 0 6px; display: inline-block; zoom: 1; *display: inline; }
+.ma-banner7-container .flex-control-paging li a:hover,
+.ma-banner7-container .flex-control-paging li a.flex-active,
+.nivo-controlNav a:hover,
+.nivo-controlNav a.active {cursor: pointer; width: 10px;line-height: 10px;height: 10px}
+.ma-banner7-container .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.ma-banner7-container .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.ma-banner7-container .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.ma-banner7-container .flex-control-thumbs img:hover {opacity: 1;}
+.ma-banner7-container .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+.ma-nivoslider {
+    overflow: hidden;
+}
+.nivoslider {
+position: relative;
+overflow: hidden;
+height: auto;
+width: 100%; 
+}
+.nivoslider img {
+position: absolute;
+top: 0;
+left: 0;
+display: none;
+}
+.nivo-controlNav {
+    text-align: center;
+}
+.nivo-controlNav a {
+border: 0 none;
+display: inline-block;
+height:8px;
+margin: 0 3px;
+text-indent: -9999px;
+width:8px;
+line-height: 8px;
+cursor: pointer;
+position: relative;
+z-index: 9;
+background-color: #fff;
+border-radius: 100%
+}
+.banner7-caption {
+position: absolute;
+left:0; 
+top:0;  
+width: 100%;
+background: none;
+color: #fff;
+font-size: 16px;
+z-index: 999;
+}
+.ma-banner7-container .ma-loading {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 99;
+    background: url(../images/loader.gif) no-repeat ;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+/* The Nivo Slider styles */
+.nivoSlider {
+    position:relative;
+    width:100%;
+    height:auto;
+    overflow: hidden;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    max-width: none;
+}
+.nivo-main-image {
+    display: block !important;
+    position: relative !important; 
+    width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    border:0;
+    padding:0;
+    margin:0;
+    z-index:6;
+    display:none;
+    background:white; 
+    filter:alpha(opacity=0); 
+    opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+    display:block;
+    position:absolute;
+    z-index:5;
+    height:100%;
+    top:0;
+}
+.nivo-box {
+    display:block;
+    position:absolute;
+    z-index:5;
+    overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+.nivo-caption {
+  position:absolute;
+    left:0; 
+    top:0;  
+    color:#fff;
+    width:100%;
+    height: 100%;
+    z-index:8;
+}
+.nivo-html-caption {
+    display: none;
+}
+.nivo-main-image {
+    display: block !important;
+    position: relative !important; 
+    width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    border:0;
+    padding:0;
+    margin:0;
+    z-index:6;
+    display:none;
+    background:white; 
+    filter:alpha(opacity=0); 
+    opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+    display:block;
+    position:absolute;
+    z-index:5;
+    height:100%;
+    top:0;
+}
+.nivo-box {
+    display:block;
+    position:absolute;
+    z-index:5;
+    overflow:hidden;
+}
+
+
+.nivo-caption {
+  position:absolute;
+    left:0; 
+    top:0;  
+    color:#fff;
+    width:100%;
+    z-index:8;
+    height: 100%;
+}
+.nivo-html-caption {
+    display: none;
+}
+@-webkit-keyframes myfirst {
+  from {width: 0;}
+  to {width: 100%;}
+ }
+ @keyframes myfirst {
+  from {width: 0;}
+  to {width: 100%;}
+ }
+ .timethai.pos_hover{
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  
+ }
+ .ma-banner7-container{
+position: relative;
+float: left;
+width: 100%
+ }
+
+/*===Content-banner7===========================================================*/
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.banner7-content{ height: 100%; position: relative;}
+.bannerslideshow{position: absolute;top:20%;left:50%;text-align:center;max-width:1111px;padding: 0 10px;margin: 0 auto}
+.banner7-content h1{
+	-webkit-animation: bounceInDown 1500ms ease-in-out;
+    -moz-animation: bounceInDown 1500ms ease-in-out;
+    -ms-animation: bounceInDown 1500ms ease-in-out;
+    animation: bounceInDown 1500ms ease-in-out;
+font-size:5em;
+line-height: 1em
+}
+.banner7-content h1 span{
+color: #fff;
+font-weight: bold;
+text-transform:capitalize;
+padding: 20px 30px;
+display: inline-block;
+position: relative;
+margin-bottom: 10px;    
+}
+.banner7-content h1 span:after{
+ content: "";
+ position: absolute;
+ left: 0;
+ right: 0;
+ text-align: center;
+ margin: auto;
+ bottom: 0;
+ width: 105px;
+ height: 7px;
+ background-color: #fff;   
+}
+.banner7-content h2{
+	-webkit-animation: bounceInLeft 1800ms ease-in-out;
+    -moz-animation: bounceInLeft 1800ms ease-in-out;
+    -ms-animation: bounceInLeft 1800ms ease-in-out;
+    animation: bounceInLeft 1800ms ease-in-out;
+    margin-bottom: 10px;
+    font-weight:700;
+    font-size: 3.33em;
+    color: #fff;
+    letter-spacing: 10px
+}
+.banner7-content h3{
+	-webkit-animation: bounceInLeft 2200ms ease-in-out;
+    -moz-animation: bounceInLeft 2200ms ease-in-out;
+    -ms-animation: bounceInLeft 2200ms ease-in-out;
+    animation: bounceInLeft 2200ms ease-in-out;
+       text-transform: uppercase;
+       color: #fff;
+       font-size: 1em;
+       line-height:1.8em;
+       margin-bottom: 20px;
+       letter-spacing: 2px;
+
+}
+.banner7-content .banner7-readmore{
+-webkit-animation: bounceIn 2200ms ease-in-out;
+-moz-animation: bounceIn 2200ms ease-in-out;
+-ms-animation: bounceIn 2200ms ease-in-out;
+animation: bounceIn 2200ms ease-in-out;	
+}
+.banner7-content .banner7-readmore a{
+background: #222222;
+font-size: 12px;
+padding: 10px 30px;
+text-transform: uppercase;
+font-weight: bold;
+display:inline-block;
+color: #fff;
+font-family: 'Montserrat', sans-serif
+}
+.banner7-content .banner7-readmore a:after{
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+content:"\f0da";
+margin-left: 10px;
+}
+.banner7-content .banner7-readmore a:hover{background-color:#ec5355;}
+.banner7-content .banner7-des{
+	-webkit-animation: bounceInLeft 2000ms ease-in-out;
+    -moz-animation: bounceInLeft 2000ms ease-in-out;
+    -ms-animation: bounceInLeft 2000ms ease-in-out;
+    animation: bounceInLeft 2000ms ease-in-out;
+}
+.banner7-content img.img1 {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	max-width: none;
+	-webkit-animation: fadeInRight 1500ms ease-in-out;
+    -moz-animation: fadeInRight 1500ms ease-in-out;
+    -ms-animation: fadeInRight 1500ms ease-in-out;
+    animation: fadeInRight 1500ms ease-in-out;
+}
+.banner7-content img.img2 {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	max-width: none;
+	-webkit-animation: bounceInLeft 1500ms ease-in-out;
+    -moz-animation: bounceInLeft 1500ms ease-in-out;
+    -ms-animation: bounceInLeft 1500ms ease-in-out;
+    animation: bounceInLeft 1500ms ease-in-out;
+}
+
+/*slider-2======================*/
+.slider-2 .bannerslideshow{left: 0;right: 0}
+.slider-2 h1{
+	-webkit-animation: rotateIn 1000ms ease-in-out;
+    -moz-animation: rotateIn 1000ms ease-in-out;
+    -ms-animation: rotateIn 1000ms ease-in-out;
+    animation: rotateIn 1000ms ease-in-out;
+    font-size:6em;
+}
+.slider-2 h1 span{
+border-width: 10px;
+padding: 10px 30px;
+border: 10px solid #fff;
+text-transform: uppercase;   
+}
+.slider-2 h1 span:after{display: none}
+.slider-2 h2{
+	-webkit-animation: bounceInUp 1800ms ease-in-out;
+    -moz-animation: bounceInUp 1800ms ease-in-out;
+    -ms-animation: bounceInUp 1800ms ease-in-out;
+    animation: bounceInUp 1800ms ease-in-out;
+}
+.slider-2 h3{
+	-webkit-animation: bounceInUp 2200ms ease-in-out;
+    -moz-animation: bounceInUp 2200ms ease-in-out;
+    -ms-animation: bounceInUp 2200ms ease-in-out;
+    animation: bounceInUp 2200ms ease-in-out;
+}
+.slider-2 .banner7-des{
+	-webkit-animation: bounceInUp 2000ms ease-in-out;
+    -moz-animation: bounceInUp 2000ms ease-in-out;
+    -ms-animation: bounceInUp 2000ms ease-in-out;
+    animation: bounceInUp 2000ms ease-in-out;
+}
+.slider-2 img.img1 {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	max-width: none;
+	-webkit-animation: bounceInLeft 1500ms ease-in-out;
+    -moz-animation: bounceInLeft 1500ms ease-in-out;
+    -ms-animation: bounceInLeft 1500ms ease-in-out;
+    animation: bounceInLeft 1500ms ease-in-out;
+}
+.slider-2 img.img2 {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	max-width: none;
+	-webkit-animation: fadeInRight 1500ms ease-in-out;
+    -moz-animation: fadeInRight 1500ms ease-in-out;
+    -ms-animation: fadeInRight 1500ms ease-in-out;
+    animation: fadeInRight 1500ms ease-in-out;
+}
+
+@media(max-width:992px){
+.bannerslideshow{top: 10%}
+.banner7-content h1 {font-size: 3.4em}
+.banner7-content h2{font-size: 2.33em}
+.banner7-content h3{font-size: 1em}
+}

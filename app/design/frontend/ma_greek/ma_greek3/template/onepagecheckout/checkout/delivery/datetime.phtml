@@ -1,0 +1,61 @@
+<?php 
+    //Format date
+    $format_date = trim(Mage::getStoreConfig('onepagecheckout/delivery/format'));
+    //Date enable
+    $date = trim(Mage::getStoreConfig('onepagecheckout/delivery/date'));
+    $dt = explode(',',$date);
+    $all_date = array('0','1','2','3','4','5','6');
+    $newary = array_diff ($all_date, $dt);
+    foreach($newary as $row){
+        $enble_date .= "date.getDay()==$row||";
+    }
+    $enble_date = substr($enble_date,0,-2);
+    //Time enable
+    $time = trim(Mage::getStoreConfig('onepagecheckout/delivery/time'));
+    $tm = explode(',',$time);
+    //Values Required
+    $values_required = trim(Mage::getStoreConfig('onepagecheckout/delivery/values_required'));
+    
+?>
+<div id="delivery-data" class="onepagecheckout_block">
+    <div class="opc_delivery_title step-title">
+        <h1><?php echo $this->__('TIME OF DELIVERY'); ?></h1>
+    </div>
+    <div class="opc_delivery_content">
+        <div style="float: left;">
+            <span><?php echo $this->__('Select a Date'); ?></span>
+            <input id="date-picker" name="delivery_date" type="text" class="input-text input-date <?php echo $values_required?"required-entry" :'';?>"/>
+        </div>
+        <div style="float: left;">
+            <img title="Select date" id="date-picker-cal" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN) . 'adminhtml/default/default/images/grid-cal.gif'; ?>"/>
+            <select name="delivery_time" class="select-date">
+                <?php foreach($tm as $row){?>
+                    <option value="<?php echo $row; ?>"><?php echo $row; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+    //<!–[CDATA[
+     Calendar.setup({
+            inputField : 'date-picker',  //Id of input field where you want to put date
+            ifFormat : '<?php echo $format_date;?>',
+            button : 'date-picker-cal', //Id of Date picker image
+            align : 'Bl',
+            singleClick : true,
+            disableFunc: function(date)  {
+                var now= new Date();
+                if(date.getFullYear()   <   now.getFullYear())  { return true; }
+                if(date.getFullYear()   ==  now.getFullYear())  { if(date.getMonth()    <   now.getMonth()) { return true; } }
+                if(date.getMonth()      ==  now.getMonth())     { if(date.getDate()     <   now.getDate())  { return true; } }
+                <?php if($enble_date){ ?>
+                    return <?php echo $enble_date;?> ? true : false;
+                <?php } ?>
+            },
+            minDate: 0
+            
+        });
+    //]]>
+</script>

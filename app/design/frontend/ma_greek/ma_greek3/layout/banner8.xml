@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+		<reference name="head">
+            <action method="addCss" ifconfig="banner8/banner8_config/enabled"><stylesheet>magentothem/css/ma.banner8.css</stylesheet></action>
+			<action method="addJs" ifconfig="banner8/banner8_config/enabled"><script>magentothem/ma.jq.slide.js</script></action>
+			<action method="addJs" ifconfig="banner8/banner8_config/enabled"><script>magentothem/ma.flexslider.js</script></action>
+			<action method="addJs" ifconfig="banner8/banner8_config/enabled"><script>magentothem/ma.nivo.js</script></action>
+        </reference>
+        <!-- <reference name="content">
+            <block type="banner8/banner8" before="-" name="banner8" template="magentothem/banner8/banner8.phtml" />
+        </reference> -->
+    </cms_index_index>
+</layout> 

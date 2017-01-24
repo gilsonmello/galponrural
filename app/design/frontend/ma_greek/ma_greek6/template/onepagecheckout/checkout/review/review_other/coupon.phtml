@@ -1,0 +1,125 @@
+<?php if(trim(Mage::getStoreConfig('onepagecheckout/general/discount_code'))){?>
+    <div class="discount">
+        <div id="coupon-discount">
+            <div class="discount">
+                <div class="op_block_title" style="float: left;"><?php echo $this->__('Discount Codes') ?>:</div><br>
+                <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+                <div class="discount-form" style="float: left;">
+                    <input type="hidden" name="process_coupon" id="process_coupon" value="0" />
+                    <input type="hidden" name="coupon[remove]" id="coupon-remove" value="0" />
+                    <div class="input-box">
+                        <input class="input-text" id="coupon-code" name="coupon[code]" value="<?php echo $this->htmlEscape($this->getCouponCode()) ?>" />
+                    </div>
+                </div>
+                <div class="discont-bottom" style="float: left;">
+                    <button type="button" style="<?php echo strlen($this->getCouponCode())?'display:block':'display:none';?>" title="<?php echo $this->__('Cancel Coupon') ?>" class="button left btn-inline"  value="<?php echo $this->__('Cancel Coupon') ?>" id="coupon-cancel"><span><span><?php echo $this->__('Cancel Coupon') ?></span></span></button>
+                    <button type="button" title="<?php echo $this->__('Apply Coupon') ?>" class="button left btn-inline" value="<?php echo $this->__('Apply Coupon') ?>" id="coupon-apply"><span><span><?php echo $this->__('Apply Coupon') ?></span></span></button>
+                </div> 
+            </div>
+        	<?php /*success-msg  error-msg*/ ?>
+            <div class="msg_coupon" style="float: left;display: none;"></div>
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            $('coupon-apply') && $('coupon-apply').observe('click', function(e) {
+             	$('process_coupon').value = "1";
+                if (!$('coupon-code').value.length) {
+                    $('coupon-code').addClassName('validation-failed');
+                    return;
+                }else{
+                    $('coupon-code').removeClassName('validation-failed');
+                }
+                $('coupon-remove').value = "0";
+            });
+            $('coupon-cancel') && $('coupon-cancel').observe('click', function(e) {
+                $('coupon-remove').value = "1";
+                $('process_coupon').value = "1";
+            });
+            //]]>
+            jQuery(document).ready(function($) {
+                $('#coupon-apply').click(function(){
+                    if($('#coupon-code').val()!= ''){
+                        coupon_code = $('#coupon-code').val();
+                        var data = 'coupon_code='+coupon_code;
+                        url = $('#mst-address-request').val()+'load/customcouponPost';
+                        if(typeof ajax_request !== 'undefined')
+                        ajax_request.abort();
+                        ajax_request = $.ajax({
+                        	type: "POST",
+                        	url: url,
+                        	data: data,
+                        	cache: false,
+                            beforeSend:  function() {
+                                $('.loading_image').show();
+                                $('.opc_available_additional').css('opacity','0.5');
+                                $('.opc_tool-tip_methods').css('opacity','0.5');
+                                $('#checkout-review-table-wrapper').css('opacity','0.5');
+                            },
+                            success: function(html){
+                                $('.loading_image').hide();
+                                $('.opc_available_additional').css('opacity','1');
+                                $('.opc_tool-tip_methods').css('opacity','1');
+                                $('#checkout-review-table-wrapper').css('opacity','1');
+                                var _json=$.parseJSON(html); 
+                                if(_json.status==='SUCCESS'){
+                                     $('#coupon-cancel').show();
+                                     $('.msg_coupon').removeClass('error-msg');
+                                     $('.msg_coupon').addClass('success-msg');
+                                }else{
+                                    $('#coupon-cancel').hide();
+                                    $('.msg_coupon').removeClass('success-msg');
+                                    $('.msg_coupon').addClass('error-msg');
+                                }
+                                $('.msg_coupon').show();
+                                $('.msg_coupon').html(_json.msg);
+                                $('#checkout-review-load').html(_json.info);
+                                $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                                if(_json.validate_cart == 0){
+                                    location.reload();
+                                }
+                            }
+                        });
+                    }
+                });
+                $('#coupon-cancel').click(function(){
+                    remove = 1;
+                    var data = 'remove='+remove;
+                    url = $('#mst-address-request').val()+'load/customcouponPost';
+                    if(typeof ajax_request !== 'undefined')
+                    ajax_request.abort();
+                    ajax_request = $.ajax({
+                    	type: "POST",
+                    	url: url,
+                    	data: data,
+                    	cache: false,
+                        beforeSend:  function() {
+                            $('.loading_image').show();
+                            $('.opc_available_additional').css('opacity','0.5');
+                            $('.opc_tool-tip_methods').css('opacity','0.5');
+                            $('#checkout-review-table-wrapper').css('opacity','0.5');
+                        },
+                        success: function(html){
+                            $('.loading_image').hide();
+                            $('.opc_available_additional').css('opacity','1');
+                            $('.opc_tool-tip_methods').css('opacity','1');
+                            $('#checkout-review-table-wrapper').css('opacity','1');
+                            var _json=$.parseJSON(html); 
+                            if(_json.status==='SUCCESS'){
+                                 $('#coupon-cancel').hide();
+                            } 
+                            $('.msg_coupon').removeClass('error-msg');
+                            $('.msg_coupon').addClass('success-msg');
+                            $('.msg_coupon').show();
+                            $('.msg_coupon').html(_json.msg);
+                            $('#checkout-review-load').html(_json.info);
+                            $('#checkout-shipping-method-load').html(_json.shipping_method);                        
+                            if(_json.validate_cart == 0){
+                                location.reload();
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+<?php } ?>

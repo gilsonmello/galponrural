@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <onepagecheckout_index_index translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="setForcedTitle"><title>Account Dashboard</title></action>
+            <!-- <action method="addItem" ifconfig="onepagecheckout/general/loadjquery"><type>skin_js</type><name>onepagecheckout/js/jquery-1.10.2.min.js</name></action> -->
+			<action method="addItem" ifconfig="onepagecheckout/general/loadjquery"><type>skin_js</type><name>onepagecheckout/js/mst-jquery-noconflict.js</name></action>
+            <action method="addCss" ifconfig="onepagecheckout/general/enabled"><stylesheet>onepagecheckout/css/onepagecheckout.css</stylesheet></action>
+            <!-- calendar default -->        
+            <action method="addItem" ifconfig="onepagecheckout/delivery/enabled"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params></params></action>
+            <action method="addItem" ifconfig="onepagecheckout/delivery/enabled"><type>js</type><name>calendar/calendar.js</name></action>
+            <action method="addItem" ifconfig="onepagecheckout/delivery/enabled"><type>js</type><name>calendar/calendar-setup.js</name></action>
+            <block type="core/html_calendar" name="head.calendar" as="calendar" template="page/js/calendar.phtml"></block> 
+        </reference>
+        <reference name="content">
+			<block type="onepagecheckout/onepagecheckout" name="onepagecheckout" template="onepagecheckout/index.phtml">
+			<!--<block  ifconfig="onepagecheckout/layout_configuration/layout" type="onepagecheckout/onepagecheckout" name="onepagecheckout" template="onepagecheckout/index-three-column-layout.phtml"> -->
+                
+                <block type="onepagecheckout/frontend_checkout_other" name="frontend_checkout_index_other" as="index_other" template="onepagecheckout/other/index-other.phtml"/>
+                
+                <block type="customer/form_login" name="customer_form_login" as="login" template="onepagecheckout/customer_login_forgotpassword/login.phtml"/>
+                
+                <block type="customer/account_forgotpassword" name="customer_account_forgotpassword" as="forgotpassword" template="onepagecheckout/customer_login_forgotpassword/forgotpassword.phtml"/>
+                
+                <block type="onepagecheckout/frontend_checkout_address" name="frontend_checkout_address_billing" as="billing_address" template="onepagecheckout/checkout/billing/billing_address.phtml"/>
+                
+                <block type="onepagecheckout/frontend_checkout_address" name="frontend_checkout_address_shipping" as="shipping_address" template="onepagecheckout/checkout/shipping/shipping_address.phtml"/>
+
+ 				<block type="checkout/onepage_shipping_method" name="checkout_onepage_shipping_method" as="shipping_method" template="onepagecheckout/checkout/shipping/shipping_method.phtml">
+                    <block type="checkout/onepage_shipping_method_available" name="checkout_onepage_shipping_method_available" as="available" template="onepagecheckout/checkout/shipping/shipping_method/available.phtml"/>
+                    <block type="checkout/onepage_shipping_method_additional" name="checkout_onepage_shipping_method_additional" as="additional" template="checkout/onepage/shipping_method/additional.phtml"/>
+                </block>
+                
+                <block type="checkout/onepage_payment" name="checkout_onepage_payment" as="payment" template="onepagecheckout/checkout/payment/payment.phtml">
+                    <block type="checkout/onepage_payment_methods" name="checkout_onepage_payment_methods" as="payment_method" template="onepagecheckout/checkout/payment/payment_methods.phtml">
+                        <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+                    </block>
+                </block>
+                
+				<block type="onepagecheckout/frontend_checkout_other" name="frontend_checkout_delivery" as="delivery"  template="onepagecheckout/checkout/delivery/datetime.phtml" />
+                
+                <block type="checkout/onepage_review" name="checkout_onepage_review" as="review" template="onepagecheckout/checkout/review/review.phtml">
+                    <block type="checkout/onepage_review_info" name="checkout_onepage_review_info" as="info" template="onepagecheckout/checkout/review/review_info/product_info.phtml">
+                        <block type="checkout/cart_totals" name="checkout_onepage_review_info_totals" as="totals" template="onepagecheckout/checkout/review/review_info/item_totals.phtml"/>
+						<block type="core/text_list" name="checkout.onepage.review.info.items.before" as="items_before"/>
+                        <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>onepagecheckout/checkout/review/review_info/item.phtml</template></action>
+						<action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>onepagecheckout/checkout/review/review_info/item.phtml</template></action>
+						<action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>onepagecheckout/checkout/review/review_info/item.phtml</template></action>
+                    </block>
+                    <block type="checkout/cart_coupon" name="checkout_cart_coupon" as="coupon" template="onepagecheckout/checkout/review/review_other/coupon.phtml"/>
+                    <block type="onepagecheckout/frontend_checkout_other" name="frontend_checkout_comment" as="comment" template="onepagecheckout/checkout/review/review_other/comment.phtml"/>
+                    <block type="onepagecheckout/frontend_checkout_other" name="frontend_checkout_suvery" as="suvery" template="onepagecheckout/checkout/review/review_other/suvery.phtml"/>
+                    <block type="onepagecheckout/frontend_checkout_other" name="frontend_checkout_temcondition" as="tem_condition" template="onepagecheckout/checkout/review/review_other/tem_conditions.phtml"/>
+                </block>
+                
+            </block>
+        </reference>
+    </onepagecheckout_index_index>
+    <onepagecheckout_load_updateall>
+    
+        <block type="checkout/onepage_payment_methods" name="checkout_payment_method" template="onepagecheckout/checkout/payment/payment_methods.phtml">
+            <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+        </block>
+        
+        <block type="checkout/onepage_shipping_method_available" name="checkout_shipping_method" template="onepagecheckout/checkout/shipping/shipping_method/available.phtml"/>
+        
+        <block type="checkout/onepage_review_info" name="review_info" template="onepagecheckout/checkout/review/review_info/product_info.phtml">
+            <block type="checkout/cart_totals" name="checkout_review_item_totals" as="totals" template="onepagecheckout/checkout/review/review_info/item_totals.phtml"/>
+			<block type="core/text_list" name="checkout.onepage.review.info.items.before" as="items_before"/>
+            <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>onepagecheckout/checkout/review/review_info/item.phtml</template></action>
+			<action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>onepagecheckout/checkout/review/review_info/item.phtml</template></action>
+			<action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>onepagecheckout/checkout/review/review_info/item.phtml</template></action>
+        </block>
+        
+    </onepagecheckout_load_updateall>
+    <checkout_cart_index>    
+        <reference name="checkout.cart.top_methods">
+            <action method="unsetChild" ifconfig="onepagecheckout/general/enabled"><name>checkout.cart.methods.onepage.top</name></action>
+            <action method="unsetChild" ifconfig="onepagecheckout/general/enabled"><name>checkout.cart.methods.onepage</name></action>
+        </reference>
+ 
+        <reference name="checkout.cart.methods">
+        	<action method="unsetChild" ifconfig="onepagecheckout/general/enabled"><name>checkout.cart.methods.onepage.bottom</name></action>
+            <action method="unsetChild" ifconfig="onepagecheckout/general/enabled"><name>checkout.cart.methods.onepage</name></action>
+        </reference>
+
+        <reference name="checkout.cart.top_methods">            
+			<block ifconfig="onepagecheckout/general/enabled" type="onepagecheckout/frontend_checkout_link" name="checkout.cart.methods.fire" template="onepagecheckout/checkout/link.phtml"/>
+        </reference>
+ 
+        <reference name="checkout.cart.methods">
+            <block ifconfig="onepagecheckout/general/enabled" type="onepagecheckout/frontend_checkout_link" name="checkout.cart.methods.fire" template="onepagecheckout/checkout/link.phtml"/>
+        </reference>
+    </checkout_cart_index>
+</layout> 
