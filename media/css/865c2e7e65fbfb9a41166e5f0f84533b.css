@@ -6497,7 +6497,7 @@ ul,ol         { list-style:none; margin: 0;}
 .v-top        { vertical-align:top; }
 .v-middle     { vertical-align:middle; }
 .f-left,
-.left         { float:left !important;}
+.left         { float:left !important; font-size: 14px;}
 .f-right,
 .right        { float:right !important; }
 .f-none       { float:none !important; }
@@ -6583,10 +6583,10 @@ input.input-text:focus,select:focus,textarea:focus {border: 1px solid #5eb9f3!im
 /* Grouped fields */
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
 .form-list li {margin: 0; }
-.form-list label { float:left; color:#666; font-weight:normal; position:relative; z-index:0; }
+.form-list label { float:left; color:#666; font-weight:normal; position:relative; z-index:0; font-size: 14px; font-weight: bold;}
 .form-list label.required {}
 .form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-8px; }
-.form-list li.control label { float:none; }
+.form-list li.control label { float:none; font-size: 14px; font-weight: bold}
 .form-list li.control input.radio,
 .form-list li.control input.checkbox { margin-right:6px; float: left; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
@@ -6597,7 +6597,7 @@ input.input-text:focus,select:focus,textarea:focus {border: 1px solid #5eb9f3!im
 .form-list textarea { width:254px; height:10em; }
 .form-list select { width:254px;padding: 7px 5px; }
 .form-list li.wide .input-box { /*width:535px;*/ }
-.form-list li.wide input.input-text { }
+.form-list li.wide input.input-text { width: 530px; }
 .form-list li.wide textarea { width:529px; }
 .form-list li.wide select {  }
 .form-list li.additional-row { border-top:1px solid #ccc; margin-top:10px; padding-top:7px; }
@@ -6774,7 +6774,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .pager li > a, .pager li > span { display:  inline; padding: 0; background: none; border: none; border-radius: 0;}
 .pager li > a:hover{background: none;color: #D7AE4E}
 /* Data Table */
-.data-table { width:100%; border:1px solid #f2f2f2; }
+.data-table { width:100%; border:1px solid #f2f2f2; font-size: 14px;}
 .data-table .odd  { border-top: 1px solid #f2f2f2 }
 .data-table .even {  }
 /*.data-table tr.odd:hover,
@@ -6786,7 +6786,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table th { padding: 6px 10px; font-weight:normal; }
 .data-table td { padding: 6px 10px; }
 
-.data-table thead th {font-weight: normal; border-right:1px solid #f2f2f2; padding: 10px;white-space:nowrap; vertical-align:middle; text-align: center; text-transform: capitalize;}
+.data-table thead th {font-weight: bold; border-right:1px solid #f2f2f2; padding: 10px;white-space:nowrap; vertical-align:middle; text-align: center; text-transform: capitalize;}
 .data-table thead th.wrap { white-space:normal; }
 .data-table thead th a,
 .data-table thead th a:hover { color:#fff; }
@@ -6795,11 +6795,11 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table tfoot { border-bottom:1px solid #d9dde3; }
 .data-table tfoot tr.first td {  }
 .data-table tfoot tr { }
-.data-table tfoot td { padding-top:1px; padding-bottom:1px; border-bottom:0; border-right:1px solid #f2f2f2; }
+.data-table tfoot td {font-weight: bold; padding-top:1px; padding-bottom:1px; border-bottom:0; border-right:1px solid #f2f2f2; }
 .data-table tfoot strong { font-size:16px; }
 
 .data-table tbody th,
-.data-table tbody td { border-bottom:1px solid #f2f2f2; border-right:1px solid #f2f2f2; }
+.data-table tbody td {font-weight: bold; border-bottom:1px solid #f2f2f2; border-right:1px solid #f2f2f2; }
 /* Bundle products tables */
 .data-table tbody.odd tr { background:#f8f7f5 !important; }
 .data-table tbody.even tr { background:#f6f6f6 !important; }
@@ -8072,11 +8072,11 @@ p.special-price{display: inline-block;}
 /* Checkout ============================================================================== */
 /********** < Common Checkout Styles */
 /* Shipping and Payment methods */
-.sp-methods { margin:0 0 8px; }
-.sp-methods dt { font-weight:normal; }
-.sp-methods dd {}
+.sp-methods {font-weight: bold; margin:0 0 8px; font-size: 14px;}
+.sp-methods dt {font-weight: bold; font-weight:normal; font-size: 14px;}
+.sp-methods dd {font-weight: bold;}
 .sp-methods dd li { margin:5px 0; }
-.sp-methods label { font-weight:normal;}
+.sp-methods label { font-weight:bold;}
 .sp-methods .price { font-weight:normal; }
 .sp-methods .form-list { padding-left:20px; }
 .sp-methods .form-list li { margin:0 0 8px; }
@@ -8170,9 +8170,9 @@ p.special-price{display: inline-block;}
 .block-progress .block-content{padding: 10px}
 .block-progress .block-title { }
 .block-progress .block-title strong {}
-.block-progress dt {  font-weight:normal; line-height:1.35;margin:0 0 6px; padding:10px 10px 10px 20px;background: url(http://gpr.com/skin/frontend/ma_greek/ma_greek1/css/../images/black-dot1.png) no-repeat 0 13px;border-bottom: 1px solid #eee;}
+.block-progress dt {  font-weight: bold; font-size: 14px; font-weight:normal; line-height:1.35;margin:0 0 6px; padding:10px 10px 10px 20px;background: url(http://gpr.com/skin/frontend/ma_greek/ma_greek1/css/../images/black-dot1.png) no-repeat 0 13px;border-bottom: 1px solid #eee;}
 .block-progress .block-content dl { margin: 0;}
-.block-progress dd { background:#fff; border:1px solid #f2f2f2; border-top:0; padding:8px 13px; margin:0 0 6px; }
+.block-progress dd { font-weight: bold; background:#fff; border:1px solid #f2f2f2; border-top:0; padding:8px 13px; margin:0 0 6px; font-size: 14px;}
 .block-progress dt.complete { margin:10px 0 0; background:#f2f2f2; color:#333; }
 .block-progress dd.complete {}
 .block-progress p { margin:0; }
@@ -8190,10 +8190,10 @@ p.special-price{display: inline-block;}
 .opc .buttons-set { margin-top:0; padding-top:2em; }
 .opc .buttons-set p.required { margin:0; padding:0 0 10px; display: none}
 .opc .buttons-set .back-link small { display:none; }
-.opc .buttons-set .back-link a { background:url(http://gpr.com/skin/frontend/ma_greek/ma_greek1/css/../images/i_arrow-top.gif) 0 50% no-repeat; padding-left:16px; }
+.opc .buttons-set .back-link a {font-weight: bold; background:url(http://gpr.com/skin/frontend/ma_greek/ma_greek1/css/../images/i_arrow-top.gif) 0 50% no-repeat; padding-left:16px; font-size: 14px;}
 .opc .buttons-set.disabled button.button { display:none; }
 .opc .buttons-set .please-wait { height:21px; line-height:21px; }
-.opc .ul { list-style:disc outside;line-height: 25px }
+.opc .ul { list-style:disc outside;line-height: 25px; font-size: 14px; font-weight: bold;}
 .opc { position:relative; }
 .opc li.section {  margin-bottom:5px;border: 1px solid #eee;}
 .opc li.section.active {background: #fff;margin-bottom:30px}
@@ -8219,7 +8219,7 @@ p.special-price{display: inline-block;}
 #opc-login .buttons-set button.button:hover span{background-color:#D7AE4E;color: #fff }
 #opc-login h3 { font-size:16px; border-bottom:1px solid #e4e4e4; padding-bottom:10px;text-transform: uppercase;}
 #opc-login h4 { font-weight:normal; margin:0 0 10px;font-size: 16px; }
-#opc-login p{color: #444444}
+#opc-login p{color: #444444; font-size: 14px; font-weight: bold !important;}
 #login-form p{color:#888888}
 #opc-shipping_method .buttons-set { border-top:0; }
 .opc .gift-messages-form { margin:0 -30px; background:#f6f1eb; border:1px solid #e9e4de; border-width:1px 0; padding:22px 24px 22px 30px; }
@@ -9517,12 +9517,21 @@ button.button span,
 }
 
 @media (max-width: 380px) {
-    .sorter .sort-by { padding: 0;}
+    .sorter .sort-by { 
+        padding: 0;
+    }
     .form-list .input-box,
     .form-list li.wide textarea,
-    .product-view .box-reviews .form-add .form-list .input-box,.form-list select { width: 210px;}
+    .product-view .box-reviews .form-add .form-list .input-box,.form-list select { 
+        width: 210px;
+    }
     .form-list input.input-text, .form-list li.wide .input-box,
-    .product-view .box-reviews .form-add .form-list input.input-text, .product-view .box-reviews .form-add .form-list textarea { width: 210px;}
+    .product-view .box-reviews .form-add .form-list input.input-text, .product-view .box-reviews .form-add .form-list textarea { 
+        width: 210px;
+    }
+    .form-list li.wide .input-box input{
+        width: 210px;
+    }
 }
 @media (max-width: 320px) {
     .cart .discount input.input-text,.form-list select,.cart .discount .input-box{width: 210px}
