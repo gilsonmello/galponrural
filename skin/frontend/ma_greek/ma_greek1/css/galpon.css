@@ -19,6 +19,8 @@ html,
     padding: 22px 0;
     background: url(../images/bg-topo.jpg);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header-container .header .header-content{
