@@ -69,7 +69,7 @@ html,
 
     .header-container .header{
         /*background-position-y: 80px;*/
-        background-size: auto 395px;
+        background-size: cover;
     }
 
     .owl-controls{
