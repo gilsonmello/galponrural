@@ -16,21 +16,25 @@ html,
 }*/
 
 .header-container .header{
-    padding: 22px 0;
+    padding: 0 0;
     background: url(../images/bg-topo.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.header-content{
+    margin-top: 0 !important;
+}
+
 .header-container .header .header-content{
     padding: 10px 0 10px;
 }
 
-.header-container .header .header-content .form-search,
-.header-container .header .header-content .top-cart-wrapper,
-.header-container .header .header-content .compare-top,
-.header-container .header .header-content .wishlist-top{
+.header-container .header .header-content /*.form-search*/,
+.header-container .header .header-content /*.top-cart-wrapper*/,
+.header-container .header .header-content /*.compare-top*/,
+.header-container .header .header-content /*.wishlist-top*/{
     margin-top: 90px;
 }
 
