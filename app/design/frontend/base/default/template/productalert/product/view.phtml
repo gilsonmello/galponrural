@@ -26,6 +26,9 @@
 ?>
 <?php /* @var $this Mage_ProductAlert_Block_Product_View */?> 
 <br />
-<p class="<?php echo $this->getHtmlClass() ?>"> 
-    <a class="button" href="<?php echo $this->escapeHtml($this->getSignupUrl()) ?>" title="Notify me when this product is back in stock"><?php echo $this->__('Notify me when this product is back in stock'); ?></a>
+<?php $_product = $this->getProduct();?>
+<p class="<?php echo $this->getHtmlClass() ?>">
+    <a class="button" href="<?php echo $this->escapeHtml($this->getSignupUrl()) ?>" title="Notify me when this product is back in stock">
+        <?php echo $this->__('Notify me when this product is back in stock'); ?>
+    </a>
 </p>

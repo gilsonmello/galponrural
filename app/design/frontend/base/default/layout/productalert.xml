@@ -40,6 +40,13 @@
                         <action method="setHtmlClass"><value>alert-stock link-stock-alert</value></action>
                         <action method="setSignupLabel" translate="value"><value>Sign up to get notified when this product is back in stock</value></action>
                     </block>
+                    <block type="productalert/product_view" name="productalert.preorder" as="productalert_preorder" template="productalert/product/preorder.phtml">
+                        <action method="preparePreOrderAlertData"/>
+                        <action method="setHtmlClass"><value>alert-preorder link-stock-alert</value></action>
+                        <action method="setSignupLabel" translate="value">
+                            <value>Pre-Order</value>
+                        </action>
+                    </block>
                 </reference>
             </reference>
         </reference>

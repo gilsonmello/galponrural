@@ -23,7 +23,9 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
-
+strong{
+    font-weight: bold !important;
+}
 
 
 
@@ -207,7 +209,13 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important;text-align: center; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer;position: relative; }
+button.button {
+    background: #052217;
+    overflow:visible; width: 100%; border:0; padding:0; margin:0;
+    //background:transparent;
+    border-radius: 2px;
+    margin-bottom: 2.5px;
+    cursor:pointer;position: relative; }
 button.button span { display:inline-block;padding:10px 15px; font:bold 1em/1.35em 'Montserrat', sans-serif; text-align:center; white-space:nowrap;background: #222222;color:#fff;text-transform: uppercase;}
 button.button span span { border:0 !important; padding:0 !important;background: none  !important}
 button.button:hover span{background:#D7AE4E;}
@@ -1296,7 +1304,7 @@ button#search_price{margin:15px 0 0;display: block;width: 100%;padding-top: 10px
 .ratings-table td { font-size:11px; line-height:1.15; padding:3px 0; }
 .ratings-table th { font-weight:normal; padding-right:8px; }
 /* Availability */
-.availability { margin:0; }
+.availability { margin:12px 0 0 0; display: block !important }
 .availability span { font-weight:bold; }
 .availability.out-of-stock span { color:#d83820; }
 
@@ -2908,7 +2916,18 @@ h3.title-newsletter{font-weight: 700;font-size: 2.5em}
 .ma-box-content .add-to-links li{display:inline-block;}
 .ma-box-content .add-to-links li a{position: relative;font-size: 1.15em;color: #aaa;padding-left: 15px;}
 .ma-box-content .add-to-links li a:hover{color:#D7AE4E}
-.ma-box-content .btn-cart span{background: none;color: #aaaaaa;text-transform: capitalize;padding:0 15px 0 0;height: 30px;line-height: 30px;border-right: 1px solid #ddd;font-size: 11px;font-family:'Montserrat', sans-serif;font-weight:normal}
+.ma-box-content .btn-cart span{
+    background: none;
+    color: white;
+    text-transform: capitalize;
+    padding: 5px 15px 0 0;
+    height: 40px;
+    line-height: 30px;
+    //border-right: 1px solid #ddd;
+    display: block;
+    font-size: 15px;
+    font-family:'Montserrat', sans-serif;font-weight:normal
+}
 .ma-box-content .btn-cart span i{line-height: 30px;margin-right: 10px;font-size: 1.15em;}
 .ma-box-content .btn-cart:hover span{background: none;color: #D7AE4E}
 

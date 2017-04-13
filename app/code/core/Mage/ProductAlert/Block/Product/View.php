@@ -53,8 +53,19 @@ class Mage_ProductAlert_Block_Product_View extends Mage_Core_Block_Template
         if (!$this->_getHelper()->isStockAlertAllowed() || !$this->_product || $this->_product->isAvailable()) {
             $this->setTemplate('');
             return;
+        }else if(!is_null($this->_product->getPreorder())){
+            $this->setTemplate('');
+            return '';
         }
         $this->setSignupUrl($this->_getHelper()->getSaveUrl('stock'));
+    }
+
+    public function preparePreOrderAlertData(){
+        if($this->_product->getPreorder() == 1){
+            return $this->setSignupUrl($this->_getHelper()->getSaveUrl('stock'));
+        }
+        $this->setTemplate('');
+        return '';
     }
 
     /**
