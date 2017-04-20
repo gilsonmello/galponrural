@@ -37,6 +37,26 @@ strong{
     top: 2px;
 }
 
+.btn-pre-order{
+    background: #052217;
+    overflow: visible;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    border-radius: 2px;
+    margin-bottom: 2.5px;
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    padding: 5px 15px 0 0;
+    height: 40px;
+    line-height: 30px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
 /* Reset ================================================================================= */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1600,7 +1620,7 @@ p.special-price{display: inline-block;}
 .send-friend .buttons-set .limit { float:right; margin:0 7px 0 0; font-size:11px; line-height:21px; }
 /* ======================================================================================= */
 /* Content Styles ================================================================= */
-.product-name { margin:5px 0;clear: both;line-height: 1em}
+.product-name { margin:5px 0;clear: both;line-height: 1em; min-height: 65px !important;}
 .product-name a {font-size:0.75em;text-transform: uppercase;font-family:'Montserrat', sans-serif;font-weight: 700;color: #222222}
 /* Product Tags */
 .tags-list { display:block; font-size:13px; border:1px solid #c1c4bc; background:#f8f7f5;}

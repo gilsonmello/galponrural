@@ -53,7 +53,7 @@ $_convertedFinalPrice = $_store->roundPrice($_store->convertPrice($_product->get
 $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStoreLabel();
 ?>
 
-<?php if (!$_product->isGrouped()): ?>
+<?php if (!$_product->isGrouped() && is_null($_product->getPreorder())): ?>
     <?php $_weeeTaxAmount = $_weeeHelper->getAmountForDisplay($_product); ?>
     <?php $_weeeTaxAttributes = $_weeeHelper->getProductWeeeAttributesForRenderer($_product, null, null, null, true); ?>
     <?php $_weeeTaxAmountInclTaxes = $_weeeTaxAmount; ?>

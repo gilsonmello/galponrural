@@ -57,12 +57,12 @@ class Mage_ProductAlert_Block_Product_View extends Mage_Core_Block_Template
             $this->setTemplate('');
             return '';
         }
-        $this->setSignupUrl($this->_getHelper()->getSaveUrl('stock'));
+        return $this->setSignupUrl($this->_getHelper()->getSaveUrl('stock'));
     }
 
     public function preparePreOrderAlertData(){
         if($this->_product->getPreorder() == 1){
-            return $this->setSignupUrl($this->_getHelper()->getSaveUrl('stock'));
+            return $this->setSignupUrl('contacts?product_title='.$this->_product->getName());
         }
         $this->setTemplate('');
         return '';

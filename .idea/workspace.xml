@@ -2,70 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c589af19-f1b2-4f20-8b2a-dccacc1c9bb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/a/r/aruana.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_brizantha.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_humidicola.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_mg-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_mg-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_ruziziensis1_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/d/e/decumbens.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/i/v/ivermectina_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/p/a/panicum_maximum_massai_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/rotator_image/250x250/9df78eab33525d08d6e5fb8d27136e95/p/a/panicun_maximun_tanzania__73278_zoom.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/a/r/aruana.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_brizantha.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_humidicola.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_mg-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_mg-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/b/r/brachiaria_ruziziensis1_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/d/e/decumbens.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/i/v/ivermectina_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/p/a/panicum_maximum_massai_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/p/a/panicun_maximun_tanzania__73278_zoom.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/small_image/9df78eab33525d08d6e5fb8d27136e95/placeholder/default/Logo_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/thumbnail/70x70/9df78eab33525d08d6e5fb8d27136e95/images/catalog/product/placeholder/thumbnail.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/8/thumbnail/80x95/9df78eab33525d08d6e5fb8d27136e95/images/catalog/product/placeholder/thumbnail.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/5429dc52caade30eaac4b9ab2afdf70b.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/a3b93edddc7e071657ddb3ba4bef83fc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/15a7fdc7ca318ef6d4ad8ef4ad97e33f.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/1b83868ed056e46d79c0435810d925aa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/2259068f704c0d624c938423b0a5fc22.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/48bf1f2a976f3620b3edf59e88828425.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/4aa02005434e9b6b64dba8be3c915f07.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/661ab6719421a596187870a3e684be6c.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/78ab6e0f8f06862c72fcaa8e4620c4d1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/8db08ab8e230e952ec77e57a26281acf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/9342d8fd2b52e578ba4c65d8dd88b20b.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/97510efc5cb418b7a510b96b36b84f7a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/a331c7fc2e92236541a7b0caf13d26a0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/b2485769b410753df935796ed563698a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/c057a206bcb55983d670080bde1d58ff.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/js/fec7e5cf7ab32397437889150adb7f38.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/4e9f8749337010171d8106a6c479a575.css" afterPath="$PROJECT_DIR$/media/css/16b9d0f5f93a90953271a857426213b0.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/5200db4b0d8e5303a8ade086517c0b62.css" afterPath="$PROJECT_DIR$/media/css/1fd47e4538e373800dfc2231bb33c5f3.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/79997125e892be712f0109c7548925cc.css" afterPath="$PROJECT_DIR$/media/css/953067613b76c76ddf520a62d7a8051f.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/8540975ac0c7da93fa22613f601608b4.css" afterPath="$PROJECT_DIR$/media/css/465e9fb1b238caaef65c23f1b77aae72.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/865c2e7e65fbfb9a41166e5f0f84533b.css" afterPath="$PROJECT_DIR$/media/css/e8786a412aa4b07046295d15e78df545.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/9d40318375d73b854279e836116fe870.css" afterPath="$PROJECT_DIR$/media/css/cc5f371478b6eb5a27f2c31c8ff41cda.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/ac288b98b1b2a48c039401b7f062c01b.css" afterPath="$PROJECT_DIR$/media/css/fb2159251bd01724c608da49408c228e.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/b1cb1d904b651b9b5833fd0ad082d7de.css" afterPath="$PROJECT_DIR$/media/css/521b12bd2d338edaf318fc89184da359.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/c056e07feeae9739ae1b2c44b6012e7a.css" afterPath="$PROJECT_DIR$/media/css/664206045acd35ec2b9ad3c528e5fd7d.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/d429ef812034b3978a41264f46e5e602.css" afterPath="$PROJECT_DIR$/media/css/7c79cb3c5282c7dfdf72b1d959efb57b.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/dbc27ae07b0bf7fd3da44dc6665601a1.css" afterPath="$PROJECT_DIR$/media/css/e5e57b6c58bc207abeac7654a5de14ed.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/f1956a15525366af021a2c24aa65d15b.css" afterPath="$PROJECT_DIR$/media/css/55a8a2bc1156ef501853ea4b47755f58.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/css/fb2f01eeda8ab09759b349dea47d4bd0.css" afterPath="$PROJECT_DIR$/media/css/d4be85708ec3442b669cad6c0b26720c.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php" afterPath="$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/layout/productalert.xml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/layout/productalert.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/improvedaddress/customer/form/register.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/improvedaddress/customer/form/register.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/persistent/customer/form/register.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/persistent/customer/form/register.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/view.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/view.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view/addtocart.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view/addtocart.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/price.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/price.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/type/default.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/type/default.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/lastestproduct/lastestproduct.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/lastestproduct/lastestproduct.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/producttabs/producttabs.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/producttabs/producttabs.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/es_ES/Mage_Catalog.csv" afterPath="$PROJECT_DIR$/app/locale/es_ES/Mage_Catalog.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/es_ES/Mage_Contacts.csv" afterPath="$PROJECT_DIR$/app/locale/es_ES/Mage_Contacts.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/es_ES/Mage_ProductAlert.csv" afterPath="$PROJECT_DIR$/app/locale/es_ES/Mage_ProductAlert.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Catalog.csv" afterPath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Catalog.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Contacts.csv" afterPath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Contacts.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/pt_BR/Mage_ProductAlert.csv" afterPath="$PROJECT_DIR$/app/locale/pt_BR/Mage_ProductAlert.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/ma_greek/ma_greek1/css/styles.css" afterPath="$PROJECT_DIR$/skin/frontend/ma_greek/ma_greek1/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_am_" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_am_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_field_week" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_field_week" />
@@ -95,30 +46,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="view.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="catalog.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/layout/catalog.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.029310346">
-              <caret line="195" column="103" selection-start-line="195" selection-start-column="77" selection-end-line="195" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/view.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preorder.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/preorder.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -127,16 +68,16 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9615383">
+            <state vertical-scroll-proportion="0.0">
               <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
-                <marker date="1491140751342" expanded="false" signature="1045:1091" placeholder="..." />
-                <marker date="1491140751342" expanded="true" signature="1092:1515" placeholder="..." />
-                <marker date="1491140751342" expanded="true" signature="1106:1154" placeholder="..." />
-                <marker date="1491140751342" expanded="true" signature="1155:1334" placeholder="..." />
-                <marker date="1491140751342" expanded="true" signature="1168:1267" placeholder="..." />
-                <marker date="1491140751342" expanded="true" signature="1268:1328" placeholder="..." />
-                <marker date="1491140751342" expanded="true" signature="1337:1509" placeholder="..." />
+                <marker date="1492305476199" expanded="false" signature="1045:1091" placeholder="..." />
+                <marker date="1492305476199" expanded="true" signature="1092:1515" placeholder="..." />
+                <marker date="1492305476199" expanded="false" signature="1106:1154" placeholder="..." />
+                <marker date="1492305476199" expanded="true" signature="1155:1334" placeholder="..." />
+                <marker date="1492305476199" expanded="false" signature="1168:1267" placeholder="..." />
+                <marker date="1492305476199" expanded="true" signature="1268:1328" placeholder="..." />
+                <marker date="1492305476199" expanded="true" signature="1337:1509" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -145,7 +86,7 @@
       <file leaf-file-name="register.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/improvedaddress/customer/form/register.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
               <folding />
             </state>
@@ -155,8 +96,8 @@
       <file leaf-file-name="register.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/persistent/customer/form/register.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="44" column="57" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -165,28 +106,28 @@
       <file leaf-file-name="productalert.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/productalert.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.538462">
-              <caret line="42" column="155" selection-start-line="42" selection-start-column="147" selection-end-line="42" selection-end-column="155" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preorder.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/preorder.phtml">
+      <file leaf-file-name="View.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.phtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="form.phtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.038462">
-              <caret line="59" column="264" selection-start-line="59" selection-start-column="252" selection-end-line="59" selection-end-column="264" />
+            <state vertical-scroll-proportion="0.3717728">
+              <caret line="61" column="88" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -224,7 +165,6 @@
         <option value="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/view.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/teste.phtml" />
-        <option value="$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/productalert.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/layout/catalog.xml" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -232,6 +172,7 @@
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/persistent/customer/form/register.phtml" />
         <option value="$PROJECT_DIR$/app/code/core/Mage/Customer/controllers/AccountController.php" />
         <option value="$PROJECT_DIR$/app/code/core/Mage/Core/Model/Abstract.php" />
+        <option value="$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/preorder.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml" />
       </list>
@@ -293,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,7 +249,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,117 +259,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -441,7 +273,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -459,7 +291,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -481,7 +313,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -507,7 +339,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -541,7 +373,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -569,11 +401,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="contacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -583,7 +411,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -606,22 +434,6 @@
               <option name="myItemId" value="ma_greek1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -629,79 +441,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ma_greek1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -735,7 +475,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -773,7 +513,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -815,7 +555,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -843,7 +583,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="persistent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -853,7 +593,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -881,11 +621,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="persistent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -895,7 +639,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -923,15 +667,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="improvedaddress" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="customer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -941,7 +685,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -969,19 +713,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="improvedaddress" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="type" />
+              <option name="myItemId" value="customer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -991,7 +727,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="improvedaddress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gpr.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1025,7 +799,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1055,7 +829,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1073,29 +847,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpr.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1110,10 +862,6 @@
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1121,7 +869,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1140,10 +888,6 @@
               <option name="myItemId" value="Mage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1151,7 +895,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1171,11 +915,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
+              <option name="myItemId" value="ProductAlert" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1185,7 +925,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www.gplocal.com" />
+              <option name="myItemId" value="www.localhostgp.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1205,23 +945,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Customer" />
+              <option name="myItemId" value="ProductAlert" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
+              <option name="myItemId" value="Block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gpr.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www.localhostgp.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProductAlert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trabweb" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -1271,9 +1048,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26793557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26793557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1287,7 +1064,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3548896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35433072" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1308,20 +1085,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/locale/pt_BR/Mage_Customer.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/locale/es_ES/Mage_Checkout.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/locale/pt_BR/Mage_Checkout.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.068966">
@@ -1560,13 +1323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Customer/controllers/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.123411976">
@@ -1602,82 +1358,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.038462">
-          <caret line="59" column="264" selection-start-line="59" selection-start-column="252" selection-end-line="59" selection-end-column="264" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/layout/catalog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="103" selection-start-line="195" selection-start-column="77" selection-end-line="195" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/review/helper/summary_short.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32185885">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/rating/empty.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08777969">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/preorder.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/productalert.xml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/view.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.538462">
-          <caret line="42" column="155" selection-start-line="42" selection-start-column="147" selection-end-line="42" selection-end-column="155" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/persistent/customer/form/register.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="44" column="57" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/improvedaddress/customer/form/register.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9615383">
+        <state vertical-scroll-proportion="0.0">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
-            <marker date="1491140751342" expanded="false" signature="1045:1091" placeholder="..." />
-            <marker date="1491140751342" expanded="true" signature="1092:1515" placeholder="..." />
-            <marker date="1491140751342" expanded="true" signature="1106:1154" placeholder="..." />
-            <marker date="1491140751342" expanded="true" signature="1155:1334" placeholder="..." />
-            <marker date="1491140751342" expanded="true" signature="1168:1267" placeholder="..." />
-            <marker date="1491140751342" expanded="true" signature="1268:1328" placeholder="..." />
-            <marker date="1491140751342" expanded="true" signature="1337:1509" placeholder="..." />
+            <marker date="1492305476199" expanded="false" signature="1045:1091" placeholder="..." />
+            <marker date="1492305476199" expanded="true" signature="1092:1515" placeholder="..." />
+            <marker date="1492305476199" expanded="false" signature="1106:1154" placeholder="..." />
+            <marker date="1492305476199" expanded="true" signature="1155:1334" placeholder="..." />
+            <marker date="1492305476199" expanded="false" signature="1168:1267" placeholder="..." />
+            <marker date="1492305476199" expanded="true" signature="1268:1328" placeholder="..." />
+            <marker date="1492305476199" expanded="true" signature="1337:1509" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/productalert/product/view.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/improvedaddress/customer/form/register.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/catalog/product/view.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/persistent/customer/form/register.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/layout/catalog.xml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/productalert.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029310346">
-          <caret line="195" column="103" selection-start-line="195" selection-start-column="77" selection-end-line="195" selection-end-column="103" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3717728">
+          <caret line="61" column="88" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
           <folding />
         </state>
       </provider>

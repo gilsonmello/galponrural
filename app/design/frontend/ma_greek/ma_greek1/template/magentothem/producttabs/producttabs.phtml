@@ -17,7 +17,6 @@ $product_new = $helper_cf->getProductCfg('product_new');
 $product_random = $helper_cf->getProductCfg('product_random');
 $product_sale = $helper_cf->getProductCfg('product_sale');
 
-
 $default = $this->getTypeDefault();
 $_tabs = $this->getTabs();
 $numtab =count($_tabs);
@@ -187,11 +186,15 @@ if($numtab){
 													</p> ';
 													} 
 													}else {
-													echo '<div class="price-boxs">
-													<span class="regular-price">
-													<span class="price">'.Mage::helper('core')->currency($price, true, false).'</span>                                    
-													</span>    
-													</div>';    
+														if($_product->getPreorder()){
+															echo '<p>&nbsp;</p>';
+														}else{
+														echo '<div class="price-boxs">
+														<span class="regular-price">
+														<span class="price">'.Mage::helper('core')->currency($price, true, false).'</span>                                    
+														</span>    
+														</div>'; 
+														}   
 													}
 													?>
 												</div>
@@ -200,9 +203,19 @@ if($numtab){
 													<?php if(Mage::getStoreConfig('producttabs/producttabs_config/addtocart')):?>
 														<?php if($_product->isSaleable()): ?>
 															<button type="button" title="<?php //echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><span> <i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
+															<?php elseif($_product->getPreorder()): ?>
+																<button class="button btn-cart">
+																<span>
+
+																<a style="color: white;" class="contact" href="<?php echo Mage::getUrl("contacts") ?>?product_title=<?php echo $_product->getName(); ?>">
+
+																<?php echo $this->__('Pre-order'); ?></a>
+																</span></button>
+                                                                <!--<span><?php // echo $this->__('Out of stock') ?></span>-->
+															<?php ?>
 														<?php else: ?>
-                                                                                                                        <p class="availability out-of-stock"><a class="contact" href="<?php echo Mage::getUrl("contacts") ?>"><?php echo $this->__('Contact Us'); ?></a></p>
-                                                                                                                        <!--<span><?php // echo $this->__('Out of stock') ?></span>-->
+                                                                <p class="availability out-of-stock"><a class="contact" href="<?php echo Mage::getUrl("contacts") ?>"><?php echo $this->__('Contact Us'); ?></a></p>
+                                                                <!--<span><?php // echo $this->__('Out of stock') ?></span>-->
 														<?php endif; ?>
 													<?php endif; ?>
 													<ul class="add-to-links">

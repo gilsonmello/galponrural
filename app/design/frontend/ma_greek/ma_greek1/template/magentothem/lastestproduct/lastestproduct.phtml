@@ -126,11 +126,15 @@
 												</p> ';
 												} 
 												}else {
-												echo '<div class="price-boxs">
-												<span class="regular-price">
-												<span class="price">'.Mage::helper('core')->currency($price, true, false).'</span>                                    
-												</span>    
-												</div>';    
+													if($_product->getPreorder()){
+															echo '<p>&nbsp;</p>';
+													}else{
+													echo '<div class="price-boxs">
+													<span class="regular-price">
+													<span class="price">'.Mage::helper('core')->currency($price, true, false).'</span>                                    
+													</span>    
+													</div>';    
+													}
 												}
 												?>
 											</div>
@@ -139,6 +143,17 @@
 											<?php if ($this->getConfig('addtocart')) { ?>
 												<?php if($_product->isSaleable()): ?>
 													<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
+
+												<?php elseif($_product->getPreorder()): ?>
+													<button class="button btn-cart">
+														<span>
+
+														<a style="color: white;" class="contact" href="<?php echo Mage::getUrl("contacts") ?>?product_title=<?php echo $_product->getName(); ?>">
+
+														<?php echo $this->__('Pre-order'); ?></a>
+														</span></button>
+                                                        <!--<span><?php // echo $this->__('Out of stock') ?></span>-->
+
 												<?php else: ?>
 													<p class="availability out-of-stock"><a class="contact" href="<?php echo Mage::getUrl("contacts") ?>"><?php echo $this->__('Contact Us'); ?></a></p>
                                                                                                         <!--<span><?php echo $this->__('Out of stock') ?></span>-->

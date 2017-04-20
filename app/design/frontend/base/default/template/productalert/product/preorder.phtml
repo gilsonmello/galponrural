@@ -24,15 +24,11 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php /* @var $this Mage_Catalog_Block_Product_View_Abstract */?>
-<?php $_product = $this->getProduct() ?>
-
-<?php if ($this->displayProductStockStatus() && is_null($_product->getPreorder())): ?>
-    <?php if ($_product->isAvailable()): ?>
-        <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
-    <?php else: ?>
-        <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Pre-order') ?></span></p>
-    <?php endif; ?>
-<?php endif; ?>
-<?php echo $this->getChildHtml('product_type_data_extra') ?>
-<?php echo $this->getPriceHtml($_product) ?>
+<?php /* @var $this Mage_ProductAlert_Block_Product_View */?>
+<br />
+<?php $_product = $this->getProduct();?>
+<p class="<?php echo $this->getHtmlClass() ?>">
+    <a class="button" href="<?php echo $this->getSignupUrl()?>" title="Sob consulta">
+        <?php echo $this->__('Pre-order'); ?>
+    </a>
+</p>
