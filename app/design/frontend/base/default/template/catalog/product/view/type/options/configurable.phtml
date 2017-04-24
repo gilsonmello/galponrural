@@ -29,15 +29,17 @@
 $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 ?>
+<form action="http://www.localhostgp.com/checkout/cart/add/uenc/aHR0cDovL3d3dy5sb2NhbGhvc3RncC5jb20vdXJpbmFyeS1zLW8tbHAtMTguaHRtbA,,/product/105/form_key/lkOl9mHha2W95M9H/" method="post">
+                    <button type="button" title="" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span>Añadir al Carrito</span></span></button>
+                </form>
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <dl>
     <?php foreach($_attributes as $_attribute): ?>
         <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
         <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
             <div class="input-box">
-                <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
-                    <option><?php echo $this->__('Choose an Option...') ?></option>
-                  </select>
+                
+                
               </div>
         </dd>
     <?php endforeach; ?>

@@ -165,7 +165,8 @@
                                     </a>
 
                                 </div>
-                                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                                <h2 class="product-name">
+                                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
                                 <?php if ($_product->getRatingSummary()): ?>
                                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                                 <?php else: ?>
@@ -175,6 +176,15 @@
                                 <div class="actions">
                                     <?php if ($_product->isSaleable()): ?>
                                         <button type="button" title="<?php //echo $this->__('Add to Cart')   ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
+                                    
+                                    <?php elseif($_product->getPreorder()): ?>
+                                        <button class="button btn-cart">
+                                            <span>
+                                                <a style="color: white;" class="contact" href="<?php echo Mage::getUrl("contacts") ?>?product_title=<?php echo $_product->getName(); ?>">
+                                                    <?php echo $this->__('Pre-order'); ?>
+                                                </a>
+                                            </span>
+                                        </button>
                                     <?php else: ?>
                                         <p class="availability out-of-stock"><a class="contact" href="<?php echo Mage::getUrl("contacts") ?>"><?php echo $this->__('Contact Us'); ?></a></p>
                                         <!--<span><?php // echo $this->__('Out of stock') ?></span>--> 
