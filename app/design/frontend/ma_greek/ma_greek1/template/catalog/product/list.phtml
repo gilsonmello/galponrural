@@ -68,14 +68,14 @@ $_helper = $this->helper('catalog/output');
                                         <?php echo $this->getPriceHtml($_product, true) ?>
                                         <div class="desc std">
                                             <?php $descr = $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description'); ?>
-                                            <?php echo substr($descr, 1, 300); ?>
+                                            <?php echo $descr; ?>
                                             <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="link-learn"><?php echo $this->__('Learn More') ?></a>
                                         </div>
 
                                         <div class="ma-box-content">
                                             <div class="actions">
                                                 <?php if ($_product->isSaleable()): ?>
-                                                    <button type="button" title="<?php //echo $this->__('Add to Cart')      ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
+                                                    <button style="width: auto;" type="button" title="<?php //echo $this->__('Add to Cart')      ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span style="color: white;"><i style="background: initial;" class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
                                                 <?php else: ?>
                                                     <p class="availability out-of-stock"><a class="contact" href="<?php echo Mage::getUrl("contacts") ?>"><?php echo $this->__('Contact Us'); ?></a></p>
                                                 <?php endif; ?>
@@ -103,7 +103,7 @@ $_helper = $this->helper('catalog/output');
             <?php // Grid Mode ?>
 
             <?php $_collectionSize = $_productCollection->count() ?>
-            <?php $_columnCount = 4 ?>
+            <?php $_columnCount = 5 ?>
             <?php
             $i = 0;
             foreach ($_productCollection as $_product):
@@ -111,7 +111,7 @@ $_helper = $this->helper('catalog/output');
                 <?php if ($i++ % $_columnCount == 0): ?>
                     <ul class="products-grid row">
                     <?php endif ?> 
-                    <li class="col-sm-3  item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
+                    <li style="width: 20%;" class="col-sm-3  item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
                         <div class="item-inner">
                             <div class="ma-box-content">
                                 <?php
@@ -156,7 +156,7 @@ $_helper = $this->helper('catalog/output');
                                     </a>
 
                                 </div>
-                                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                                <h2 class="product-name" style="min-height: 96px !important"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
                                 <?php if ($_product->getRatingSummary()): ?>
                                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                                 <?php else: ?>

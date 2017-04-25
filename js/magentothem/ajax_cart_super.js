@@ -69,6 +69,7 @@ function AddToCartOnProductView() {
     var is_view = $jq('#product_addtocart_form').attr('method');
     var effect_to_cart = $jq('.effect_to_cart').attr('value');
     if(is_view) {
+        //alert(productAddToCartForm);
         productAddToCartForm.submit = function(button,url){
             if(this.validator && this.validator.validate()){
                 var form = this.form;
