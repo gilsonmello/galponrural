@@ -45,4 +45,79 @@ $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
     </script>
+    <script type="text/javascript">
+        jQuery(function(){
+            var form = '<form ';
+            var action = 'action="http://www.gplocal.com:82/checkout/cart/add/uenc/aHR0cDovL3d3dy5ncGxvY2FsLmNvbTo4Mi91cmluYXJ5LXMtby1scC0xOC5odG1s/product/28/form_key/uHRL1SdVb3ThXv5Z/"';
+            var method = 'method="POST" id="teste"';
+
+            form += action+''+method+'>';
+
+            var content = '<div class="add-to-cart">';
+                    content += '<div class="input-content">';
+                        content += '<label for="qty">Cantidad:</label>';
+                        content += '<input class="qty-decrease" type="button">';
+                        
+                        content += '<input name="qty" id="qty" maxlength="12" value="1" title="Cantidad" class="input-text qty" type="text">';
+
+                        content += '<input class="qty-increase" type="button">';
+                    
+                    content += '</div>';
+                    content += '<button type="button" title="" class="button btn-cart"><span><span>Añadir al Carrito</span></span></button>';
+                content += '</div>';
+            form += content + '</form>';
+
+            jQuery('.product-options').append(form);
+
+
+            jQuery('.qty-decrease').on('click', function(){
+                alert('option');
+                var qty_el = document.getElementById('qty'); 
+                var qty = qty_el.value; 
+                if( !isNaN( qty ) && qty > 0 ) 
+                    qty_el.value--;
+                return false;
+            });
+
+            jQuery(document).on('click', '.qty-increase', function(){
+                alert('option');
+                var qty_el = document.getElementById('qty'); var qty = qty_el.value; if( !isNaN( qty )) qty_el.value++;return false;
+            })
+
+            
+            var teste = new VarienForm('teste');
+            teste.submit = function (button, url) {
+                if (this.validator.validate()) {
+                    var form = this.form;
+                    var oldUrl = form.action;
+
+                    
+
+                    if (url) {
+                        form.action = url;
+                    }
+                    var e = null;
+                    try {
+                        this.form.submit();
+                    } catch (e) {
+                    }
+                    this.form.action = oldUrl;
+                    if (e) {
+                        throw e;
+                    }
+
+                    if (button && button != 'undefined') {
+                        button.disabled = true;
+                    }
+                }
+            }.bind(teste);
+            
+
+            jQuery(document).on('click', '.btn-cart', function(){
+                teste.submit(this);
+            });
+        });
+
+
+    </script>
 <?php endif;?>
