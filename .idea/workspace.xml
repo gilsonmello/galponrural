@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c589af19-f1b2-4f20-8b2a-dccacc1c9bb8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php" afterPath="$PROJECT_DIR$/app/code/core/Mage/ProductAlert/Block/Product/View.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/price.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/price.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/type/default.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/type/default.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/lastestproduct/lastestproduct.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/lastestproduct/lastestproduct.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/producttabs/producttabs.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/magentothem/producttabs/producttabs.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/es_ES/Mage_Catalog.csv" afterPath="$PROJECT_DIR$/app/locale/es_ES/Mage_Catalog.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/es_ES/Mage_Contacts.csv" afterPath="$PROJECT_DIR$/app/locale/es_ES/Mage_Contacts.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/es_ES/Mage_ProductAlert.csv" afterPath="$PROJECT_DIR$/app/locale/es_ES/Mage_ProductAlert.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Catalog.csv" afterPath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Catalog.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Contacts.csv" afterPath="$PROJECT_DIR$/app/locale/pt_BR/Mage_Contacts.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locale/pt_BR/Mage_ProductAlert.csv" afterPath="$PROJECT_DIR$/app/locale/pt_BR/Mage_ProductAlert.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/ma_greek/ma_greek1/css/styles.css" afterPath="$PROJECT_DIR$/skin/frontend/ma_greek/ma_greek1/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_am_" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_am_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_field_week" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_field_week" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_pm_" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_pm_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_relative_0" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleC_pt_BR_relative_0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleL_pt_BR_days_" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleL_pt_BR_days_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleL_pt_BR_months_" afterPath="$PROJECT_DIR$/tmp/zend_cache---internal-metadatas---Zend_LocaleL_pt_BR_months_" />
     </list>
     <ignored path="gpr.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,15 +49,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <marker date="1492305476199" expanded="false" signature="1045:1091" placeholder="..." />
-                <marker date="1492305476199" expanded="true" signature="1092:1515" placeholder="..." />
-                <marker date="1492305476199" expanded="false" signature="1106:1154" placeholder="..." />
-                <marker date="1492305476199" expanded="true" signature="1155:1334" placeholder="..." />
-                <marker date="1492305476199" expanded="false" signature="1168:1267" placeholder="..." />
-                <marker date="1492305476199" expanded="true" signature="1268:1328" placeholder="..." />
-                <marker date="1492305476199" expanded="true" signature="1337:1509" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,7 +97,7 @@
       <file leaf-file-name="form.phtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3717728">
+            <state vertical-scroll-proportion="0.37241378">
               <caret line="61" column="88" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
               <folding />
             </state>
@@ -234,7 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -993,12 +964,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trabweb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -1048,7 +1019,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26793557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1406,15 +1377,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <marker date="1492305476199" expanded="false" signature="1045:1091" placeholder="..." />
-            <marker date="1492305476199" expanded="true" signature="1092:1515" placeholder="..." />
-            <marker date="1492305476199" expanded="false" signature="1106:1154" placeholder="..." />
-            <marker date="1492305476199" expanded="true" signature="1155:1334" placeholder="..." />
-            <marker date="1492305476199" expanded="false" signature="1168:1267" placeholder="..." />
-            <marker date="1492305476199" expanded="true" signature="1268:1328" placeholder="..." />
-            <marker date="1492305476199" expanded="true" signature="1337:1509" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,7 +1415,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/ma_greek/ma_greek1/template/contacts/form.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3717728">
+        <state vertical-scroll-proportion="0.37241378">
           <caret line="61" column="88" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
           <folding />
         </state>

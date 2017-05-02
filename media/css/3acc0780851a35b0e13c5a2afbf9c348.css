@@ -9298,12 +9298,12 @@ h3.title-newsletter{font-weight: 700;font-size: 2.5em}
     background: none;
     color: white;
     text-transform: capitalize;
-    padding: 5px 15px 0 0;
+    padding: 5px 15px 4px 15px;
     height: 40px;
     line-height: 30px;
     //border-right: 1px solid #ddd;
     display: block;
-    font-size: 15px;
+    font-size: 12px;
     font-family:'Montserrat', sans-serif;font-weight:normal
 }
 .ma-box-content .btn-cart span i{line-height: 30px;margin-right: 10px;font-size: 1.15em;}
@@ -9586,6 +9586,12 @@ button.button span,
     border: none
 }
 
+.cart button{
+    width: auto !important;
+}
+.brand-slider button{
+    width: auto !important;
+}
 /**
  * Magento
  *
