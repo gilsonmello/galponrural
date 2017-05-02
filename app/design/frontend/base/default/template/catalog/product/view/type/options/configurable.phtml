@@ -46,11 +46,16 @@ $formKey = Mage::getSingleton('core/session')->getFormKey();
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
     </script> -->
+    
+    <?php $i=0; foreach($this->getAllowProducts() as $related_product){ 
 
-    <?php $i=0; foreach($this->getAllowProducts() as $related_product){ ?>
-        <?php $teste .= '<form action="/checkout/cart/add/product/'.$related_product->getId().'">';
+        $product = Mage::getModel('catalog/product')->load($related_product->getId());
+        
+
+        $teste .= '<form action="/checkout/cart/add/product/'.$product->getId().'">';
                 $teste .= '<input type="hidden" name="form_key" value="'.$formKey.'">';
                 $teste .= '<div class="add-to-cart">';
+                    $teste .= '<div style="float: left;"> '.$product->getWeight().'</div>';
                     $teste .= '<div class="input-content">';
                         $teste .= '<label for="qty">'.$this->__('Quantidade').'</label>';
                             $teste .= '<input class="qty-decrease" type="button">';
@@ -64,8 +69,8 @@ $formKey = Mage::getSingleton('core/session')->getFormKey();
                 $teste .= '<br>';
                 $i++;
             }
-        ?>
-    <?php } ?>
+        
+    } ?>
     <script type="text/javascript">
         $jq(function(){
             $jq('.product-options').append('<?php echo $teste; ?>');
