@@ -46,10 +46,50 @@ $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $formKey = Mage::getSingleton('core/session')->getFormKey();
 $_taxHelper = $this->helper('tax');
+$medidasLabel = '';
+$medidas = '';
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <dl>
     <?php foreach($_attributes as $_attribute): ?>
+        <?php switch ($_attribute->getLabel()) {
+                case 'Pulgadas':
+                    $medidasLabel = '"';
+                    $medidas = 'plugada';
+                    break;
+                case 'Watts':
+                    $medidasLabel = 'Watts';
+                    $medidas = 'potencia';
+                    break;
+                case 'Litros':
+                    $medidasLabel = 'Litros';
+                    $medidas = 'litros';
+                    break;
+                case 'Peldaños':
+                    $medidas = 'peldanos';
+                    $medidasLabel = 'Peldaños';
+                    break;
+                case 'Metros':
+                    $medidas = 'metros';
+                    $medidasLabel = 'Metros';
+                    break;
+                case 'Modelo':
+                    $medidas = 'modelo';
+                    $medidasLabel = 'Modelo';
+                    break;
+                case 'Número': 
+                    $medidas = 'numero';
+                    $medidasLabel = 'Número';
+                    break;
+                case 'Dientes':
+                    $medidas = 'dientes';
+                    $medidasLabel = 'Dientes';
+                    break;
+                default:
+                    $medidasLabel = 'KG';
+                    $medidas = 'peso';
+                    break;
+            }?>
         <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
     <?php endforeach; ?>
     </dl> 
@@ -68,7 +108,6 @@ $_taxHelper = $this->helper('tax');
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
     </script> -->
-    
     <?php $i=0; foreach($this->getAllowProducts() as $related_product){ 
         $product = Mage::getModel('catalog/product')->load($related_product->getId());
         if($product->isSaleable()){
@@ -76,14 +115,13 @@ $_taxHelper = $this->helper('tax');
             $_store = $product->getStore();
             $_convertedFinalPrice = $_store->roundPrice($_store->convertPrice($product->getFinalPrice()));
             $_finalPrice = $_taxHelper->getPrice($product, $_convertedFinalPrice);
-            
             $teste .= '<form action="/checkout/cart/add/product/'.$product->getId().'">';
                     $teste .= '<input type="hidden" name="form_key" value="'.$formKey.'">';
                     $teste .= '<div class="add-to-cart">';
                         $teste .= '<table cellpadding="0" cellspacing="0" border="0" width="100%">';
                             $teste .= '<tbody>';
                                 $teste .= '<tr>';
-                                    $teste .= '<td style="vertical-align: middle; padding-right: 10px;"><h3 style="margin-bottom: 0;">'.number_format($product->getWeight(), 2, '.', '').' KG</h3></td>';
+                                    $teste .= '<td style="vertical-align: middle; padding-right: 10px;"><h3 style="margin-bottom: 0;">'.$product->getAttributeText($medidas).'</h3></td>';
                                     $teste .= '<td style="vertical-align: middle; padding-right: 10px;" aling="center"><h3 style="margin-bottom: 0;">'.$this->__('In Stock').'</h3></td>';
                                     $teste .= '<td style="vertical-align: middle; padding-right: 10px;" aling="center"><h3 style="margin-bottom: 0;"><span class="cart-price">'.$this->__('Price').' USD.: '.$_finalPrice.'</span></h3></td>';
                                     $teste .= '<td style="padding-right: 10px;">';
@@ -101,10 +139,7 @@ $_taxHelper = $this->helper('tax');
                         $teste .= '</table>';
                     $teste .= '</div>';
                 $teste .= '</form>'; 
-            if($i == 0){
                 $teste .= '<br>';
-                $i++;
-            }
         }   
     }?>
     <script type="text/javascript">

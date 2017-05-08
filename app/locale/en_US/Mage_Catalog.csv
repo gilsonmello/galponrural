@@ -840,3 +840,6 @@
 "select all","select all"
 "unselect all","unselect all"
 "x","x"
+"Inch", "Pulgadas"
+"Kilo" , "Kilo"
+"Watts", "Watts"
