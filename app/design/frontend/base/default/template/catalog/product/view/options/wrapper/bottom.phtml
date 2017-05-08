@@ -24,6 +24,13 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<?php $atributes = $this->getProduct()->getTypeInstance(true)
+            ->getConfigurableAttributes($this->getProduct());
+?>
+<?php $_attributes = Mage::helper('core')->decorateArray($atributes); ?>
+<?php if(count($_attributes) == 0){?>
 <div class="product-options-bottom">
     <?php echo $this->getChildHtml('', true, true);?>
 </div>
+
+<?php }?>

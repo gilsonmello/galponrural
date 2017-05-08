@@ -24,13 +24,35 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-
+<br>
+<style type="text/css">
+    button.btn-add-to-cart{
+        background: #052217;
+        overflow: visible;
+        width: 100%;
+        border: 0;
+        padding: 10px;
+        margin: 0;
+        /*background: transparent;*/
+        border-radius: 2px;
+        margin-bottom: 2.5px;
+        cursor: pointer;
+        position: relative;
+        color: white;
+    }
+</style>
 <?php
 $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $formKey = Mage::getSingleton('core/session')->getFormKey();
+$_taxHelper = $this->helper('tax');
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)):?>
+    <dl>
+    <?php foreach($_attributes as $_attribute): ?>
+        <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
+    <?php endforeach; ?>
+    </dl> 
     <!-- <dl>
     <?php foreach($_attributes as $_attribute): ?>
         <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
@@ -48,29 +70,43 @@ $formKey = Mage::getSingleton('core/session')->getFormKey();
     </script> -->
     
     <?php $i=0; foreach($this->getAllowProducts() as $related_product){ 
-
         $product = Mage::getModel('catalog/product')->load($related_product->getId());
-        
-
-        $teste .= '<form action="/checkout/cart/add/product/'.$product->getId().'">';
-                $teste .= '<input type="hidden" name="form_key" value="'.$formKey.'">';
-                $teste .= '<div class="add-to-cart">';
-                    $teste .= '<div style="float: left;"> '.$product->getWeight().'</div>';
-                    $teste .= '<div class="input-content">';
-                        $teste .= '<label for="qty">'.$this->__('Quantidade').'</label>';
-                            $teste .= '<input class="qty-decrease" type="button">';
-                            $teste .= '<input name="qty" id="qty" maxlength="12" value="1" title="Cantidad" class="input-text qty" type="text">';
-                            $teste .= '<input class="qty-increase" type="button">';
-                $teste .= '</div>';
-                $teste .= '<input type="submit" class="button" value="Add to basket" />';
-                $teste .= '</div>';
-            $teste .= '</form>'; 
+        if($product->isSaleable()){
+            $_storeId = $product->getStoreId();
+            $_store = $product->getStore();
+            $_convertedFinalPrice = $_store->roundPrice($_store->convertPrice($product->getFinalPrice()));
+            $_finalPrice = $_taxHelper->getPrice($product, $_convertedFinalPrice);
+            
+            $teste .= '<form action="/checkout/cart/add/product/'.$product->getId().'">';
+                    $teste .= '<input type="hidden" name="form_key" value="'.$formKey.'">';
+                    $teste .= '<div class="add-to-cart">';
+                        $teste .= '<table cellpadding="0" cellspacing="0" border="0" width="100%">';
+                            $teste .= '<tbody>';
+                                $teste .= '<tr>';
+                                    $teste .= '<td style="vertical-align: middle; padding-right: 10px;"><h3 style="margin-bottom: 0;">'.number_format($product->getWeight(), 2, '.', '').' KG</h3></td>';
+                                    $teste .= '<td style="vertical-align: middle; padding-right: 10px;" aling="center"><h3 style="margin-bottom: 0;">'.$this->__('In Stock').'</h3></td>';
+                                    $teste .= '<td style="vertical-align: middle; padding-right: 10px;" aling="center"><h3 style="margin-bottom: 0;"><span class="cart-price">'.$this->__('Price').' USD.: '.$_finalPrice.'</span></h3></td>';
+                                    $teste .= '<td style="padding-right: 10px;">';
+                                        $teste .= '<label for="qty">'.$this->__('Quantidade').'</label>';
+                                        $teste .= '<input class="qty-decrease" type="button">';
+                                        $teste .= '<input name="qty" id="qty" maxlength="12" value="1" title="Cantidad" class="input-text qty" type="text">';
+                                        $teste .= '<input class="qty-increase" type="button">';
+                                    $teste .= '</td>';
+                                    $teste .= '<td aling="center">';
+                                        $teste .= '<button type="submit" name="" value="'.$this->__('Add to Cart').'" title="'.$this->__('Add to Cart').'" class="btn-add-to-cart"><span><span>'.$this->__('Add to Cart').'</span></span></button>';
+                                        //$teste .= '<input type="submit" class="btn-add-to-cart" value="'.$this->__('Add to Cart').'" />';
+                                    $teste .= '</td>';
+                                $teste .= '</tr>';
+                            $teste .= '</tbody>';
+                        $teste .= '</table>';
+                    $teste .= '</div>';
+                $teste .= '</form>'; 
             if($i == 0){
                 $teste .= '<br>';
                 $i++;
             }
-        
-    } ?>
+        }   
+    }?>
     <script type="text/javascript">
         $jq(function(){
             $jq('.product-options').append('<?php echo $teste; ?>');
