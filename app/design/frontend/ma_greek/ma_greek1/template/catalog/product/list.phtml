@@ -103,7 +103,7 @@ $_helper = $this->helper('catalog/output');
             <?php // Grid Mode ?>
 
             <?php $_collectionSize = $_productCollection->count() ?>
-            <?php $_columnCount = 5 ?>
+            <?php $_columnCount = 4 ?>
             <?php
             $i = 0;
             foreach ($_productCollection as $_product):
@@ -111,7 +111,7 @@ $_helper = $this->helper('catalog/output');
                 <?php if ($i++ % $_columnCount == 0): ?>
                     <ul class="products-grid row">
                     <?php endif ?> 
-                    <li style="width: 20%;" class="col-sm-3  item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
+                    <li class="col-sm-3 col-md-3 item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
                         <div class="item-inner">
                             <div class="ma-box-content">
                                 <?php

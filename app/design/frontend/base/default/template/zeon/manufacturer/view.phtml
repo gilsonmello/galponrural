@@ -112,7 +112,7 @@
 
             <?php else: ?>
 
-                <?php $_columnCount = $this->getColumnCount(); ?>
+                <?php $_columnCount = $this->getColumnCount();?>
                 <?php
                 $i = 0;
                 foreach ($_products->getItems() as $_product):
@@ -120,7 +120,7 @@
                     <?php if ($i++ % $_columnCount == 0): ?>
                     <ul class="products-grid row">
                     <?php endif ?> 
-                    <li class="col-sm-4 col-md-4 col-sms-12 col-smb-12 item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
+                    <li class="col-sm-3 col-md-3 col-sms-12 col-smb-12 item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
                         <div class="item-inner">
                             <div class="ma-box-content">
                                 <?php
