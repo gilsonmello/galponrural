@@ -34,7 +34,7 @@ class Zeon_Manufacturer_Block_View extends Mage_Catalog_Block_Product_Abstract
     
     protected $_manufacturerCollection;
     
-    protected $_columnCount = 3;
+    protected $_columnCount = 4;
 
     /**
      * Retrieve Manufacturer instance
