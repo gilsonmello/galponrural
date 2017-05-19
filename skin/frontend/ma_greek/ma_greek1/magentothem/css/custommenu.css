@@ -4,7 +4,7 @@
 position:relative;
 z-index:1000;
 margin:0 auto;
-text-align: center;
+/*text-align: center; */
 }
 .pt_custommenu div.pt_menu {
 display: inline-block;margin-left: -2px
